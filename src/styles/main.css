@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto, Arial, sans-serif';
+}
+
+h1,
+h2 {
+  font-family: 'Roboto' !important;
+  font-weight: 600 !important;
+  color: #428b46 !important;
+  line-height: 150% !important;
+}
+
+h3,
+h4,
+h5,
+p {
+  font-family: 'Roboto' !important;
+  color: #030314 !important;
+}
+
+a {
+  font-family: 'Roboto' !important;
+}
+
+/* ==== button ==== */
+
+.btn-green {
+  background-color: #428b46 !important;
+  border-color: #428b46 !important;
+  color: white !important;
+  font-weight: 500 !important;
+}
+
+.btn-outline-green {
+  background-color: #ffff !important;
+  border-color: #428b46 !important;
+  color: #428b46 !important;
+  font-weight: 500 !important;
+}
+
+.btn-outline-green:hover {
+  background-color: #3a7a3d !important;
+  color: white !important;
+}
+
+.btn-green:hover {
+  background-color: #326835 !important;
+}
+
+/* ==== color ==== */
+
+.color-ctn {
+  color: #428b46 !important;
+}
+
+.color-white {
+  color: white !important;
+}
+
+.color-black {
+  color: #030314 !important;
+}
+
+.color-traveloka {
+  color: #27a7e5 !important;
+}
+
+.color-bookingcom {
+  color: #083484 !important;
+}
+
+/* ==== Universal Sizing ==== */
+
+.icons-size {
+  font-size: 20px !important;
+}
+
+.size-text-sm {
+  font-size: 13px !important;
+}
+
+.size-text-md {
+  font-size: 18px !important;
+}
+
+/* ==== Card ==== */
+
+.text-limit {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+}
+
+.rounded-card {
+  border-radius: 20px !important;
+}
+
+.img-rounded-card {
+  border-radius: 20px 20px 0 0 !important;
+}
+
+/* ==== Hero ==== */
+
+.linkhov-deco {
+  text-decoration: none;
+}
+
+.linkhov-deco:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero > img {
+  background-color: #c4c4c4 !important;
+  filter: brightness(65%);
+  object-fit: cover;
+  object-position: center;
+  -webkit-user-drag: none;
+}
+
+.hero-text {
+  position: absolute;
+  text-align: left;
+}
+
+.pos-fix-hero {
+  bottom: 0;
+  left: 20%;
+  transform: translate(-20%, -20%);
+}
+
+.hero-text > h1 {
+  font-size: 24px !important;
+  color: white !important;
+  line-height: 80% !important;
+}
+
+.hero-text > p {
+  font-size: 14px;
+  font-weight: 300;
+  color: white !important;
+}
+
+@media (min-width: 480px) {
+  .hero-text > h1 {
+    font-size: 26px !important;
+  }
+
+  .hero-text > p {
+    font-size: 16px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-text > h1 {
+    font-size: 30px !important;
+  }
+
+  .hero-text > p {
+    font-size: 20px !important;
+  }
+}
+
+/* Free Responsive */
+
+@media (min-width: 480px) {
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
