@@ -99,6 +99,10 @@ a {
   text-decoration: underline;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 /* ==== background ==== */
 .bg-login {
   width: 100%;
