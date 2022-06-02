@@ -127,6 +127,23 @@ a {
   border-radius: 20px 20px 0 0 !important;
 }
 
+/* ==== Review ==== */
+
+.card-comment {
+  border: 1px solid black !important;
+  border-radius: 15px !important;
+}
+
+.usercomment-img {
+border: 2px solid #326835 !important;
+  margin-top: 4px !important;
+}
+
+.comment-textarea {
+  resize: none;
+  height: 200px !important;
+}
+
 /* ==== Hero ==== */
 
 .hero {
