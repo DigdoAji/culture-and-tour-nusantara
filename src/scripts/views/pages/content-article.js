@@ -31,8 +31,9 @@ const ContentArticle = {
   },
 
   async afterRender() {
-    const articleCard = await article.contentArticles;
     const articleContainer = document.querySelector('#card-articles');
+    articleContainer.innerHTML = '';
+    const articleCard = await article.contentArticles;
     articleCard.forEach((allArticle) => {
       articleContainer.innerHTML += createContentArticleTemplate(allArticle);
     });
