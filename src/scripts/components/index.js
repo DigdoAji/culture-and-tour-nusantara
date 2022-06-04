@@ -5,5 +5,5 @@ import './tags/hero-intro';
 import './tags/hero-jumbotron';
 import './tags/hero-interested';
 import './card/card-home';
-import './card/card-contentarticle';
-import './card/card-contentevent';
+import './card/article-detail';
+import './card/event-detail';
