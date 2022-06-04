@@ -24,6 +24,7 @@ const ContentArticle = {
 
 
               </div>
+            </div>
         </section>
 
         <hero-interested></hero-interested>

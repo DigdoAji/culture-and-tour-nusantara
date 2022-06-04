@@ -23,6 +23,7 @@ const ContentEvent = {
               <div class="row" id="card-events">
 
               </div>
+            </div>
         </section>
 
         <hero-interested></hero-interested>
