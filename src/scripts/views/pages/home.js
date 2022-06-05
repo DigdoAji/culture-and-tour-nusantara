@@ -20,7 +20,7 @@ const Home = {
       <div class="row" id="home-article">
       </div>
       <div class="d-flex justify-content-center my-2">
-        <a href="#/content-article"><button type="button" class="btn btn-green px-4 py-2" tabindex="-1">More Articles</button></a>
+        <button type="button" class="btn btn-green px-4 py-2" tabindex="0" id="more-articles">More Articles</button>
       </div>
     </div>
 
@@ -38,7 +38,7 @@ const Home = {
       <div class="row" id="home-event">
       </div>
       <div class="d-flex justify-content-center my-2">
-        <a href="#/content-event"><button type="button" class="btn btn-green px-4 py-2" tabindex="-1">More Events</button></a>
+        <button type="button" class="btn btn-green px-4 py-2" tabindex="0" id="more-events">More Events</button>
       </div>
     </div>
 
@@ -59,6 +59,18 @@ const Home = {
     const eventCard = await event.contentEvents;
     eventCard.reverse().slice(0, 4).forEach((allEvent) => {
       eventContainer.innerHTML += createHomeEventTemplate(allEvent);
+    });
+
+    const clickMoreEvents = document.getElementById("more-events");
+    clickMoreEvents.addEventListener('click', () => {
+      location.replace("#/content-event");
+      window.scrollTo(0, 0);
+    });
+
+    const clickMoreArticles = document.getElementById("more-articles");
+    clickMoreArticles.addEventListener('click', () => {
+      location.replace("#/content-article");
+      window.scrollTo(0, 0);
     });
   },
 };
