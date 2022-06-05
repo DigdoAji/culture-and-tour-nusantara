@@ -35,7 +35,7 @@ const ContentArticle = {
     const articleContainer = document.querySelector('#card-articles');
     articleContainer.innerHTML = '';
     const articleCard = await article.contentArticles;
-    articleCard.forEach((allArticle) => {
+    articleCard.reverse().forEach((allArticle) => {
       articleContainer.innerHTML += createContentArticleTemplate(allArticle);
     });
   },

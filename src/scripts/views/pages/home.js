@@ -50,14 +50,14 @@ const Home = {
     const articleContainer = document.querySelector('#home-article');
     articleContainer.innerHTML = '';
     const articleCard = await article.contentArticles;
-    articleCard.forEach((allArticle) => {
+    articleCard.reverse().slice(0, 4).forEach((allArticle) => {
       articleContainer.innerHTML += createHomeArticleTemplate(allArticle);
     });
 
     const eventContainer = document.querySelector('#home-event');
     eventContainer.innerHTML = '';
     const eventCard = await event.contentEvents;
-    eventCard.forEach((allEvent) => {
+    eventCard.reverse().slice(0, 4).forEach((allEvent) => {
       eventContainer.innerHTML += createHomeEventTemplate(allEvent);
     });
   },

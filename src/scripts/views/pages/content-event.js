@@ -34,7 +34,7 @@ const ContentEvent = {
     const eventContainer = document.querySelector('#card-events');
     eventContainer.innerHTML = '';
     const eventCard = await event.contentEvents;
-    eventCard.forEach((allEvent) => {
+    eventCard.reverse().forEach((allEvent) => {
       eventContainer.innerHTML += createContentEventTemplate(allEvent);
     });
   },
