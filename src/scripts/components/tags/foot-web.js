@@ -17,10 +17,10 @@ class FooterWeb extends HTMLElement {
               <div class="row mt-4 mt-md-0">
                 <ul class="nav flex-column">
                   <h5 class="mx-3">Navigation</h5>
-                  <li class="nav-item mb-2 mx-3"><a href="/" class="nav-link p-0 text-muted">Home</a></li>
-                  <li class="nav-item mb-2 mx-3"><a href="#/content-article" class="nav-link p-0 text-muted">Content Article</a></li>
-                  <li class="nav-item mb-2 mx-3"><a href="#/content-event" class="nav-link p-0 text-muted">Content Event</a></li>
-                  <li class="nav-item mb-2 mx-3"><a href="#/about" class="nav-link p-0 text-muted">About Us</a></li>
+                  <li class="nav-item mb-2 mx-3"><a href="/" class="nav-link p-0 text-muted"">Home</a></li>
+                  <li class="nav-item mb-2 mx-3"><a href="#/content-article" class="nav-link p-0 text-muted" onclick="window.scrollTo(0, 0);">Content Article</a></li>
+                  <li class="nav-item mb-2 mx-3"><a href="#/content-event" class="nav-link p-0 text-muted" onclick="window.scrollTo(0, 0);">Content Event</a></li>
+                  <li class="nav-item mb-2 mx-3"><a href="#/about" class="nav-link p-0 text-muted" onclick="window.scrollTo(0, 0);">About Us</a></li>
                 </ul>
               </div>
               <div class="row mt-4">
