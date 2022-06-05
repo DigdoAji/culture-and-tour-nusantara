@@ -6,6 +6,10 @@ import ContentArticle from '../views/pages/content-article';
 import ContentEvent from '../views/pages/content-event';
 import DetailArticle from '../views/pages/detail-article';
 import DetailEvent from '../views/pages/detail-event';
+import AddArticle from '../views/pages/create-article';
+import AddEvent from '../views/pages/create-event';
+import EditArticle from '../views/pages/edit-article';
+import EditEvent from '../views/pages/edit-event';
 
 const routes = {
   '/': Home, // default page
@@ -17,6 +21,10 @@ const routes = {
   '/register': Register,
   '/detail-article/:id': DetailArticle,
   '/detail-event/:id': DetailEvent,
+  '/create-article': AddArticle,
+  '/create-event': AddEvent,
+  '/edit-article': EditArticle,
+  '/edit-event': EditEvent,
 
 };
 
