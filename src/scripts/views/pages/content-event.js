@@ -1,4 +1,4 @@
-import event from "../../data/Event.json"
+import CTNAPISource from "../../data/API-CTNsource";
 import { createContentEventTemplate } from "../templates/template-content";
 
 const ContentEvent = {
@@ -33,10 +33,15 @@ const ContentEvent = {
   async afterRender() {
     const eventContainer = document.querySelector('#card-events');
     eventContainer.innerHTML = '';
-    const eventCard = await event.contentEvents;
-    eventCard.reverse().forEach((allEvent) => {
-      eventContainer.innerHTML += createContentEventTemplate(allEvent);
-    });
+
+    try {
+      const eventCard = await CTNAPISource.contentEvents();
+      eventCard.reverse().slice(0, 4).forEach((allEvent) => {
+        eventContainer.innerHTML += createContentEventTemplate(allEvent);
+      });
+    } catch (err) {
+      console.log(err);
+    }
   },
 };
 

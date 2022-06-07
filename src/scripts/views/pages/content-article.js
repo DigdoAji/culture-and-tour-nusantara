@@ -1,4 +1,4 @@
-import article from "../../data/Article.json"
+import CTNAPISource from "../../data/API-CTNsource";
 import { createContentArticleTemplate } from "../templates/template-content";
 
 const ContentArticle = {
@@ -34,10 +34,15 @@ const ContentArticle = {
   async afterRender() {
     const articleContainer = document.querySelector('#card-articles');
     articleContainer.innerHTML = '';
-    const articleCard = await article.contentArticles;
-    articleCard.reverse().forEach((allArticle) => {
-      articleContainer.innerHTML += createContentArticleTemplate(allArticle);
-    });
+
+    try {
+      const articleCard = await CTNAPISource.contentArticles();
+      articleCard.reverse().forEach((allArticle) => {
+        articleContainer.innerHTML += createContentArticleTemplate(allArticle);
+      });
+    } catch (err) {
+      console.log(err);
+    }
   },
 };
 
