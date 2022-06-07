@@ -18,12 +18,12 @@ const EditArticle = {
               <label for="editDateArticle">Date</label>
             </div>
             <div class="form-floating mb-4">
-              <input type="text" class="form-control" id="editTagsArticle" placeholder="Tags">
+              <input type="url" class="form-control" id="editTagsArticle" placeholder="Tags">
               <label for="editTagsArticle">Tags</label>
               </div>
             <div class="form-floating mb-4" style="padding: 10px 0 20px 0;">
               <input type="file" class="form-control" id="editImageArticle" placeholder="image">
-              <label for="editImageArticle">Image</label>
+              <label for="editImageArticle">Image (Insert Direct Link Image)</label>
             </div> 
             <div class="form-floating mb-4">
               <textarea class="form-control comment-textarea" id="editDescriptionArticle" placeholder="Description" ></textarea>

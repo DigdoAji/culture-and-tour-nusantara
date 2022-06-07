@@ -26,8 +26,8 @@ const AddEvent = {
                   <label for="inputTagsEvent">Tags</label>
               </div>
               <div class="form-floating mb-4" style="padding: 10px 0 20px 0;">
-                <input type="file" class="form-control" id="inputImageEvent" placeholder="image">
-                <label for="inputImageEvent">Image</label>
+              <input type="url" class="form-control" id="inputImageEvent" placeholder="image">
+              <label for="inputImageEvent">Image (Insert Direct Link Image)</label>
               </div> 
               <div class="form-floating mb-4">
                 <textarea class="form-control comment-textarea" id="inputDescriptionEvent" placeholder="Description" ></textarea>
