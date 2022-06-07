@@ -1,7 +1,7 @@
 const createContentArticleTemplate = (contentArticles) => `
     <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
         <div class="card shadow-lg rounded-card h-100">
-            <img src="images/${contentArticles.pictureId}" alt="${contentArticles.name} illustration" class="card-img-top img-fluid border border-2 img-rounded-card" width="600px" height="400px">
+            <img src="${contentArticles.pictureId}" alt="${contentArticles.name} illustration" class="card-img-top img-fluid border border-2 img-rounded-card" width="600px" height="400px">
             <div class="card-body px-4">
                 <p class="card-text fw-normal size-text-sm mb-0"><i class="fa fa-calendar me-1"></i>${contentArticles.publishDate} | <i class="fa fa-user me-1"></i>Admin ${contentArticles.publisherName}</p>
                 <p class="card-text fw-normal size-text-sm mb-2"><i class="fa fa-tags me-1"></i>${contentArticles.categories}</p>
@@ -21,12 +21,12 @@ const createContentArticleTemplate = (contentArticles) => `
 const createContentEventTemplate = (contentEvents) => `
     <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
         <div class="card shadow-lg rounded-card h-100">
-            <img src="images/${contentEvents.pictureId}" alt="${contentEvents.name} illustration" class="card-img-top img-fluid border border-2 img-rounded-card" width="600px" height="700px">
+            <img src="${contentEvents.pictureId}" alt="${contentEvents.name} illustration" class="card-img-top img-fluid border border-2 img-rounded-card" width="600px" height="700px">
             <div class="card-body px-4">
                 <h5 class="card-title text-center fw-bold color-ctn py-2">${contentEvents.name}</h5>
                 <p class="card-text fw-normal mb-0"><i class="fa fa-map-marker me-1"></i>${contentEvents.location}</p>
-                <p class="card-text fw-normal mb-0"><i class="fa fa-calendar me-1"></i>${contentEvents.Date}</p>
-                <p class="card-text fw-normal mb-0"><i class="fa fa-clock-o me-1"></i>${contentEvents.Time}</p>
+                <p class="card-text fw-normal mb-0"><i class="fa fa-calendar me-1"></i>${contentEvents.date}</p>
+                <p class="card-text fw-normal mb-0"><i class="fa fa-clock-o me-1"></i>${contentEvents.time}</p>
                 <p class="card-text fw-normal mb-0"><i class="fa fa-tags me-1"></i>${contentEvents.categories}</p>
             </div>
             <div class="d-flex justify-content-center mt-2 mb-4">
@@ -39,7 +39,7 @@ const createContentEventTemplate = (contentEvents) => `
 const createHomeArticleTemplate = (contentArticles) => `
     <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
         <div class="card shadow-lg rounded-card h-100">
-            <img src="images/${contentArticles.pictureId}" alt="${contentArticles.name} illustration" class="card-img-top img-fluid border border-2 img-rounded-card" width="600px" height="400px">
+            <img src="${contentArticles.pictureId}" alt="${contentArticles.name} illustration" class="card-img-top img-fluid border border-2 img-rounded-card" max-width="600px" height="400px">
             <div class="card-body px-4">
                 <p class="card-text fw-normal size-text-sm mb-0"><i class="fa fa-calendar me-1"></i>${contentArticles.publishDate} | <i class="fa fa-user me-1"></i>Admin ${contentArticles.publisherName}</p>
                 <p class="card-text fw-normal size-text-sm mb-2"><i class="fa fa-tags me-1"></i>${contentArticles.categories}</p>
@@ -59,12 +59,12 @@ const createHomeArticleTemplate = (contentArticles) => `
 const createHomeEventTemplate = (contentEvents) => `
     <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
         <div class="card shadow-lg rounded-card h-100">
-            <img src="images/${contentEvents.pictureId}" alt="${contentEvents.name} illustration" class="card-img-top img-fluid border border-2 img-rounded-card" width="600px" height="700px">
+            <img src="${contentEvents.pictureId}" alt="${contentEvents.name} illustration" class="card-img-top img-fluid border border-2 img-rounded-card" width="600px" height="700px">
             <div class="card-body px-4">
                 <h5 class="card-title text-center fw-bold color-ctn py-2">${contentEvents.name}</h5>
                 <p class="card-text fw-normal mb-0"><i class="fa fa-map-marker me-1"></i>${contentEvents.location}</p>
-                <p class="card-text fw-normal mb-0"><i class="fa fa-calendar me-1"></i>${contentEvents.Date}</p>
-                <p class="card-text fw-normal mb-0"><i class="fa fa-clock-o me-1"></i>${contentEvents.Time}</p>
+                <p class="card-text fw-normal mb-0"><i class="fa fa-calendar me-1"></i>${contentEvents.date}</p>
+                <p class="card-text fw-normal mb-0"><i class="fa fa-clock-o me-1"></i>${contentEvents.time}</p>
                 <p class="card-text fw-normal mb-0"><i class="fa fa-tags me-1"></i>${contentEvents.categories}</p>
             </div>
             <div class="d-flex justify-content-center mt-2 mb-4">
