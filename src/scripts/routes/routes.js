@@ -10,6 +10,9 @@ import AddArticle from '../views/pages/create-article';
 import AddEvent from '../views/pages/create-event';
 import EditArticle from '../views/pages/edit-article';
 import EditEvent from '../views/pages/edit-event';
+import AddAccount from '../views/pages/create-account';
+import EditAccount from '../views/pages/edit-account';
+import ListAccount from '../views/pages/list-account';
 
 const routes = {
   '/': Home, // default page
@@ -25,6 +28,9 @@ const routes = {
   '/create-event': AddEvent,
   '/edit-article': EditArticle,
   '/edit-event': EditEvent,
+  '/create-account': AddAccount,
+  '/edit-account': EditAccount,
+  '/list-account': ListAccount,
 
 };
 
