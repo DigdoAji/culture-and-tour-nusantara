@@ -38,11 +38,11 @@ const createDetailArticleTemplate = (detailArticle) => `
             <label for="inputUserReview">Name</label>
         </div>
         <div class="form-floating mb-4">
-            <textarea class="form-control comment-textarea" id="inputReview" placeholder="Leave your comment here"></textarea>
+            <textarea class="form-control comment-textarea" id="inputReviewArticle" placeholder="Leave your comment here"></textarea>
             <label for="inputReview">Your Comment</label>
         </div>
         <div class="d-flex justify-content-center my-2 pt-3 pb-2 px-3 px-md-5">
-            <button type="button" class="btn btn-green fs-5 px-5 fw-bold" tabindex="-1">Submit</button>
+            <button id="submitReview" type="submit" class="btn btn-green fs-5 px-5 fw-bold" tabindex="-1">Submit</button>
         </div>
     </form>
 </div>
@@ -65,10 +65,10 @@ const createDetailArticleTemplate = (detailArticle) => `
                     </div>
                     <div class="action d-flex justify-content-between align-items-center">
                         <div class="card-text px-3 ms-5">
-                            <p class="fw-light mb-0 ps-1">${comment.review}</p>                           
+                            <p class="fw-light mb-0 ps-1">${comment.review}</p>                       
                         </div>
                         <div class="align-items-center">
-                            <button type="button" class="btn btn-danger fw-bold px-3" tabindex="-1">Remove</button>
+                            <p class="text-muted size-text-sm ps-1 mt-2 mb-0">Review ID: ${comment.reviewId}</p> 
                         </div>
                     </div>
                 </div>
@@ -110,7 +110,7 @@ const createDetailEventTemplate = (detailEvent) => `
     </div>
 </div>
 
-<!-- Review Article -->
+<!-- Review Event -->
 <div class="container mt-5">
     <h3 class="text-center color-ctn fw-bold pt-3 pb-1 mt-1">What's your comment?</h3>
     <form class="color-black mx-2 my-5 mx-sm-0 mx-md-5">
@@ -119,11 +119,11 @@ const createDetailEventTemplate = (detailEvent) => `
             <label for="inputUserReview">Name</label>
         </div>
         <div class="form-floating mb-4">
-            <textarea class="form-control comment-textarea" id="inputReview" placeholder="Leave your comment here"></textarea>
+            <textarea class="form-control comment-textarea" id="inputReviewEvent" placeholder="Leave your comment here"></textarea>
             <label for="inputReview">Your Comment</label>
         </div>
         <div class="d-flex justify-content-center my-2 pt-3 pb-2 px-3 px-md-5">
-            <button type="button" class="btn btn-green fs-5 px-5 fw-bold" tabindex="-1">Submit</button>
+            <button id="submitReview" type="button" class="btn btn-green fs-5 px-5 fw-bold" tabindex="-1">Submit</button>
         </div>
     </form>
 </div>
@@ -146,10 +146,10 @@ const createDetailEventTemplate = (detailEvent) => `
                     </div>
                     <div class="action d-flex justify-content-between align-items-center">
                         <div class="card-text px-3 ms-5">
-                            <p class="fw-light mb-0 ps-1">${comment.review}</p>                           
+                            <p class="fw-light mb-0 ps-1">${comment.review}</p>                          
                         </div>
                         <div class="align-items-center">
-                            <button type="button" class="btn btn-danger fw-bold px-3" tabindex="-1">Remove</button>
+                            <p class="text-muted size-text-sm ps-1 mt-2 mb-0">Review ID: ${comment.reviewId}</p> 
                         </div>
                     </div>
                 </div>
