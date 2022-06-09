@@ -22,7 +22,7 @@ const AddArticle = {
                   <label for="inputTagsArticle">Categories</label>
                 </div>
               <div class="form-floating mb-4" style="padding: 10px 0 20px 0;">
-                  <input type="url" class="form-control" id="inputImageArticle" placeholder="Image />
+                  <input type="url" class="form-control" id="inputImageArticle" placeholder="Image" />
                   <label for="inputImageArticle">Image (Insert Direct Link Image)</label>
               </div> 
               <div class="form-floating mb-4">

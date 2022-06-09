@@ -26,7 +26,7 @@ const EditEvent = {
                 <label for="editTagsEvent">Categories</label>
               </div>
               <div class="form-floating mb-4" style="padding: 10px 0 20px 0;">
-                <input type="url" class="form-control" id="editImageEvent" placeholder="image" />
+                <input type="url" class="form-control" id="editImageEvent" placeholder="Image" />
                 <label for="editImageEvent">Image (Insert Direct Link Image)</label>
               </div> 
               <div class="form-floating mb-4">
