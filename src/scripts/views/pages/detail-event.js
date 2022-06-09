@@ -21,6 +21,25 @@ const DetailEvent = {
     } catch (err) {
       console.log(err);
     }
+
+    const submitReview = document.querySelector('#submitReview');
+    const inputName = document.querySelector('#inputUserReview');
+    const inputReview = document.querySelector('#inputReviewEvent');
+
+    submitReview.addEventListener('click', async (event) => {
+      event.preventDefault();
+      if (inputName.value === '' || inputReview.value === '') {
+        alert('Input still empty. Please fill the input form!');
+      } else {
+        const dataReview = {
+          id: url.id,
+          name: inputName.value,
+          review: inputReview.value,
+        };
+        await CTNAPISource.addReviewEvent(dataReview);
+        await location.reload();
+      }
+    });
   },
 };
 

@@ -24,6 +24,53 @@ class CTNAPISource {
     const responseJson = await response.json();
     return responseJson.detailEvent;
   }
+
+  static async addReviewArticle(dataReview) {
+    const response = await fetch(API_ENDPOINT.REVIEW_ARTICLE, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(dataReview),
+    });
+    const responseJson = await response.json();
+    return responseJson.userReviews;
+  }
+
+  static async addReviewEvent(dataReview) {
+    const response = await fetch(API_ENDPOINT.REVIEW_EVENT, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(dataReview),
+    });
+    const responseJson = await response.json();
+    return responseJson.userReviews;
+  }
+
+  static async insertArticle(dataArticle) {
+    const response = await fetch(API_ENDPOINT.ARTICLES, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(dataArticle),
+    });;
+    const responseJson = await response.json();
+    return responseJson.detailArticle;
+  }
+
+  static async removeArticle(id) {
+    const response = await fetch(API_ENDPOINT.DETAIL_ARTICLE(id), {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });;
+    const responseJson = await response.json();
+    return responseJson.detailArticle;
+  }
 }
 
 export default CTNAPISource;

@@ -21,8 +21,8 @@ const createDetailArticleTemplate = (detailArticle) => `
                     <p class="card-text fw-normal mb-2"><i class="fa fa-tags me-2"></i>${detailArticle.categories}</p>
                 </div>
                 <div class="col-md-4 my-auto pt-3 d-flex justify-content-center justify-content-md-end">
-                    <button type="button" class="btn btn-primary me-2 fw-bold px-4" tabindex="-1">Update</button>
-                    <button type="button" class="btn btn-danger me-2 fw-bold px-4" tabindex="-1">Delete</button>
+                    <button id="updateArticle" type="button" class="btn btn-primary me-2 fw-bold px-4" tabindex="-1">Update</button>
+                    <button id="deleteArticle" type="submit" class="btn btn-danger me-2 fw-bold px-4" tabindex="-1">Delete</button>
                 </div>
             </div>
         </div>
@@ -65,7 +65,7 @@ const createDetailArticleTemplate = (detailArticle) => `
                     </div>
                     <div class="action d-flex justify-content-between align-items-center">
                         <div class="card-text px-3 ms-5">
-                            <p class="fw-light mb-0 ps-1">${comment.review}</p>                       
+                            <p class="fw-light mb-0 ps-1">${comment.review}</p>                           
                         </div>
                         <div class="align-items-center">
                             <p class="text-muted size-text-sm ps-1 mt-2 mb-0">Review ID: ${comment.reviewId}</p> 
@@ -103,8 +103,8 @@ const createDetailEventTemplate = (detailEvent) => `
             alt="${detailEvent.name} Poster"
             >
             <div class="d-flex justify-content-center justify-content-md-end mt-2 mb-2 pt-4">
-                <button type="button" class="btn btn-primary ms-2 fw-bold px-4" tabindex="-1">Update</button>
-                <button type="button" class="btn btn-danger ms-2 fw-bold px-4" tabindex="-1">Delete</button>
+                <button id="updateEvent" type="button" class="btn btn-primary ms-2 fw-bold px-4" tabindex="-1">Update</button>
+                <button id="deleteEvent" type="button" class="btn btn-danger ms-2 fw-bold px-4" tabindex="-1">Delete</button>
             </div>
         </div>
     </div>
@@ -146,10 +146,10 @@ const createDetailEventTemplate = (detailEvent) => `
                     </div>
                     <div class="action d-flex justify-content-between align-items-center">
                         <div class="card-text px-3 ms-5">
-                            <p class="fw-light mb-0 ps-1">${comment.review}</p>                          
+                            <p class="fw-light mb-0 ps-1">${comment.review}</p>                           
                         </div>
                         <div class="align-items-center">
-                            <p class="text-muted size-text-sm ps-1 mt-2 mb-0">Review ID: ${comment.reviewId}</p> 
+                        <p class="text-muted size-text-sm ps-1 mt-2 mb-0">Review ID: ${comment.reviewId}</p> 
                         </div>
                     </div>
                 </div>

@@ -16,11 +16,41 @@ const DetailArticle = {
 
     try {
       const articleItem = await CTNAPISource.detailArticle(url.id);
-      console.log (articleItem);
       detailContainer.innerHTML = createDetailArticleTemplate(articleItem);
     } catch (err) {
       console.log(err);
     }
+
+    const submitReview = document.querySelector('#submitReview');
+    const inputName = document.querySelector('#inputUserReview');
+    const inputReview = document.querySelector('#inputReviewArticle');
+
+    submitReview.addEventListener('click', async (event) => {
+      event.preventDefault();
+      if (inputName.value === '' || inputReview.value === '') {
+        alert('Input still empty. Please fill the input form!');
+      } else {
+        const dataReview = {
+          id: url.id,
+          name: inputName.value,
+          review: inputReview.value,
+        };
+        await CTNAPISource.addReviewArticle(dataReview);
+        await location.reload();
+      }
+    });
+
+    const submitDelete = document.querySelector('#deleteArticle');
+
+    submitDelete.addEventListener('click', async (event) => {
+      event.preventDefault();
+      if (confirm('Are you sure delete this article?')) {
+        await CTNAPISource.removeArticle(url.id);
+        await location.replace("#/content-article");
+      } else {
+        await location.reload();
+      }
+    });
   },
 };
 
