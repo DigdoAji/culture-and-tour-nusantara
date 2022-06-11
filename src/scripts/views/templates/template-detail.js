@@ -21,7 +21,7 @@ const createDetailArticleTemplate = (detailArticle) => `
                     <p class="card-text fw-normal mb-2"><i class="fa fa-tags me-2"></i>${detailArticle.categories}</p>
                 </div>
                 <div class="col-md-4 my-auto pt-3 d-flex justify-content-center justify-content-md-end">
-                    <button id="updateArticle" type="button" class="btn btn-primary me-2 fw-bold px-4" tabindex="-1">Update</button>
+                    <a href="${`#/edit-article/${detailArticle.id}`}"><button id="updateArticle" type="button" class="btn btn-primary me-2 fw-bold px-4" tabindex="-1">Update</button></a>
                     <button id="deleteArticle" type="submit" class="btn btn-danger me-2 fw-bold px-4" tabindex="-1">Delete</button>
                 </div>
             </div>
@@ -103,7 +103,7 @@ const createDetailEventTemplate = (detailEvent) => `
             alt="${detailEvent.name} Poster"
             >
             <div class="d-flex justify-content-center justify-content-md-end mt-2 mb-2 pt-4">
-                <button id="updateEvent" type="button" class="btn btn-primary ms-2 fw-bold px-4" tabindex="-1">Update</button>
+                <a href="${`#/edit-event/${detailEvent.id}`}"><button id="updateEvent" type="button" class="btn btn-primary ms-2 fw-bold px-4" tabindex="-1">Update</button></a>
                 <button id="deleteEvent" type="button" class="btn btn-danger ms-2 fw-bold px-4" tabindex="-1">Delete</button>
             </div>
         </div>

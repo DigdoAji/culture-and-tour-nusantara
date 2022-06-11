@@ -60,17 +60,7 @@ class CTNAPISource {
     const responseJson = await response.json();
     return responseJson.detailArticle;
   }
-
-  static async removeArticle(id) {
-    const response = await fetch(API_ENDPOINT.DETAIL_ARTICLE(id), {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });;
-    const responseJson = await response.json();
-    return responseJson.detailArticle;
-  }
+  
   static async insertEvent(dataEvent) {
     const response = await fetch(API_ENDPOINT.EVENTS, {
       method: 'POST',
@@ -81,6 +71,41 @@ class CTNAPISource {
     });;
     const responseJson = await response.json();
     return responseJson.detailEvent;
+  }
+
+  static async editArticle(id, dataArticle) {
+    const response = await fetch(API_ENDPOINT.DETAIL_ARTICLE(id), {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(dataArticle),
+    });
+    const responseJson = await response.json();
+    return responseJson.detailArticle;
+  }
+
+  static async editEvent(id, dataEvent) {
+    const response = await fetch(API_ENDPOINT.DETAIL_EVENT(id), {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(dataEvent),
+    });
+    const responseJson = await response.json();
+    return responseJson.detailEvent;
+  }
+
+  static async removeArticle(id) {
+    const response = await fetch(API_ENDPOINT.DETAIL_ARTICLE(id), {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });;
+    const responseJson = await response.json();
+    return responseJson.detailArticle;
   }
 
   static async removeEvent(id) {
