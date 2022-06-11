@@ -59,11 +59,11 @@ const AddEvent = {
         event.preventDefault();
         const dataEvent = {
           name: inputNameEvent.value,
+          location: inputLocationEvent.value,
+          date: inputDateEvent.value,
+          time : inputTimeEvent.value,
           description: inputDescriptionEvent.value,
           pictureId: inputImageEvent.value,
-          LocationName: inputLocationEvent.value,
-          publishDate: inputDateEvent.value,
-          TimeEvent : inputTimeEvent.value,
           categories: inputTagsEvent.value,
         };
         await CTNAPISource.insertEvent(dataEvent);

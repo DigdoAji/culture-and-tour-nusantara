@@ -83,7 +83,7 @@ const createDetailArticleTemplate = (detailArticle) => `
 const createDetailEventTemplate = (detailEvent) => `
 <div class="container my-5">
     <div class="row">
-        <div class="col-md-7 d-flex justify-content-md-end">
+        <div class="col-md-7 d-flex justify-content-md-start">
             <div class="p-3" >
                 <h2 class="mt-2">${detailEvent.name}</h2>
                 <p class="fw-normal size-text-md mb-1"><i class="fa fa-map-marker me-2"></i>${detailEvent.location}</p>
