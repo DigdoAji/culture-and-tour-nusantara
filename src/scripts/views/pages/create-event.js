@@ -1,3 +1,5 @@
+import CTNAPISource from "../../data/API-CTNsource";
+
 const AddEvent = {
     async render() {
       return `
@@ -44,7 +46,29 @@ const AddEvent = {
     },
   
     async afterRender() {
-      // Fungsi ini akan dipanggil setelah render()
+      const submitEvent = document.querySelector('#submitEvent');
+      const inputNameEvent = document.querySelector('#inputNameEvent');
+      const inputLocationEvent = document.querySelector('#inputLocationEvent');
+      const inputDateEvent = document.querySelector('#inputDateEvent');
+      const inputTimeEvent = document.querySelector ('#inputTimeEvent')
+      const inputTagsEvent = document.querySelector('#inputTagsEvent');
+      const inputImageEvent = document.querySelector('#inputImageEvent');
+      const inputDescriptionEvent = document.querySelector('#inputDescriptionEvent');
+      
+      submitEvent.addEventListener('click', async (event) => {
+        event.preventDefault();
+        const dataEvent = {
+          name: inputNameEvent.value,
+          description: inputDescriptionEvent.value,
+          pictureId: inputImageEvent.value,
+          LocationName: inputLocationEvent.value,
+          publishDate: inputDateEvent.value,
+          TimeEvent : inputTimeEvent.value,
+          categories: inputTagsEvent.value,
+        };
+        await CTNAPISource.insertEvent(dataEvent);
+        await location.replace("#/content-event");
+      });
     },
   };
   

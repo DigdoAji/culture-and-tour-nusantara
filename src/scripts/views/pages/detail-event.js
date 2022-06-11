@@ -40,6 +40,18 @@ const DetailEvent = {
         await location.reload();
       }
     });
+
+    const submitDelete = document.querySelector('#deleteEvent');
+
+    submitDelete.addEventListener('click', async (event) => {
+      event.preventDefault();
+      if (confirm('Are you sure delete this Event?')) {
+        await CTNAPISource.removeEvent(url.id);
+        await location.replace("#/content-event");
+      } else {
+        await location.reload();
+      }
+    });
   },
 };
 

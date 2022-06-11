@@ -71,6 +71,28 @@ class CTNAPISource {
     const responseJson = await response.json();
     return responseJson.detailArticle;
   }
+  static async insertEvent(dataEvent) {
+    const response = await fetch(API_ENDPOINT.EVENTS, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(dataEvent),
+    });;
+    const responseJson = await response.json();
+    return responseJson.detailEvent;
+  }
+
+  static async removeEvent(id) {
+    const response = await fetch(API_ENDPOINT.DETAIL_EVENT(id), {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });;
+    const responseJson = await response.json();
+    return responseJson.detailEvent;
+  }
 }
 
 export default CTNAPISource;
