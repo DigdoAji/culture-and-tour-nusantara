@@ -1,6 +1,7 @@
-import article from "../../data/Article.json"
-import event from "../../data/Event.json"
-import { createHomeArticleTemplate, createHomeEventTemplate} from "../templates/template-content";
+import CTNAPISource from "../../data/API-CTNsource";
+import { createContentArticleTemplate, createContentEventTemplate} from "../templates/template-content";
+// import article from "../../data/Article.json";
+// import event from "../../data/Event.json";
 
 const Home = {
   async render() {
@@ -49,17 +50,39 @@ const Home = {
   async afterRender() {
     const articleContainer = document.querySelector('#home-article');
     articleContainer.innerHTML = '';
-    const articleCard = await article.contentArticles;
-    articleCard.reverse().slice(0, 4).forEach((allArticle) => {
-      articleContainer.innerHTML += createHomeArticleTemplate(allArticle);
-    });
+
+    try {
+      const articleCard = await CTNAPISource.contentArticles();
+      articleCard.reverse().slice(0, 4).forEach((allArticle) => {
+        articleContainer.innerHTML += createContentArticleTemplate(allArticle);
+      });
+    } catch (err) {
+      console.log(err);
+      /*
+      const articleCard = await article.contentArticles;
+      articleCard.reverse().slice(0, 4).forEach((allArticle) => {
+        articleContainer.innerHTML += createHomeArticleTemplate(allArticle);
+      });
+      */
+    }
 
     const eventContainer = document.querySelector('#home-event');
     eventContainer.innerHTML = '';
-    const eventCard = await event.contentEvents;
-    eventCard.reverse().slice(0, 4).forEach((allEvent) => {
-      eventContainer.innerHTML += createHomeEventTemplate(allEvent);
-    });
+
+    try {
+      const eventCard = await CTNAPISource.contentEvents();
+      eventCard.reverse().slice(0, 4).forEach((allEvent) => {
+        eventContainer.innerHTML += createContentEventTemplate(allEvent);
+      });
+    } catch (err) {
+      console.log(err);
+      /*
+      const eventCard = await event.contentEvents;
+      eventCard.reverse().slice(0, 4).forEach((allEvent) => {
+        eventContainer.innerHTML += createHomeEventTemplate(allEvent);
+      });
+      */
+    }
 
     const clickMoreEvents = document.getElementById("more-events");
     clickMoreEvents.addEventListener('click', () => {
