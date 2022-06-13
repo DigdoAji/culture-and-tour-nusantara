@@ -1,5 +1,5 @@
-import CTNAPISource from "../../data/API-CTNsource";
-import { createContentArticleTemplate } from "../templates/template-content";
+import CTNAPISource from '../../data/API-CTNsource';
+import { createContentArticleTemplate } from '../templates/template-content';
 
 const ContentArticle = {
   async render() {

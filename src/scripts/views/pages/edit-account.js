@@ -1,5 +1,5 @@
 const EditAccount = {
-    async render() {
+  async render() {
     return `
     <section id="update-account">
     <div class="container">
@@ -41,11 +41,11 @@ const EditAccount = {
     </div>
   </section>
     `;
-    },
-  
-    async afterRender() {
-      // Fungsi ini akan dipanggil setelah render()
-    },
-  };
-  
-  export default EditAccount;
+  },
+
+  async afterRender() {
+    // Fungsi ini akan dipanggil setelah render()
+  },
+};
+
+export default EditAccount;

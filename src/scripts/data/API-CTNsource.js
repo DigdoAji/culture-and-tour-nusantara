@@ -56,11 +56,11 @@ class CTNAPISource {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(dataArticle),
-    });;
+    });
     const responseJson = await response.json();
     return responseJson.detailArticle;
   }
-  
+
   static async insertEvent(dataEvent) {
     const response = await fetch(API_ENDPOINT.EVENTS, {
       method: 'POST',
@@ -68,7 +68,7 @@ class CTNAPISource {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(dataEvent),
-    });;
+    });
     const responseJson = await response.json();
     return responseJson.detailEvent;
   }
@@ -103,7 +103,7 @@ class CTNAPISource {
       headers: {
         'Content-Type': 'application/json',
       },
-    });;
+    });
     const responseJson = await response.json();
     return responseJson.detailArticle;
   }
@@ -114,7 +114,7 @@ class CTNAPISource {
       headers: {
         'Content-Type': 'application/json',
       },
-    });;
+    });
     const responseJson = await response.json();
     return responseJson.detailEvent;
   }

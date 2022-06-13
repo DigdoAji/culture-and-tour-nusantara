@@ -162,6 +162,6 @@ const createDetailEventTemplate = (detailEvent) => `
 `;
 
 export {
-    createDetailArticleTemplate,
-    createDetailEventTemplate,
+  createDetailArticleTemplate,
+  createDetailEventTemplate,
 };

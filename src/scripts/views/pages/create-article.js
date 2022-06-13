@@ -1,8 +1,8 @@
-import CTNAPISource from "../../data/API-CTNsource";
+import CTNAPISource from '../../data/API-CTNsource';
 
 const AddArticle = {
-    async render() {
-      return `
+  async render() {
+    return `
     <section id="add-article">
         <div class="container mt-5">
           <h2 class="text-center fw-bold pt-3 pb-1 mt-1">Form Create Article</h2>
@@ -39,32 +39,31 @@ const AddArticle = {
         </div>
     </section>
     `;
-    },
-  
-    async afterRender() {
-      const submitArticle = document.querySelector('#submitArticle');
-      const inputHeadineArticle = document.querySelector('#inputHeadineArticle');
-      const inputPublisherName = document.querySelector('#inputPublisherName');
-      const inputDateArticle = document.querySelector('#inputDateArticle');
-      const inputTagsArticle = document.querySelector('#inputTagsArticle');
-      const inputImageArticle = document.querySelector('#inputImageArticle');
-      const inputDescriptionArticle = document.querySelector('#inputDescriptionArticle');
-      
-      submitArticle.addEventListener('click', async (event) => {
-        event.preventDefault();
-        const dataArticle = {
-          name: inputHeadineArticle.value,
-          description: inputDescriptionArticle.value,
-          pictureId: inputImageArticle.value,
-          publisherName: inputPublisherName.value,
-          publishDate: inputDateArticle.value,
-          categories: inputTagsArticle.value,
-        };
-        await CTNAPISource.insertArticle(dataArticle);
-        await location.replace("#/content-article");
-      });
-    },
-  };
-  
-  export default AddArticle;
-  
+  },
+
+  async afterRender() {
+    const submitArticle = document.querySelector('#submitArticle');
+    const inputHeadineArticle = document.querySelector('#inputHeadineArticle');
+    const inputPublisherName = document.querySelector('#inputPublisherName');
+    const inputDateArticle = document.querySelector('#inputDateArticle');
+    const inputTagsArticle = document.querySelector('#inputTagsArticle');
+    const inputImageArticle = document.querySelector('#inputImageArticle');
+    const inputDescriptionArticle = document.querySelector('#inputDescriptionArticle');
+
+    submitArticle.addEventListener('click', async (event) => {
+      event.preventDefault();
+      const dataArticle = {
+        name: inputHeadineArticle.value,
+        description: inputDescriptionArticle.value,
+        pictureId: inputImageArticle.value,
+        publisherName: inputPublisherName.value,
+        publishDate: inputDateArticle.value,
+        categories: inputTagsArticle.value,
+      };
+      await CTNAPISource.insertArticle(dataArticle);
+      await location.replace('#/content-article');
+    });
+  },
+};
+
+export default AddArticle;

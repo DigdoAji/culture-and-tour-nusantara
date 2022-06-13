@@ -1,5 +1,5 @@
-import CTNAPISource from "../../data/API-CTNsource";
-import { createContentEventTemplate } from "../templates/template-content";
+import CTNAPISource from '../../data/API-CTNsource';
+import { createContentEventTemplate } from '../templates/template-content';
 
 const ContentEvent = {
   async render() {

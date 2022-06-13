@@ -37,6 +37,6 @@ const createContentEventTemplate = (contentEvents) => `
 `;
 
 export {
-    createContentArticleTemplate,
-    createContentEventTemplate,
+  createContentArticleTemplate,
+  createContentEventTemplate,
 };

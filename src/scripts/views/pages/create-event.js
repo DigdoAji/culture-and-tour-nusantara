@@ -1,8 +1,8 @@
-import CTNAPISource from "../../data/API-CTNsource";
+import CTNAPISource from '../../data/API-CTNsource';
 
 const AddEvent = {
-    async render() {
-      return `
+  async render() {
+    return `
       <section id="add-event">
         <div class="container mt-5">
           <h2 class="text-center fw-bold pt-3 pb-1 mt-1">Form Create Event</h2>
@@ -43,33 +43,33 @@ const AddEvent = {
         </div>
       </section>
     `;
-    },
-  
-    async afterRender() {
-      const submitEvent = document.querySelector('#submitEvent');
-      const inputNameEvent = document.querySelector('#inputNameEvent');
-      const inputLocationEvent = document.querySelector('#inputLocationEvent');
-      const inputDateEvent = document.querySelector('#inputDateEvent');
-      const inputTimeEvent = document.querySelector ('#inputTimeEvent')
-      const inputTagsEvent = document.querySelector('#inputTagsEvent');
-      const inputImageEvent = document.querySelector('#inputImageEvent');
-      const inputDescriptionEvent = document.querySelector('#inputDescriptionEvent');
-      
-      submitEvent.addEventListener('click', async (event) => {
-        event.preventDefault();
-        const dataEvent = {
-          name: inputNameEvent.value,
-          location: inputLocationEvent.value,
-          date: inputDateEvent.value,
-          time : inputTimeEvent.value,
-          description: inputDescriptionEvent.value,
-          pictureId: inputImageEvent.value,
-          categories: inputTagsEvent.value,
-        };
-        await CTNAPISource.insertEvent(dataEvent);
-        await location.replace("#/content-event");
-      });
-    },
-  };
-  
-  export default AddEvent;
+  },
+
+  async afterRender() {
+    const submitEvent = document.querySelector('#submitEvent');
+    const inputNameEvent = document.querySelector('#inputNameEvent');
+    const inputLocationEvent = document.querySelector('#inputLocationEvent');
+    const inputDateEvent = document.querySelector('#inputDateEvent');
+    const inputTimeEvent = document.querySelector('#inputTimeEvent');
+    const inputTagsEvent = document.querySelector('#inputTagsEvent');
+    const inputImageEvent = document.querySelector('#inputImageEvent');
+    const inputDescriptionEvent = document.querySelector('#inputDescriptionEvent');
+
+    submitEvent.addEventListener('click', async (event) => {
+      event.preventDefault();
+      const dataEvent = {
+        name: inputNameEvent.value,
+        location: inputLocationEvent.value,
+        date: inputDateEvent.value,
+        time: inputTimeEvent.value,
+        description: inputDescriptionEvent.value,
+        pictureId: inputImageEvent.value,
+        categories: inputTagsEvent.value,
+      };
+      await CTNAPISource.insertEvent(dataEvent);
+      await location.replace('#/content-event');
+    });
+  },
+};
+
+export default AddEvent;

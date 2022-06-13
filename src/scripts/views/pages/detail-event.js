@@ -1,6 +1,6 @@
-import UrlParser from "../../routes/url-parser";
-import CTNAPISource from "../../data/API-CTNsource";
-import { createDetailEventTemplate } from "../templates/template-detail";
+import UrlParser from '../../routes/url-parser';
+import CTNAPISource from '../../data/API-CTNsource';
+import { createDetailEventTemplate } from '../templates/template-detail';
 
 const DetailEvent = {
   async render() {
@@ -16,7 +16,7 @@ const DetailEvent = {
 
     try {
       const eventItem = await CTNAPISource.detailEvent(url.id);
-      console.log (eventItem);
+      console.log(eventItem);
       detailContainer.innerHTML = createDetailEventTemplate(eventItem);
     } catch (err) {
       console.log(err);
@@ -47,7 +47,7 @@ const DetailEvent = {
       event.preventDefault();
       if (confirm('Are you sure delete this Event?')) {
         await CTNAPISource.removeEvent(url.id);
-        await location.replace("#/content-event");
+        await location.replace('#/content-event');
       } else {
         await location.reload();
       }

@@ -1,6 +1,6 @@
 import UrlParser from '../../routes/url-parser';
-import CTNAPISource from "../../data/API-CTNsource";
-import { createDetailArticleTemplate } from "../templates/template-detail";
+import CTNAPISource from '../../data/API-CTNsource';
+import { createDetailArticleTemplate } from '../templates/template-detail';
 
 const DetailArticle = {
   async render() {
@@ -46,7 +46,7 @@ const DetailArticle = {
       event.preventDefault();
       if (confirm('Are you sure delete this article?')) {
         await CTNAPISource.removeArticle(url.id);
-        await location.replace("#/content-article");
+        await location.replace('#/content-article');
       } else {
         await location.reload();
       }

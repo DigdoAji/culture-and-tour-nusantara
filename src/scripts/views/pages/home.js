@@ -1,5 +1,5 @@
-import CTNAPISource from "../../data/API-CTNsource";
-import { createContentArticleTemplate, createContentEventTemplate} from "../templates/template-content";
+import CTNAPISource from '../../data/API-CTNsource';
+import { createContentArticleTemplate, createContentEventTemplate } from '../templates/template-content';
 // import article from "../../data/Article.json";
 // import event from "../../data/Event.json";
 
@@ -84,15 +84,15 @@ const Home = {
       */
     }
 
-    const clickMoreEvents = document.getElementById("more-events");
+    const clickMoreEvents = document.getElementById('more-events');
     clickMoreEvents.addEventListener('click', () => {
-      location.replace("#/content-event");
+      location.replace('#/content-event');
       window.scrollTo(0, 0);
     });
 
-    const clickMoreArticles = document.getElementById("more-articles");
+    const clickMoreArticles = document.getElementById('more-articles');
     clickMoreArticles.addEventListener('click', () => {
-      location.replace("#/content-article");
+      location.replace('#/content-article');
       window.scrollTo(0, 0);
     });
   },
