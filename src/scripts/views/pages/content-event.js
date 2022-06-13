@@ -1,5 +1,10 @@
 import CTNAPISource from '../../data/API-CTNsource';
-import { createContentEventTemplate } from '../templates/template-content';
+import {
+  createContentEventTemplate,
+  createSkeletonEventTemplate,
+  createLoadingText,
+  createAfterLoadingText,
+} from '../templates/template-content';
 
 const ContentEvent = {
   async render() {
@@ -20,6 +25,7 @@ const ContentEvent = {
             </div>
 
             <div class="container-fluid col-11 px-4 py-3 mb-4">
+              <div class="row" id="loading-event"></div>
               <div class="row" id="card-events">
 
               </div>
@@ -32,14 +38,18 @@ const ContentEvent = {
 
   async afterRender() {
     const eventContainer = document.querySelector('#card-events');
-    eventContainer.innerHTML = '';
+    const loadEvent = document.querySelector('#loading-event');
+    loadEvent.innerHTML = createLoadingText();
 
     try {
       const eventCard = await CTNAPISource.contentEvents();
       eventCard.reverse().slice(0, 4).forEach((allEvent) => {
         eventContainer.innerHTML += createContentEventTemplate(allEvent);
       });
+      loadEvent.style.display = 'none';
     } catch (err) {
+      loadEvent.innerHTML = createAfterLoadingText(err);
+      eventContainer.innerHTML += createSkeletonEventTemplate(4);
       console.log(err);
     }
   },

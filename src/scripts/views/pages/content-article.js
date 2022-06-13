@@ -1,5 +1,10 @@
 import CTNAPISource from '../../data/API-CTNsource';
-import { createContentArticleTemplate } from '../templates/template-content';
+import {
+  createContentArticleTemplate,
+  createSkeletonArticleTemplate,
+  createLoadingText,
+  createAfterLoadingText,
+} from '../templates/template-content';
 
 const ContentArticle = {
   async render() {
@@ -20,10 +25,8 @@ const ContentArticle = {
             </div>
 
             <div class="container-fluid col-11 px-4 py-3 mb-4">
-              <div class="row" id="card-articles">
-
-
-              </div>
+              <div class="row" id="loading-article"></div>
+              <div class="row" id="card-articles"></div>
             </div>
         </section>
 
@@ -33,14 +36,18 @@ const ContentArticle = {
 
   async afterRender() {
     const articleContainer = document.querySelector('#card-articles');
-    articleContainer.innerHTML = '';
+    const loadArticle = document.querySelector('#loading-article');
+    loadArticle.innerHTML = createLoadingText();
 
     try {
       const articleCard = await CTNAPISource.contentArticles();
       articleCard.reverse().forEach((allArticle) => {
         articleContainer.innerHTML += createContentArticleTemplate(allArticle);
       });
+      loadArticle.style.display = 'none';
     } catch (err) {
+      loadArticle.innerHTML = createAfterLoadingText(err);
+      articleContainer.innerHTML += createSkeletonArticleTemplate(4);
       console.log(err);
     }
   },
