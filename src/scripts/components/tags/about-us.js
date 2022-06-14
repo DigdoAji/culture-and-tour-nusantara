@@ -82,27 +82,7 @@ class AboutUs extends HTMLElement {
 
             <div class="col-xl-3 col-md-6 mb-5 px-0 px-sm-4 px-md-3 px-xl-2">
               <div class="card bg-white border border-3 rounded-card shadow-lg py-5 px-4">
-                <img src="images/blank-profile.png" 
-                  class="img-fluid rounded-circle border border-3 mx-auto mb-3 shadow-sm" 
-                  alt="Raichan Profile" 
-                  width="130px" height="130px"
-                >
-                <div class="card-body">
-                  <h5 class="card-title color-ctn fw-bold mb-0">Raichan Alghafari</h2>
-                  <p class="card-text medium text-lead pt-2 mb-1">Web Developer</p>
-                </div>
-                <div class="d-flex justify-content-center mt-4 mb-2">
-                  <a href="https://wa.me/6287870604041" target="_blank" class="px-2"><button type="button" class="btn btn-outline-green icons-size" tabindex="-1"><i class="fa fa-whatsapp"></i></button></a>
-                  <a href="https://www.instagram.com/dicoding/" target="_blank" class="px-2"><button type="button" class="btn btn-outline-green icons-size" tabindex="-1"><i class="fa fa-instagram"></i></button></a>
-                  <a href="https://www.linkedin.com/in/raichan-alghafari-9b5a1a217/" target="_blank" class="px-2"><button type="button" class="btn btn-outline-green icons-size" tabindex="-1"><i class="fa fa-linkedin-square"></i></button></a>
-                  <a href="https://github.com/Raichan4" target="_blank" class="px-2"><button type="button" class="btn btn-outline-green icons-size" tabindex="-1"><i class="fa fa-github"></i></button></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xl-3 col-md-6 mb-5 px-0 px-sm-4 px-md-3 px-xl-2">
-              <div class="card bg-white border border-3 rounded-card shadow-lg py-5 px-4">
-                <img src="images/blank-profile.png" 
+                <img src="images/foto-profil-taufik.jpg" 
                   class="img-fluid rounded-circle border border-3 mx-auto mb-3 shadow-sm" 
                   alt="Taufik Profile" 
                   width="130px" height="130px"
@@ -116,6 +96,26 @@ class AboutUs extends HTMLElement {
                   <a href="https://www.instagram.com/muhtaufikhidayat_/" target="_blank" class="px-2"><button type="button" class="btn btn-outline-green icons-size" tabindex="-1"><i class="fa fa-instagram"></i></button></a>
                   <a href="https://www.linkedin.com/in/muh-taufik-hidayat-536029209/" target="_blank" class="px-2"><button type="button" class="btn btn-outline-green icons-size" tabindex="-1"><i class="fa fa-linkedin-square"></i></button></a>
                   <a href="https://github.com/MuhTaufikHidayat" target="_blank" class="px-2"><button type="button" class="btn btn-outline-green icons-size" tabindex="-1"><i class="fa fa-github"></i></button></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 mb-5 px-0 px-sm-4 px-md-3 px-xl-2">
+              <div class="card bg-white border border-3 rounded-card shadow-lg py-5 px-4">
+                <img src="images/foto-profil-raichan.jpg" 
+                  class="img-fluid rounded-circle border border-3 mx-auto mb-3 shadow-sm" 
+                  alt="Raichan Profile" 
+                  width="130px" height="130px"
+                >
+                <div class="card-body">
+                  <h5 class="card-title color-ctn fw-bold mb-0">Raichan Alghafari</h2>
+                  <p class="card-text medium text-lead pt-2 mb-1">Web Developer</p>
+                </div>
+                <div class="d-flex justify-content-center mt-4 mb-2">
+                  <a href="https://wa.me/6287870604041" target="_blank" class="px-2"><button type="button" class="btn btn-outline-green icons-size" tabindex="-1"><i class="fa fa-whatsapp"></i></button></a>
+                  <a href="https://www.instagram.com/dicoding/" target="_blank" class="px-2"><button type="button" class="btn btn-outline-green icons-size" tabindex="-1"><i class="fa fa-instagram"></i></button></a>
+                  <a href="https://www.linkedin.com/in/raichan-alghafari-9b5a1a217/" target="_blank" class="px-2"><button type="button" class="btn btn-outline-green icons-size" tabindex="-1"><i class="fa fa-linkedin-square"></i></button></a>
+                  <a href="https://github.com/Raichan4" target="_blank" class="px-2"><button type="button" class="btn btn-outline-green icons-size" tabindex="-1"><i class="fa fa-github"></i></button></a>
                 </div>
               </div>
             </div>
