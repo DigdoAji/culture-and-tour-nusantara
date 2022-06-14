@@ -34,7 +34,7 @@ const createContentEventTemplate = (contentEvents) => `
                 <h5 class="card-title text-center fw-bold color-ctn py-2">${contentEvents.name}</h5>
                 <p class="card-text fw-normal mb-0"><i class="fa fa-map-marker me-1"></i>${contentEvents.location}</p>
                 <p class="card-text fw-normal mb-0"><i class="fa fa-calendar me-1"></i>${contentEvents.date}</p>
-                <p class="card-text fw-normal mb-0"><i class="fa fa-clock-o me-1"></i>${contentEvents.time}</p>
+                <p class="card-text fw-normal mb-0"><i class="fa fa-clock-o me-1"></i>${contentEvents.time} ${contentEvents.timezone}</p>
                 <p class="card-text fw-normal mb-0"><i class="fa fa-tags me-1"></i>${contentEvents.categories}</p>
             </div>
             <div class="d-flex justify-content-center mt-2 mb-4">

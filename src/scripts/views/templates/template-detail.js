@@ -88,7 +88,7 @@ const createDetailEventTemplate = (detailEvent) => `
                 <h2 class="mt-2">${detailEvent.name}</h2>
                 <p class="fw-normal size-text-md mb-1"><i class="fa fa-map-marker me-2"></i>${detailEvent.location}</p>
                 <p class="fw-normal size-text-md mb-1"><i class="fa fa-calendar me-2"></i>${detailEvent.date}</p>
-                <p class="fw-normal size-text-md mb-1"><i class="fa fa-clock-o me-2"></i>${detailEvent.time}</p>
+                <p class="fw-normal size-text-md mb-1"><i class="fa fa-clock-o me-2"></i>${detailEvent.time} ${detailEvent.timezone}</p>
                 <p class="fw-normal size-text-md mb-4"><i class="fa fa-tags me-2"></i>${detailEvent.categories}</p>
                 <h3 class="fw-bold size-text-md mb-1">Description :</h3>
                 <p class="fw-normal mt-2 mb-2">

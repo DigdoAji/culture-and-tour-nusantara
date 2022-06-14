@@ -48,8 +48,6 @@ const DetailEvent = {
       if (confirm('Are you sure delete this Event?')) {
         await CTNAPISource.removeEvent(url.id);
         await location.replace('#/content-event');
-      } else {
-        await location.reload();
       }
     });
   },

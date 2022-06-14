@@ -43,7 +43,7 @@ const ContentEvent = {
 
     try {
       const eventCard = await CTNAPISource.contentEvents();
-      eventCard.reverse().slice(0, 4).forEach((allEvent) => {
+      eventCard.reverse().forEach((allEvent) => {
         eventContainer.innerHTML += createContentEventTemplate(allEvent);
       });
       loadEvent.style.display = 'none';

@@ -1,6 +1,7 @@
 import UrlParser from '../../routes/url-parser';
 import CTNAPISource from '../../data/API-CTNsource';
 import { createFormUpdateArticleTemplate } from '../templates/template-form';
+import { setInputEditDateToday } from '../../utils/set-input-today';
 
 const EditArticle = {
   async render() {
@@ -22,12 +23,15 @@ const EditArticle = {
     }
 
     const submitArticle = document.querySelector('#submitArticle');
+    const cancelArticle = document.querySelector('#cancelArticle');
     const editHeadineArticle = document.querySelector('#editHeadineArticle');
     const editPublisherName = document.querySelector('#editPublisherName');
     const editDateArticle = document.querySelector('#editDateArticle');
     const editTagsArticle = document.querySelector('#editTagsArticle');
     const editImageArticle = document.querySelector('#editImageArticle');
     const editDescriptionArticle = document.querySelector('#editDescriptionArticle');
+
+    setInputEditDateToday(editDateArticle);
 
     submitArticle.addEventListener('click', async (event) => {
       event.preventDefault();
@@ -41,6 +45,12 @@ const EditArticle = {
       };
       await CTNAPISource.editArticle(url.id, dataArticle);
       await location.replace('#/content-article');
+    });
+
+    cancelArticle.addEventListener('click', async (event) => {
+      event.preventDefault();
+      await location.replace('#/content-article');
+      window.scrollTo(0, 0);
     });
   },
 };

@@ -47,8 +47,6 @@ const DetailArticle = {
       if (confirm('Are you sure delete this article?')) {
         await CTNAPISource.removeArticle(url.id);
         await location.replace('#/content-article');
-      } else {
-        await location.reload();
       }
     });
   },
