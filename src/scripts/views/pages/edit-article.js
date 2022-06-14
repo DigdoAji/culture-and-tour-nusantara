@@ -45,6 +45,7 @@ const EditArticle = {
       };
       await CTNAPISource.editArticle(url.id, dataArticle);
       await location.replace('#/content-article');
+      window.scrollTo(0, 0);
     });
 
     cancelArticle.addEventListener('click', async (event) => {
