@@ -136,6 +136,11 @@ a {
   border-radius: 20px !important;
 }
 
+.article-img-top {
+  height: 300px !important;
+  object-fit: cover !important;
+}
+
 
 /* ==== Review ==== */
 

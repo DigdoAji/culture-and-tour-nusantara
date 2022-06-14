@@ -9,14 +9,14 @@ const createDetailArticleTemplate = (detailArticle) => `
             >
         </div>
         <div class="card-body">
-            <h2 class="card-title text-center fw-bold py-2 mt-1">${detailArticle.name}</h2>
+            <h2 class="card-title text-center fw-bold py-2 px-sm-5 mx-3 mx-md-5 mt-1">${detailArticle.name}</h2>
             <p class="card-text mt-2 mb-0 px-3 px-md-5">
                 ${detailArticle.description}
             </p>
             <div class="row mt-2 mb-2 pt-4 px-3 px-md-5">
                 <div class="col-md-8 my-auto">
                     <h5 class="card-text fw-bold mb-3">Published by :</h5>
-                    <p class="card-text fw-normal mb-2"><i class="fa fa-user me-2"></i>Admin ${detailArticle.publisherName}</p>
+                    <p class="card-text fw-normal mb-2"><i class="fa fa-user me-2"></i>${detailArticle.publisherName}</p>
                     <p class="card-text fw-normal mb-2"><i class="fa fa-calendar me-2"></i>${detailArticle.publishDate}</p>
                     <p class="card-text fw-normal mb-2"><i class="fa fa-tags me-2"></i>${detailArticle.categories}</p>
                 </div>

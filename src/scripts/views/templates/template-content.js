@@ -1,9 +1,13 @@
 const createContentArticleTemplate = (contentArticles) => `
     <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
         <div class="card shadow-lg rounded-card h-100">
-            <img src="${contentArticles.pictureId}" alt="${contentArticles.name} illustration" class="card-img-top img-fluid border border-2 img-rounded-card" width="600px" height="400px">
+            <img src="${contentArticles.pictureId}" 
+                alt="${contentArticles.name} illustration" 
+                class="article-img-top img-fluid border border-2 img-rounded-card" 
+                width="600px" height="300px"
+            >
             <div class="card-body px-4">
-                <p class="card-text fw-normal size-text-sm mb-0"><i class="fa fa-calendar me-1"></i>${contentArticles.publishDate} | <i class="fa fa-user me-1"></i>Admin ${contentArticles.publisherName}</p>
+                <p class="card-text fw-normal size-text-sm mb-0"><i class="fa fa-calendar me-1"></i>${contentArticles.publishDate} | <i class="fa fa-user me-1"></i>${contentArticles.publisherName}</p>
                 <p class="card-text fw-normal size-text-sm mb-2"><i class="fa fa-tags me-1"></i>${contentArticles.categories}</p>
                 <h5 class="card-title text-center fw-bold color-ctn py-2">${contentArticles.name}</h5>
                 <p class="card-text text-limit mt-2 mb-0">
@@ -21,7 +25,11 @@ const createContentArticleTemplate = (contentArticles) => `
 const createContentEventTemplate = (contentEvents) => `
     <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
         <div class="card shadow-lg rounded-card h-100">
-            <img src="${contentEvents.pictureId}" alt="${contentEvents.name} illustration" class="card-img-top img-fluid border border-2 img-rounded-card" width="600px" height="700px">
+            <img src="${contentEvents.pictureId}" 
+                alt="${contentEvents.name} illustration" 
+                class="img-fluid border border-2 img-rounded-card" 
+                width="600px" height="700px"
+            >
             <div class="card-body px-4">
                 <h5 class="card-title text-center fw-bold color-ctn py-2">${contentEvents.name}</h5>
                 <p class="card-text fw-normal mb-0"><i class="fa fa-map-marker me-1"></i>${contentEvents.location}</p>
@@ -43,9 +51,13 @@ const createSkeletonArticleTemplate = (count) => {
     skeletonTemplate += `
       <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
         <div class="card skeleton shadow-lg rounded-card h-100">
-            <img src="https://via.placeholder.com/600x400/?text=image+placeholder" alt="Skeleton image" class="card-img-top img-fluid border border-2 img-rounded-card" width="600px" height="400px">
+            <img src="https://via.placeholder.com/600x400/?text=image+placeholder" 
+                alt="Skeleton image" 
+                class="article-img-top img-fluid border border-2 img-rounded-card" 
+                width="600px" height="400px"
+            >
             <div class="card-body px-4">
-                <p class="card-text fw-normal size-text-sm mb-0"><i class="fa fa-calendar me-1"></i>XX June XXXX | <i class="fa fa-user me-1"></i>Admin XXXX</p>
+                <p class="card-text fw-normal size-text-sm mb-0"><i class="fa fa-calendar me-1"></i>XX June XXXX | <i class="fa fa-user me-1"></i>User</p>
                 <p class="card-text fw-normal size-text-sm mb-2"><i class="fa fa-tags me-1"></i>Any</p>
                 <h5 class="card-title text-center fw-bold color-ctn py-2">Lorem Ipsum</h5>
                 <p class="card-text text-limit mt-2 mb-0">
@@ -76,9 +88,11 @@ const createSkeletonEventTemplate = (count) => {
     skeletonTemplate += `
     <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
         <div class="card skeleton shadow-lg rounded-card h-100">
-            <img src="https://via.placeholder.com/450x550/?text=image+placeholder" 
-                alt="image skeleton" class="card-img-top img-fluid border border-2 img-rounded-card" 
-                width="450px" height="550px">
+            <img src="https://via.placeholder.com/600x700/?text=image+placeholder" 
+                alt="image skeleton" 
+                class="img-fluid border border-2 img-rounded-card" 
+                width="600px" height="700px"
+            >
             <div class="card-body px-4">
                 <h5 class="card-title text-center fw-bold color-ctn py-2">Lorem Ipsum</h5>
                 <p class="card-text fw-normal mb-0"><i class="fa fa-map-marker me-1"></i>Nusantara</p>

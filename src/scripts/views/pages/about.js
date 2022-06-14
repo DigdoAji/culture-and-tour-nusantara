@@ -6,7 +6,7 @@ const About = {
   },
 
   async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
+    // Tidak ada Fungsi
   },
 };
 
