@@ -43,9 +43,11 @@ const EditArticle = {
         publishDate: editDateArticle.value,
         categories: editTagsArticle.value,
       };
-      await CTNAPISource.editArticle(url.id, dataArticle);
-      await location.replace('#/content-article');
-      window.scrollTo(0, 0);
+      if (confirm('Are you sure update this article?')) {
+        await CTNAPISource.editArticle(url.id, dataArticle);
+        await location.replace('#/content-article');
+        window.scrollTo(0, 0);
+      }
     });
 
     cancelArticle.addEventListener('click', async (event) => {

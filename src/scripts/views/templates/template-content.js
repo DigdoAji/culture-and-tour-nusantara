@@ -116,7 +116,7 @@ const createLoadingText = () => `
 `;
 
 const createAfterLoadingText = (err) => `  
-    <p class="text-danger fw-bolder ms-2"><i class="fa fa-warning me-1"></i>Data CTN API not loaded. ${err}<h2>
+    <p class="text-danger fw-bolder ms-2"><i class="fa fa-warning me-1"></i>CTN API Error. ${err}<h2>
 `;
 
 export {

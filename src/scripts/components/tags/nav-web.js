@@ -18,7 +18,7 @@ class NavWeb extends HTMLElement {
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navDropdown">
-              <ul class="navbar-nav ms-auto me-auto mt-lg-0">
+              <ul class="navbar-nav ms-2 me-auto mt-lg-0">
                 <li class="nav-item mx-md-1">
                   <a class="nav-link" aria-current="page" href="/">Home</a>
                 </li>

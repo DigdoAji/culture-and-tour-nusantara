@@ -44,9 +44,11 @@ const EditEvent = {
         pictureId: editImageEvent.value,
         categories: editTagsEvent.value,
       };
-      await CTNAPISource.editEvent(url.id, dataEvent);
-      await location.replace('#/content-event');
-      window.scrollTo(0, 0);
+      if (confirm('Are you sure update this event?')) {
+        await CTNAPISource.editEvent(url.id, dataEvent);
+        await location.replace('#/content-event');
+        window.scrollTo(0, 0);
+      }
     });
 
     cancelEvent.addEventListener('click', async (event) => {
