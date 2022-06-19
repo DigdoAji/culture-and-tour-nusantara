@@ -7,6 +7,7 @@ import {
   createSkeletonEventTemplate,
   createLoadingText,
   createAfterLoadingText,
+  createCardEmpty,
 } from '../templates/template-content';
 
 const Home = {
@@ -74,6 +75,12 @@ const Home = {
       });
       loadArticle.style.display = 'none';
       loadEvent.style.display = 'none';
+      if (!articleCard.length) {
+        articleContainer.innerHTML = createCardEmpty();
+      }
+      if (!eventCard.length) {
+        eventContainer.innerHTML = createCardEmpty();
+      }
     } catch (err) {
       loadArticle.innerHTML = createAfterLoadingText(err);
       loadEvent.innerHTML = createAfterLoadingText(err);

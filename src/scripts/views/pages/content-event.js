@@ -4,6 +4,7 @@ import {
   createSkeletonEventTemplate,
   createLoadingText,
   createAfterLoadingText,
+  createCardEmpty,
 } from '../templates/template-content';
 
 const ContentEvent = {
@@ -47,6 +48,9 @@ const ContentEvent = {
         eventContainer.innerHTML += createContentEventTemplate(allEvent);
       });
       loadEvent.style.display = 'none';
+      if (!eventCard.length) {
+        eventContainer.innerHTML = createCardEmpty();
+      }
     } catch (err) {
       loadEvent.innerHTML = createAfterLoadingText(err);
       eventContainer.innerHTML += createSkeletonEventTemplate(4);

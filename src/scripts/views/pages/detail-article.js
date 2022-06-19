@@ -31,7 +31,7 @@ const DetailArticle = {
         alert('Input still empty. Please fill the input form!');
       } else {
         const dataReview = {
-          id: url.id,
+          _id: url.id,
           name: inputName.value,
           review: inputReview.value,
         };

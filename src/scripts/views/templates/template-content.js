@@ -15,7 +15,7 @@ const createContentArticleTemplate = (contentArticles) => `
                 </p>
             </div>
             <div class="d-flex justify-content-center mt-2 mb-4">
-                <a href="${`#/detail-article/${contentArticles.id}`}" onclick="window.scrollTo(0, 0);"><button type="button" class="btn btn-outline-green px-3 py-2" tabindex="-1">Read More</button></a>
+                <a href="${`#/detail-article/${contentArticles._id}`}" onclick="window.scrollTo(0, 0);"><button type="button" class="btn btn-outline-green px-3 py-2" tabindex="-1">Read More</button></a>
             </div>
         </div>
      </div>
@@ -38,7 +38,7 @@ const createContentEventTemplate = (contentEvents) => `
                 <p class="card-text fw-normal mb-0"><i class="fa fa-tags me-1"></i>${contentEvents.categories}</p>
             </div>
             <div class="d-flex justify-content-center mt-2 mb-4">
-                <a href="${`#/detail-event/${contentEvents.id}`}" onclick="window.scrollTo(0, 0);"><button type="button" class="btn btn-outline-green px-3 py-2" tabindex="-1">Read More</button></a>
+                <a href="${`#/detail-event/${contentEvents._id}`}" onclick="window.scrollTo(0, 0);"><button type="button" class="btn btn-outline-green px-3 py-2" tabindex="-1">Read More</button></a>
             </div>
         </div>
     </div>
@@ -119,6 +119,10 @@ const createAfterLoadingText = (err) => `
     <p class="text-danger fw-bolder ms-2"><i class="fa fa-warning me-1"></i>CTN API Error. ${err}<h2>
 `;
 
+const createCardEmpty = () => `  
+    <h3 class="text-center mb-5">404 NOT FOUND. Data in CTN API Empty</h3>
+`;
+
 export {
   createContentArticleTemplate,
   createContentEventTemplate,
@@ -126,4 +130,5 @@ export {
   createSkeletonEventTemplate,
   createLoadingText,
   createAfterLoadingText,
+  createCardEmpty,
 };

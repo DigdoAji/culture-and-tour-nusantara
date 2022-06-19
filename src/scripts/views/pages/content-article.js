@@ -4,6 +4,7 @@ import {
   createSkeletonArticleTemplate,
   createLoadingText,
   createAfterLoadingText,
+  createCardEmpty,
 } from '../templates/template-content';
 
 const ContentArticle = {
@@ -45,6 +46,9 @@ const ContentArticle = {
         articleContainer.innerHTML += createContentArticleTemplate(allArticle);
       });
       loadArticle.style.display = 'none';
+      if (!articleCard.length) {
+        articleContainer.innerHTML = createCardEmpty();
+      }
     } catch (err) {
       loadArticle.innerHTML = createAfterLoadingText(err);
       articleContainer.innerHTML += createSkeletonArticleTemplate(4);
