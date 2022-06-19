@@ -20,7 +20,7 @@ const ContentEvent = {
                         <p class="lead">All activities/event/competitions about culture and tourism of Nusantara</p>
                     </div>
                     <div class="col-md-4 my-auto d-flex justify-content-md-end">
-                        <a href="#/create-event"><button type="button" class="btn btn-green px-3 py-2" tabindex="-1">Create New Event</button></a>
+                        <a href="#/create-event" onclick="window.scrollTo(0, 0);"><button type="button" class="btn btn-green px-3 py-2" tabindex="-1">Create New Event</button></a>
                     </div>
                 </div>
             </div>

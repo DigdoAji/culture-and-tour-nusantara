@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 import UrlParser from '../../routes/url-parser';
 import CTNAPISource from '../../data/API-CTNsource';
 import { createFormUpdateArticleTemplate } from '../templates/template-form';
@@ -35,25 +36,49 @@ const EditArticle = {
 
     submitArticle.addEventListener('click', async (event) => {
       event.preventDefault();
-      const dataArticle = {
-        name: editHeadineArticle.value,
-        description: editDescriptionArticle.value,
-        pictureId: editImageArticle.value,
-        publisherName: editPublisherName.value,
-        publishDate: editDateArticle.value,
-        categories: editTagsArticle.value,
-      };
-      if (confirm('Are you sure update this article?')) {
-        await CTNAPISource.editArticle(url.id, dataArticle);
-        await location.replace('#/content-article');
-        window.scrollTo(0, 0);
+      if (!editHeadineArticle.value || !editDescriptionArticle.value || !editImageArticle.value
+        || !editPublisherName.value || !editDateArticle.value || !editTagsArticle.value) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Your input still empty',
+          text: 'Please fill the empty input form!',
+        });
+      } else {
+        const dataArticle = {
+          name: editHeadineArticle.value,
+          description: editDescriptionArticle.value,
+          pictureId: editImageArticle.value,
+          publisherName: editPublisherName.value,
+          publishDate: editDateArticle.value,
+          categories: editTagsArticle.value,
+        };
+        Swal.fire({
+          title: 'Are you sure update this article?',
+          text: 'Make sure your changes are correct!',
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Confirm',
+        }).then(async (result) => {
+          if (result.isConfirmed) {
+            await CTNAPISource.editArticle(url.id, dataArticle);
+            Swal.fire(
+              'Updated!',
+              'Your selected article has been updated.',
+              'success',
+            );
+            await location.replace('#/content-article');
+            await window.scrollTo(0, 0);
+          }
+        });
       }
     });
 
     cancelArticle.addEventListener('click', async (event) => {
       event.preventDefault();
       await location.replace('#/content-article');
-      window.scrollTo(0, 0);
+      await window.scrollTo(0, 0);
     });
   },
 };

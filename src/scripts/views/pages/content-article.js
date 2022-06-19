@@ -20,7 +20,7 @@ const ContentArticle = {
                         <p class="lead">Article about culture and tourism of Nusantara</p>
                     </div>
                     <div class="col-md-4 my-auto d-flex justify-content-md-end">
-                        <a href="#/create-article"><button type="button" class="btn btn-green px-3 py-2" tabindex="-1">Create New Article</button></a>
+                        <a href="#/create-article" onclick="window.scrollTo(0, 0);"><button type="button" class="btn btn-green px-3 py-2" tabindex="-1">Create New Article</button></a>
                     </div>
                 </div>
             </div>

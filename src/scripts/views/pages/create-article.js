@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 import CTNAPISource from '../../data/API-CTNsource';
 import { setInputCreateDateToday } from '../../utils/set-input-today';
 
@@ -62,22 +63,35 @@ const AddArticle = {
 
     submitArticle.addEventListener('click', async (event) => {
       event.preventDefault();
-      const dataArticle = {
-        name: inputHeadineArticle.value,
-        description: inputDescriptionArticle.value,
-        pictureId: inputImageArticle.value,
-        publisherName: inputPublisherName.value,
-        publishDate: inputDateArticle.value,
-        categories: inputTagsArticle.value,
-      };
-      await CTNAPISource.insertArticle(dataArticle);
-      await location.replace('#/content-article');
+      if (!inputHeadineArticle.value || !inputDescriptionArticle.value || !inputImageArticle.value
+        || !inputPublisherName.value || !inputDateArticle.value || !inputTagsArticle.value) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Your input still empty',
+          text: 'Please fill the empty input form!',
+        });
+      } else {
+        const dataArticle = {
+          name: inputHeadineArticle.value,
+          description: inputDescriptionArticle.value,
+          pictureId: inputImageArticle.value,
+          publisherName: inputPublisherName.value,
+          publishDate: inputDateArticle.value,
+          categories: inputTagsArticle.value,
+        };
+        await CTNAPISource.insertArticle(dataArticle);
+        Swal.fire({
+          icon: 'success',
+          title: 'New Article have been added',
+        });
+        await location.replace('#/content-article');
+      }
     });
 
     cancelArticle.addEventListener('click', async (event) => {
       event.preventDefault();
       await location.replace('#/content-article');
-      window.scrollTo(0, 0);
+      await window.scrollTo(0, 0);
     });
   },
 };

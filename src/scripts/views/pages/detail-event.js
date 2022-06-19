@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 import UrlParser from '../../routes/url-parser';
 import CTNAPISource from '../../data/API-CTNsource';
 import { createDetailEventTemplate } from '../templates/template-detail';
@@ -28,8 +29,12 @@ const DetailEvent = {
 
     submitReview.addEventListener('click', async (event) => {
       event.preventDefault();
-      if (inputName.value === '' || inputReview.value === '') {
-        alert('Input still empty. Please fill the input form!');
+      if (!inputName.value || !inputReview.value) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Your input still Empty',
+          text: 'Please fill the empty input comment!',
+        });
       } else {
         const dataReview = {
           _id: url.id,
@@ -45,10 +50,26 @@ const DetailEvent = {
 
     submitDelete.addEventListener('click', async (event) => {
       event.preventDefault();
-      if (confirm('Are you sure delete this Event?')) {
-        await CTNAPISource.removeEvent(url.id);
-        await location.replace('#/content-event');
-      }
+      Swal.fire({
+        title: 'Are you sure delete this event?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!',
+      }).then(async (result) => {
+        if (result.isConfirmed) {
+          await CTNAPISource.removeEvent(url.id);
+          Swal.fire(
+            'Deleted!',
+            'Your selected article has been deleted.',
+            'success',
+          );
+          await location.replace('#/content-event');
+          await window.scrollTo(0, 0);
+        }
+      });
     });
   },
 };

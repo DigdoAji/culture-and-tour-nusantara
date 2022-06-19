@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 import CTNAPISource from '../../data/API-CTNsource';
 
 const AddEvent = {
@@ -81,24 +82,38 @@ const AddEvent = {
 
     submitEvent.addEventListener('click', async (event) => {
       event.preventDefault();
-      const dataEvent = {
-        name: inputNameEvent.value,
-        location: inputLocationEvent.value,
-        date: inputDateEvent.value,
-        time: inputTimeEvent.value,
-        timezone: inputTimezoneEvent.value,
-        description: inputDescriptionEvent.value,
-        pictureId: inputImageEvent.value,
-        categories: inputTagsEvent.value,
-      };
-      await CTNAPISource.insertEvent(dataEvent);
-      await location.replace('#/content-event');
+      if (!inputNameEvent.value || !inputLocationEvent.value || !inputTimeEvent.value
+        || !inputTimezoneEvent.value || !inputDescriptionEvent.value
+        || !inputImageEvent.value || !inputTagsEvent.value) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Your input still empty',
+          text: 'Please fill the empty input form!',
+        });
+      } else {
+        const dataEvent = {
+          name: inputNameEvent.value,
+          location: inputLocationEvent.value,
+          date: inputDateEvent.value,
+          time: inputTimeEvent.value,
+          timezone: inputTimezoneEvent.value,
+          description: inputDescriptionEvent.value,
+          pictureId: inputImageEvent.value,
+          categories: inputTagsEvent.value,
+        };
+        await CTNAPISource.insertEvent(dataEvent);
+        Swal.fire({
+          icon: 'success',
+          title: 'New Event have been added',
+        });
+        await location.replace('#/content-event');
+      }
     });
 
     cancelEvent.addEventListener('click', async (event) => {
       event.preventDefault();
       await location.replace('#/content-event');
-      window.scrollTo(0, 0);
+      await window.scrollTo(0, 0);
     });
   },
 };
