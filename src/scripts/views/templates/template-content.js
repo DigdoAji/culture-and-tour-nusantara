@@ -1,7 +1,7 @@
 const createContentArticleTemplate = (contentArticles) => `
     <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
         <div class="card shadow-lg rounded-card h-100">
-            <img src="${contentArticles.pictureId}" 
+            <img src="${contentArticles.pictureId ? contentArticles.pictureId : 'https://via.placeholder.com/600x400/?text=image+not+found'}" 
                 alt="${contentArticles.name} illustration" 
                 class="article-img-top img-fluid border border-2 img-rounded-card" 
                 width="600px" height="300px"
@@ -25,7 +25,7 @@ const createContentArticleTemplate = (contentArticles) => `
 const createContentEventTemplate = (contentEvents) => `
     <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
         <div class="card shadow-lg rounded-card h-100">
-            <img src="${contentEvents.pictureId}" 
+            <img src="${contentEvents.pictureId ? contentEvents.pictureId : 'https://via.placeholder.com/600x700/?text=image+not+found'}" 
                 alt="${contentEvents.name} illustration" 
                 class="img-fluid border border-2 img-rounded-card" 
                 width="600px" height="700px"
@@ -57,9 +57,9 @@ const createSkeletonArticleTemplate = (count) => {
                 width="800px" height="400px"
             >
             <div class="card-body px-4">
-                <p class="card-text fw-normal size-text-sm mb-0"><i class="fa fa-calendar me-1"></i>XX June XXXX | <i class="fa fa-user me-1"></i>User</p>
+                <p class="card-text fw-normal size-text-sm mb-0"><i class="fa fa-calendar me-1"></i>XXXX-XX-XX | <i class="fa fa-user me-1"></i>User</p>
                 <p class="card-text fw-normal size-text-sm mb-2"><i class="fa fa-tags me-1"></i>Any</p>
-                <h5 class="card-title text-center fw-bold color-ctn py-2">Lorem Ipsum</h5>
+                <h5 class="card-title text-center fw-bold color-ctn py-2">Lorem ipsum dolor sit amet</h5>
                 <p class="card-text text-limit mt-2 mb-0">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
@@ -72,7 +72,7 @@ const createSkeletonArticleTemplate = (count) => {
                 </p>
             </div>
             <div class="d-flex justify-content-center mt-2 mb-4">
-                <a href="#"><button type="button" class="btn btn-outline-green px-3 py-2" tabindex="-1">Read More</button></a>
+            <a href="#/skeleton-detail-article" onclick="window.scrollTo(0, 0);"><button type="button" class="btn btn-outline-green px-3 py-2" tabindex="-1">Read More</button></a>
             </div>
         </div>
      </div>
@@ -89,19 +89,19 @@ const createSkeletonEventTemplate = (count) => {
     <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
         <div class="card skeleton shadow-lg rounded-card h-100">
             <img src="https://via.placeholder.com/600x700/?text=image+placeholder" 
-                alt="image skeleton" 
+                alt="Poster Skeleton" 
                 class="img-fluid border border-2 img-rounded-card" 
                 width="800px" height="700px"
             >
             <div class="card-body px-4">
-                <h5 class="card-title text-center fw-bold color-ctn py-2">Lorem Ipsum</h5>
+                <h5 class="card-title text-center fw-bold color-ctn py-2">Lorem Ipsum Inarte</h5>
                 <p class="card-text fw-normal mb-0"><i class="fa fa-map-marker me-1"></i>Nusantara</p>
-                <p class="card-text fw-normal mb-0"><i class="fa fa-calendar me-1"></i>XX June XXXX</p>
-                <p class="card-text fw-normal mb-0"><i class="fa fa-clock-o me-1"></i>XX.XX WITA</p>
+                <p class="card-text fw-normal mb-0"><i class="fa fa-calendar me-1"></i>XXXX-XX-XX</p>
+                <p class="card-text fw-normal mb-0"><i class="fa fa-clock-o me-1"></i>XX:XX WIB</p>
                 <p class="card-text fw-normal mb-0"><i class="fa fa-tags me-1"></i>Any</p>
             </div>
             <div class="d-flex justify-content-center mt-2 mb-4">
-                <a href="#"><button type="button" class="btn btn-outline-green px-3 py-2" tabindex="-1">Read More</button></a>
+                <a href="#/skeleton-detail-event" onclick="window.scrollTo(0, 0);"><button type="button" class="btn btn-outline-green px-3 py-2" tabindex="-1">Read More</button></a>
             </div>
         </div>
     </div>
