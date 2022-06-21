@@ -1,6 +1,7 @@
-import UrlParser from "../../routes/url-parser";
-import CTNAPISource from "../../data/API-CTNsource";
-import { createDetailEventTemplate } from "../templates/template-detail";
+import Swal from 'sweetalert2';
+import UrlParser from '../../routes/url-parser';
+import CTNAPISource from '../../global/API-CTNsource';
+import { createDetailEventTemplate } from '../templates/template-detail';
 
 const DetailEvent = {
   async render() {
@@ -16,7 +17,7 @@ const DetailEvent = {
 
     try {
       const eventItem = await CTNAPISource.detailEvent(url.id);
-      console.log (eventItem);
+      console.log(eventItem);
       detailContainer.innerHTML = createDetailEventTemplate(eventItem);
     } catch (err) {
       console.log(err);
@@ -28,11 +29,15 @@ const DetailEvent = {
 
     submitReview.addEventListener('click', async (event) => {
       event.preventDefault();
-      if (inputName.value === '' || inputReview.value === '') {
-        alert('Input still empty. Please fill the input form!');
+      if (!inputName.value || !inputReview.value) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Your input still Empty',
+          text: 'Please fill the empty input comment!',
+        });
       } else {
         const dataReview = {
-          id: url.id,
+          _id: url.id,
           name: inputName.value,
           review: inputReview.value,
         };
@@ -45,12 +50,26 @@ const DetailEvent = {
 
     submitDelete.addEventListener('click', async (event) => {
       event.preventDefault();
-      if (confirm('Are you sure delete this Event?')) {
-        await CTNAPISource.removeEvent(url.id);
-        await location.replace("#/content-event");
-      } else {
-        await location.reload();
-      }
+      Swal.fire({
+        title: 'Are you sure delete this event?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!',
+      }).then(async (result) => {
+        if (result.isConfirmed) {
+          await CTNAPISource.removeEvent(url.id);
+          Swal.fire(
+            'Deleted!',
+            'Your selected article has been deleted.',
+            'success',
+          );
+          await location.replace('#/content-event');
+          await window.scrollTo(0, 0);
+        }
+      });
     });
   },
 };

@@ -1,5 +1,5 @@
 const AddAccount = {
-    async render() {
+  async render() {
     return `
     <section id="add-account">
     <div class="container">
@@ -41,11 +41,11 @@ const AddAccount = {
     </div>
   </section>
     `;
-    },
-  
-    async afterRender() {
-      // Fungsi ini akan dipanggil setelah render()
-    },
-  };
-  
-  export default AddAccount;
+  },
+
+  async afterRender() {
+    // Fungsi ini akan dipanggil setelah render()
+  },
+};
+
+export default AddAccount;

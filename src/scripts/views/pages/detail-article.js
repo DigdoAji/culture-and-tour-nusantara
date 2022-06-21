@@ -1,6 +1,7 @@
+import Swal from 'sweetalert2';
 import UrlParser from '../../routes/url-parser';
-import CTNAPISource from "../../data/API-CTNsource";
-import { createDetailArticleTemplate } from "../templates/template-detail";
+import CTNAPISource from '../../global/API-CTNsource';
+import { createDetailArticleTemplate } from '../templates/template-detail';
 
 const DetailArticle = {
   async render() {
@@ -27,11 +28,15 @@ const DetailArticle = {
 
     submitReview.addEventListener('click', async (event) => {
       event.preventDefault();
-      if (inputName.value === '' || inputReview.value === '') {
-        alert('Input still empty. Please fill the input form!');
+      if (!inputName.value || !inputReview.value) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Your input still Empty',
+          text: 'Please fill the empty input comment!',
+        });
       } else {
         const dataReview = {
-          id: url.id,
+          _id: url.id,
           name: inputName.value,
           review: inputReview.value,
         };
@@ -42,14 +47,28 @@ const DetailArticle = {
 
     const submitDelete = document.querySelector('#deleteArticle');
 
-    submitDelete.addEventListener('click', async (event) => {
+    submitDelete.addEventListener('click', (event) => {
       event.preventDefault();
-      if (confirm('Are you sure delete this article?')) {
-        await CTNAPISource.removeArticle(url.id);
-        await location.replace("#/content-article");
-      } else {
-        await location.reload();
-      }
+      Swal.fire({
+        title: 'Are you sure delete this article?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!',
+      }).then(async (result) => {
+        if (result.isConfirmed) {
+          await CTNAPISource.removeArticle(url.id);
+          Swal.fire(
+            'Deleted!',
+            'Your selected article has been deleted.',
+            'success',
+          );
+          await location.replace('#/content-article');
+          await window.scrollTo(0, 0);
+        }
+      });
     });
   },
 };

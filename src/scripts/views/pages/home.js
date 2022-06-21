@@ -1,7 +1,14 @@
-import CTNAPISource from "../../data/API-CTNsource";
-import { createContentArticleTemplate, createContentEventTemplate} from "../templates/template-content";
-// import article from "../../data/Article.json";
-// import event from "../../data/Event.json";
+import CTNAPISource from '../../global/API-CTNsource';
+import MoreButton from '../../utils/more-button';
+import {
+  createContentArticleTemplate,
+  createContentEventTemplate,
+  createSkeletonArticleTemplate,
+  createSkeletonEventTemplate,
+  createLoadingText,
+  createAfterLoadingText,
+  createCardEmpty,
+} from '../templates/template-content';
 
 const Home = {
   async render() {
@@ -18,6 +25,7 @@ const Home = {
     </div>
 
     <div class="container-fluid col-11 px-4 py-3 mb-0">
+      <div class="row" id="loading-article"></div>
       <div class="row" id="home-article">
       </div>
       <div class="d-flex justify-content-center my-2">
@@ -36,6 +44,7 @@ const Home = {
     </div>
 
     <div class="container-fluid col-11 px-4 py-3 mb-5">
+      <div class="row" id="loading-event"></div>
       <div class="row" id="home-event">
       </div>
       <div class="d-flex justify-content-center my-2">
@@ -49,52 +58,38 @@ const Home = {
 
   async afterRender() {
     const articleContainer = document.querySelector('#home-article');
-    articleContainer.innerHTML = '';
+    const eventContainer = document.querySelector('#home-event');
+    const loadArticle = document.querySelector('#loading-article');
+    const loadEvent = document.querySelector('#loading-event');
+    loadArticle.innerHTML = createLoadingText();
+    loadEvent.innerHTML = createLoadingText();
 
     try {
       const articleCard = await CTNAPISource.contentArticles();
       articleCard.reverse().slice(0, 4).forEach((allArticle) => {
         articleContainer.innerHTML += createContentArticleTemplate(allArticle);
       });
-    } catch (err) {
-      console.log(err);
-      /*
-      const articleCard = await article.contentArticles;
-      articleCard.reverse().slice(0, 4).forEach((allArticle) => {
-        articleContainer.innerHTML += createHomeArticleTemplate(allArticle);
-      });
-      */
-    }
-
-    const eventContainer = document.querySelector('#home-event');
-    eventContainer.innerHTML = '';
-
-    try {
       const eventCard = await CTNAPISource.contentEvents();
       eventCard.reverse().slice(0, 4).forEach((allEvent) => {
         eventContainer.innerHTML += createContentEventTemplate(allEvent);
       });
+      loadArticle.style.display = 'none';
+      loadEvent.style.display = 'none';
+      if (!articleCard.length) {
+        articleContainer.innerHTML = createCardEmpty();
+      }
+      if (!eventCard.length) {
+        eventContainer.innerHTML = createCardEmpty();
+      }
     } catch (err) {
+      loadArticle.innerHTML = createAfterLoadingText(err);
+      loadEvent.innerHTML = createAfterLoadingText(err);
+      articleContainer.innerHTML += createSkeletonArticleTemplate(4);
+      eventContainer.innerHTML += createSkeletonEventTemplate(4);
       console.log(err);
-      /*
-      const eventCard = await event.contentEvents;
-      eventCard.reverse().slice(0, 4).forEach((allEvent) => {
-        eventContainer.innerHTML += createHomeEventTemplate(allEvent);
-      });
-      */
     }
 
-    const clickMoreEvents = document.getElementById("more-events");
-    clickMoreEvents.addEventListener('click', () => {
-      location.replace("#/content-event");
-      window.scrollTo(0, 0);
-    });
-
-    const clickMoreArticles = document.getElementById("more-articles");
-    clickMoreArticles.addEventListener('click', () => {
-      location.replace("#/content-article");
-      window.scrollTo(0, 0);
-    });
+    MoreButton();
   },
 };
 

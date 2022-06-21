@@ -1,5 +1,5 @@
 const ListAccount = {
-    async render() {
+  async render() {
     return `
     <section id="list-account">
         <div class="container mt-3">
@@ -56,11 +56,11 @@ const ListAccount = {
         </div>
       </section>
     `;
-    },
-  
-    async afterRender() {
-      // Fungsi ini akan dipanggil setelah render()
-    },
-  };
-  
-  export default ListAccount;
+  },
+
+  async afterRender() {
+    // Fungsi ini akan dipanggil setelah render()
+  },
+};
+
+export default ListAccount;

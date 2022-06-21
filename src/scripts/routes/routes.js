@@ -13,6 +13,8 @@ import EditEvent from '../views/pages/edit-event';
 import AddAccount from '../views/pages/create-account';
 import EditAccount from '../views/pages/edit-account';
 import ListAccount from '../views/pages/list-account';
+import ArticleDetailSkeleton from '../views/pages/skeleton-detailarticle';
+import EventDetailSkeleton from '../views/pages/skeleton-detailevent';
 
 const routes = {
   '/': Home, // default page
@@ -20,14 +22,16 @@ const routes = {
   '/about': About,
   '/content-article': ContentArticle,
   '/content-event': ContentEvent,
-  '/login': Login,
-  '/register': Register,
   '/detail-article/:id': DetailArticle,
   '/detail-event/:id': DetailEvent,
   '/create-article': AddArticle,
   '/create-event': AddEvent,
   '/edit-article/:id': EditArticle,
   '/edit-event/:id': EditEvent,
+  '/skeleton-detail-article': ArticleDetailSkeleton,
+  '/skeleton-detail-event': EventDetailSkeleton,
+  '/login': Login,
+  '/register': Register,
   '/create-account': AddAccount,
   '/edit-account': EditAccount,
   '/list-account': ListAccount,

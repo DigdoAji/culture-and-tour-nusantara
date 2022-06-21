@@ -1,5 +1,11 @@
-import CTNAPISource from "../../data/API-CTNsource";
-import { createContentArticleTemplate } from "../templates/template-content";
+import CTNAPISource from '../../global/API-CTNsource';
+import {
+  createContentArticleTemplate,
+  createSkeletonArticleTemplate,
+  createLoadingText,
+  createAfterLoadingText,
+  createCardEmpty,
+} from '../templates/template-content';
 
 const ContentArticle = {
   async render() {
@@ -14,16 +20,14 @@ const ContentArticle = {
                         <p class="lead">Article about culture and tourism of Nusantara</p>
                     </div>
                     <div class="col-md-4 my-auto d-flex justify-content-md-end">
-                        <a href="#/create-article"><button type="button" class="btn btn-green px-3 py-2" tabindex="-1">Create New Article</button></a>
+                        <a href="#/create-article" onclick="window.scrollTo(0, 0);"><button type="button" class="btn btn-green px-3 py-2" tabindex="-1">Create New Article</button></a>
                     </div>
                 </div>
             </div>
 
             <div class="container-fluid col-11 px-4 py-3 mb-4">
-              <div class="row" id="card-articles">
-
-
-              </div>
+              <div class="row" id="loading-article"></div>
+              <div class="row" id="card-articles"></div>
             </div>
         </section>
 
@@ -33,14 +37,21 @@ const ContentArticle = {
 
   async afterRender() {
     const articleContainer = document.querySelector('#card-articles');
-    articleContainer.innerHTML = '';
+    const loadArticle = document.querySelector('#loading-article');
+    loadArticle.innerHTML = createLoadingText();
 
     try {
       const articleCard = await CTNAPISource.contentArticles();
       articleCard.reverse().forEach((allArticle) => {
         articleContainer.innerHTML += createContentArticleTemplate(allArticle);
       });
+      loadArticle.style.display = 'none';
+      if (!articleCard.length) {
+        articleContainer.innerHTML = createCardEmpty();
+      }
     } catch (err) {
+      loadArticle.innerHTML = createAfterLoadingText(err);
+      articleContainer.innerHTML += createSkeletonArticleTemplate(4);
       console.log(err);
     }
   },

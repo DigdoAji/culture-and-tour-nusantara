@@ -1,5 +1,11 @@
-import CTNAPISource from "../../data/API-CTNsource";
-import { createContentEventTemplate } from "../templates/template-content";
+import CTNAPISource from '../../global/API-CTNsource';
+import {
+  createContentEventTemplate,
+  createSkeletonEventTemplate,
+  createLoadingText,
+  createAfterLoadingText,
+  createCardEmpty,
+} from '../templates/template-content';
 
 const ContentEvent = {
   async render() {
@@ -14,12 +20,13 @@ const ContentEvent = {
                         <p class="lead">All activities/event/competitions about culture and tourism of Nusantara</p>
                     </div>
                     <div class="col-md-4 my-auto d-flex justify-content-md-end">
-                        <a href="#/create-event"><button type="button" class="btn btn-green px-3 py-2" tabindex="-1">Create New Event</button></a>
+                        <a href="#/create-event" onclick="window.scrollTo(0, 0);"><button type="button" class="btn btn-green px-3 py-2" tabindex="-1">Create New Event</button></a>
                     </div>
                 </div>
             </div>
 
             <div class="container-fluid col-11 px-4 py-3 mb-4">
+              <div class="row" id="loading-event"></div>
               <div class="row" id="card-events">
 
               </div>
@@ -32,14 +39,21 @@ const ContentEvent = {
 
   async afterRender() {
     const eventContainer = document.querySelector('#card-events');
-    eventContainer.innerHTML = '';
+    const loadEvent = document.querySelector('#loading-event');
+    loadEvent.innerHTML = createLoadingText();
 
     try {
       const eventCard = await CTNAPISource.contentEvents();
-      eventCard.reverse().slice(0, 4).forEach((allEvent) => {
+      eventCard.reverse().forEach((allEvent) => {
         eventContainer.innerHTML += createContentEventTemplate(allEvent);
       });
+      loadEvent.style.display = 'none';
+      if (!eventCard.length) {
+        eventContainer.innerHTML = createCardEmpty();
+      }
     } catch (err) {
+      loadEvent.innerHTML = createAfterLoadingText(err);
+      eventContainer.innerHTML += createSkeletonEventTemplate(4);
       console.log(err);
     }
   },
