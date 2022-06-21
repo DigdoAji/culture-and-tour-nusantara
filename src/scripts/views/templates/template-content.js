@@ -120,7 +120,7 @@ const createAfterLoadingText = (err) => `
 `;
 
 const createCardEmpty = () => `  
-    <h3 class="text-center mb-5">404 NOT FOUND. Data in CTN API Empty</h3>
+    <h3 class="text-center mt-3 mt-md-0 mb-5">Data in CTN API Empty. Create New Content First</h3>
 `;
 
 export {
