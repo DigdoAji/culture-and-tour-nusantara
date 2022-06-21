@@ -1,5 +1,5 @@
 import Swal from 'sweetalert2';
-import CTNAPISource from '../../data/API-CTNsource';
+import CTNAPISource from '../../global/API-CTNsource';
 
 const AddEvent = {
   async render() {

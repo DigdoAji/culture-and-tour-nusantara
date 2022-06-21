@@ -1,4 +1,4 @@
-import CTNAPISource from '../../data/API-CTNsource';
+import CTNAPISource from '../../global/API-CTNsource';
 import MoreButton from '../../utils/more-button';
 import {
   createContentArticleTemplate,

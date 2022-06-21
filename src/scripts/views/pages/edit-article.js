@@ -1,6 +1,6 @@
 import Swal from 'sweetalert2';
 import UrlParser from '../../routes/url-parser';
-import CTNAPISource from '../../data/API-CTNsource';
+import CTNAPISource from '../../global/API-CTNsource';
 import { createFormUpdateArticleTemplate } from '../templates/template-form';
 import { setInputEditDateToday } from '../../utils/set-input-today';
 

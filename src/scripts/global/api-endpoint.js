@@ -1,4 +1,6 @@
-import CONFIG from './config';
+const CONFIG = {
+  BASE_URL: 'http://localhost:3030/',
+};
 
 const API_ENDPOINT = {
   ARTICLES: `${CONFIG.BASE_URL}articles`,

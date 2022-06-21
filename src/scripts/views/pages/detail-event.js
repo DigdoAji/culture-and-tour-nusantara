@@ -1,6 +1,6 @@
 import Swal from 'sweetalert2';
 import UrlParser from '../../routes/url-parser';
-import CTNAPISource from '../../data/API-CTNsource';
+import CTNAPISource from '../../global/API-CTNsource';
 import { createDetailEventTemplate } from '../templates/template-detail';
 
 const DetailEvent = {

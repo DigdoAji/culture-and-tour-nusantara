@@ -1,4 +1,4 @@
-import API_ENDPOINT from '../global/api-endpoint';
+import API_ENDPOINT from './api-endpoint';
 
 class CTNAPISource {
   static async contentArticles() {
