@@ -119,8 +119,15 @@ const createAfterLoadingText = (err) => `
     <p class="text-danger fw-bolder ms-2"><i class="fa fa-warning me-1"></i>CTN API Error. ${err}<h2>
 `;
 
-const createCardEmpty = () => `  
-    <h3 class="text-center mt-3 mt-md-0 mb-5">Data in CTN API Empty. Create New Content First</h3>
+const createCardEmpty = () => ` 
+    <div class="d-flex justify-content-center">
+        <img src="images/empty-box.png" 
+            class="d-block img-fluid mt-2 mt-md-0 mb-4"  
+            alt="logo Culture and Tour Nusantara" 
+            width="300px" height="300px"
+        >
+    </div>
+    <h3 class="text-center mt-2 mb-5">Data in CTN API is Empty. Please create new content!!</h3>
 `;
 
 export {

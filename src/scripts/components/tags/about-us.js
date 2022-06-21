@@ -12,7 +12,7 @@ class AboutUs extends HTMLElement {
                 <img src="images/CTN logo.png" 
                   class="d-block mx-lg-auto img-fluid" 
                   alt="logo Culture and Tour Nusantara" 
-                  width="320" height="320"
+                  width="320px" height="320px"
                 >
               </div>
               <div class="col-lg-6">

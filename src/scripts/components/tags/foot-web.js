@@ -9,7 +9,11 @@ class FooterWeb extends HTMLElement {
         <div class="container px-0 mb-5">
           <div class="post-footer d-flex pt-5 px-4 px-md-0">
             <div class="col">
-              <img class="img-fluid bi me-2 mb-3" src="images/CTN logo - with title.png" alt="logo Culture and Tour Nusantara" width="175" height="95">
+              <img class="img-fluid bi me-2 mb-3" 
+                src="images/CTN logo - with title.png" 
+                alt="logo Culture and Tour Nusantara" 
+                width="175px" height="95px"
+              >
               <p class=" text-muted">Discover Paradise of Nusantara</p>
             </div>
             

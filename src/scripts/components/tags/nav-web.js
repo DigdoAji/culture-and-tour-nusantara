@@ -11,7 +11,7 @@ class NavWeb extends HTMLElement {
                   <img class="img-fluid" 
                     src="images/CTN logo - with title.png" 
                     alt="logo Culture and Tour Nusantara" 
-                    width="145" height="53"
+                    width="145px" height="53px"
                   >
               </div>
             <button class="navbar-toggler" type="button" id="drawerButton" data-bs-toggle="collapse" data-bs-target="#navDropdown" aria-controls="navDropdown" aria-expanded="false" aria-label="Toggle navigation">

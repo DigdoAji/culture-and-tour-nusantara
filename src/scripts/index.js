@@ -1,6 +1,7 @@
 import '../styles/main.css';
 import '../styles/header.css';
 import '../styles/footer.css';
+import '../styles/responsive.css';
 import './components/index';
 import 'regenerator-runtime';
 import 'bootstrap/dist/css/bootstrap.min.css';

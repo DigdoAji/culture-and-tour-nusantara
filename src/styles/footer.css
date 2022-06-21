@@ -11,12 +11,3 @@
   color: white !important;
   font-weight: 300;
 }
-
-@media (max-width: 768px) {
-  .post-footer {
-    padding: 0px 25px !important;
-
-    flex-direction: column;
-    text-align: left;
-  }
-}
