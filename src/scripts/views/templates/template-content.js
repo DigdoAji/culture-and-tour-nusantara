@@ -1,7 +1,7 @@
 const createContentArticleTemplate = (contentArticles) => `
     <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
         <div class="card shadow-lg rounded-card h-100">
-            <img src="${contentArticles.pictureId ? contentArticles.pictureId : 'https://via.placeholder.com/600x400/?text=image+not+found'}" 
+            <img class="lazyload" data-src="${contentArticles.pictureId ? contentArticles.pictureId : 'https://via.placeholder.com/600x400/?text=image+not+found'}" 
                 alt="${contentArticles.name} illustration" 
                 class="article-img-top img-fluid border border-2 img-rounded-card" 
                 width="600px" height="300px"
@@ -25,7 +25,7 @@ const createContentArticleTemplate = (contentArticles) => `
 const createContentEventTemplate = (contentEvents) => `
     <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
         <div class="card shadow-lg rounded-card h-100">
-            <img src="${contentEvents.pictureId ? contentEvents.pictureId : 'https://via.placeholder.com/600x700/?text=image+not+found'}" 
+            <img class="lazyload" data-src="${contentEvents.pictureId ? contentEvents.pictureId : 'https://via.placeholder.com/600x700/?text=image+not+found'}" 
                 alt="${contentEvents.name} illustration" 
                 class="img-fluid border border-2 img-rounded-card" 
                 width="600px" height="700px"
@@ -51,7 +51,7 @@ const createSkeletonArticleTemplate = (count) => {
     skeletonTemplate += `
       <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
         <div class="card skeleton shadow-lg rounded-card h-100">
-            <img src="https://via.placeholder.com/600x400/?text=image+placeholder" 
+            <img class="lazyload" data-src="https://via.placeholder.com/600x400/?text=image+placeholder" 
                 alt="Skeleton image" 
                 class="article-img-top img-fluid border border-2 img-rounded-card" 
                 width="800px" height="400px"
@@ -88,7 +88,7 @@ const createSkeletonEventTemplate = (count) => {
     skeletonTemplate += `
     <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
         <div class="card skeleton shadow-lg rounded-card h-100">
-            <img src="https://via.placeholder.com/600x700/?text=image+placeholder" 
+            <img class="lazyload" data-src="https://via.placeholder.com/600x700/?text=image+placeholder" 
                 alt="Poster Skeleton" 
                 class="img-fluid border border-2 img-rounded-card" 
                 width="800px" height="700px"
@@ -121,7 +121,7 @@ const createAfterLoadingText = (err) => `
 
 const createCardEmpty = () => ` 
     <div class="d-flex justify-content-center">
-        <img src="images/empty-box.png" 
+        <img class="lazyload" data-src="images/empty-box.png" 
             class="d-block img-fluid mt-2 mt-md-0 mb-4"  
             alt="logo Culture and Tour Nusantara" 
             width="300px" height="300px"

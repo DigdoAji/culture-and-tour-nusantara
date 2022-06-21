@@ -2,7 +2,7 @@ const createDetailArticleTemplate = (detailArticle) => `
 <div class="container-fluid">
     <div class="card border border-0">
         <div class="d-flex justify-content-center mx-3 mx-md-0 mt-2 mb-2 pt-4">
-            <img src="${detailArticle.pictureId}" 
+            <img class="lazyload" data-src="${detailArticle.pictureId}" 
             class="img-fluid img-rounded border border-2 border-success mx-auto d-block" 
             alt="${detailArticle.name} illustration" 
             width="600px" height="400px"
@@ -58,7 +58,7 @@ const createDetailArticleTemplate = (detailArticle) => `
                 <div class="card-body py-3">
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="user d-flex flex-row align-items-center">
-                            <img src="images/blank-profile.png" width="50" height="50" class="usercomment-img rounded-circle me-3">
+                            <img class="lazyload" data-src="images/blank-profile.png" width="50" height="50" class="usercomment-img rounded-circle me-3">
                             <h5 class="card-title fs-5 mb-0">${comment.name}</h5>
                         </div>
                         <p class="text-muted fs-6 mb-0">${comment.date}</p>
@@ -97,7 +97,7 @@ const createDetailEventTemplate = (detailEvent) => `
             </div>
         </div>
         <div class="col-md-5">
-            <img src="${detailEvent.pictureId}" 
+            <img class="lazyload" data-src="${detailEvent.pictureId}" 
             class="img-fluid img-rounded border border-2 border-success mx-auto d-block" 
             width="600px" height="700px"
             alt="${detailEvent.name} Poster"
@@ -139,7 +139,7 @@ const createDetailEventTemplate = (detailEvent) => `
                 <div class="card-body py-3">
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="user d-flex flex-row align-items-center">
-                            <img src="images/blank-profile.png" width="50" height="50" class="usercomment-img rounded-circle me-3">
+                            <img class="lazyload" data-src="images/blank-profile.png" width="50" height="50" class="usercomment-img rounded-circle me-3">
                             <h5 class="card-title fs-5 mb-0">${comment.name}</h5>
                         </div>
                         <p class="text-muted fs-6 mb-0">${comment.date}</p>
@@ -165,7 +165,7 @@ const createSkeletonDetailArticleTemplate = () => `
 <div class="container-fluid">
     <div class="card border border-0">
         <div class="d-flex justify-content-center mx-3 mx-md-0 mt-2 mb-2 pt-4">
-            <img src="https://via.placeholder.com/600x400/?text=image+placeholder" 
+            <img class="lazyload" data-src="https://via.placeholder.com/600x400/?text=image+placeholder" 
             class="img-fluid img-rounded border border-2 border-success mx-auto d-block" 
             alt="Skeleton Image" 
             width="750px" height="300px"
@@ -227,7 +227,7 @@ const createSkeletonDetailArticleTemplate = () => `
                 <div class="card-body py-3">
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="user d-flex flex-row align-items-center">
-                            <img src="images/blank-profile.png" width="50" height="50" class="usercomment-img rounded-circle me-3">
+                            <img class="lazyload" data-src="images/blank-profile.png" width="50" height="50" class="usercomment-img rounded-circle me-3">
                             <h5 class="card-title fs-5 mb-0">Jane Doe</h5>
                         </div>
                         <p class="text-muted fs-6 mb-0">XX June XXXX</p>
@@ -271,7 +271,7 @@ const createSkeletonDetailEventTemplate = () => `
             </div>
         </div>
         <div class="col-md-5">
-            <img src="https://via.placeholder.com/600x700/?text=image+placeholder" 
+            <img class="lazyload" data-src="https://via.placeholder.com/600x700/?text=image+placeholder" 
             class="img-fluid img-rounded border border-2 border-success mx-auto d-block" 
             width="600px" height="700px"
             alt="Poster Skeleton"
@@ -312,7 +312,7 @@ const createSkeletonDetailEventTemplate = () => `
                 <div class="card-body py-3">
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="user d-flex flex-row align-items-center">
-                            <img src="images/blank-profile.png" width="50" height="50" class="usercomment-img rounded-circle me-3">
+                            <img class="lazyload" data-src="images/blank-profile.png" width="50" height="50" class="usercomment-img rounded-circle me-3">
                             <h5 class="card-title fs-5 mb-0">John Doe</h5>
                         </div>
                         <p class="text-muted fs-6 mb-0">XX June XXXX</p>
