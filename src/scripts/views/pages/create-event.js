@@ -53,7 +53,7 @@ const AddEvent = {
                   <input type="url" class="form-control" id="inputImageEvent" placeholder="Image" />
                   <label for="inputImageEvent">Image (Insert Direct Link Image)</label>
                   <p class="size-text-sm ps-2 pt-2 mb-0">Convert image to direct link Url with <a href="https://postimages.org/" class="color-postimages linkhov-deco fw-bold" target="_blank">postimages</a></p>
-              </div>  
+              </div> 
               <div class="form-floating mb-4">
                 <textarea class="form-control comment-textarea" id="inputDescriptionEvent" placeholder="Description" ></textarea>
                 <label for="inputDescriptionEvent">Description</label>
