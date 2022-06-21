@@ -2,15 +2,15 @@ const createDetailArticleTemplate = (detailArticle) => `
 <div class="container-fluid">
     <div class="card border border-0">
         <div class="d-flex justify-content-center mx-3 mx-md-0 mt-2 mb-2 pt-4">
-            <img class="lazyload" data-src="${detailArticle.pictureId}" 
-            class="img-fluid img-rounded border border-2 border-success mx-auto d-block" 
+            <img data-src="${detailArticle.pictureId}" 
+            class="img-fluid img-rounded border border-2 border-success mx-auto d-block lazyload" 
             alt="${detailArticle.name} illustration" 
             width="600px" height="400px"
             >
         </div>
         <div class="card-body">
             <h2 class="card-title text-center fw-bold py-2 px-sm-5 mx-3 mx-md-5 mt-1">${detailArticle.name}</h2>
-            <p class="card-text mt-2 mb-0 px-3 px-md-5">
+            <p class="card-text text-description mt-2 mb-0 px-3 px-md-5">
                 ${detailArticle.description}
             </p>
             <div class="row mt-2 mb-2 pt-4 px-3 px-md-5">
@@ -91,14 +91,14 @@ const createDetailEventTemplate = (detailEvent) => `
                 <p class="fw-normal size-text-md mb-1"><i class="fa fa-clock-o me-2"></i>${detailEvent.time} ${detailEvent.timezone}</p>
                 <p class="fw-normal size-text-md mb-4"><i class="fa fa-tags me-2"></i>${detailEvent.categories}</p>
                 <h3 class="fw-bold size-text-md mb-1">Description :</h3>
-                <p class="fw-normal mt-2 mb-2">
+                <p class="fw-normal text-description mt-2 mb-2">
                     ${detailEvent.description}
                 </p>
             </div>
         </div>
         <div class="col-md-5">
-            <img class="lazyload" data-src="${detailEvent.pictureId}" 
-            class="img-fluid img-rounded border border-2 border-success mx-auto d-block" 
+            <img data-src="${detailEvent.pictureId}" 
+            class="img-fluid img-rounded border border-2 border-success mx-auto d-block lazyload" 
             width="600px" height="700px"
             alt="${detailEvent.name} Poster"
             >
@@ -165,23 +165,19 @@ const createSkeletonDetailArticleTemplate = () => `
 <div class="container-fluid">
     <div class="card border border-0">
         <div class="d-flex justify-content-center mx-3 mx-md-0 mt-2 mb-2 pt-4">
-            <img class="lazyload" data-src="https://via.placeholder.com/600x400/?text=image+placeholder" 
-            class="img-fluid img-rounded border border-2 border-success mx-auto d-block" 
+            <img data-src="https://via.placeholder.com/600x400/?text=image+placeholder" 
+            class="img-fluid img-rounded border border-2 border-success mx-auto d-block lazyload" 
             alt="Skeleton Image" 
             width="750px" height="300px"
             >
         </div>
         <div class="card-body">
             <h2 class="card-title text-center fw-bold py-2 px-sm-5 mx-3 mx-md-5 mt-1">Lorem ipsum dolor sit amet</h2>
-            <p class="card-text mt-2 mb-0 px-3 px-md-5">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
-                Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-                Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
-                Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, 
-                imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. 
-                Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, 
-                porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, 
-                feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
+            <p class="card-text text-description mt-2 mb-0 px-3 px-md-5">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
+                Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. 
+                
+                Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
             </p>
             <div class="row mt-2 mb-2 pt-4 px-3 px-md-5">
                 <div class="col-md-8 my-auto">
@@ -258,21 +254,16 @@ const createSkeletonDetailEventTemplate = () => `
                 <p class="fw-normal size-text-md mb-1"><i class="fa fa-clock-o me-2"></i>XX:XX WIB</p>
                 <p class="fw-normal size-text-md mb-4"><i class="fa fa-tags me-2"></i>Any</p>
                 <h3 class="fw-bold size-text-md mb-1">Description :</h3>
-                <p class="fw-normal mt-2 mb-2">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
-                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-                    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
-                    Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, 
-                    imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. 
-                    Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, 
-                    porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, 
-                    feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
+                <p class="fw-normal text-description mt-2 mb-2">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
+                    
+                    Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
                 </p>
             </div>
         </div>
         <div class="col-md-5">
-            <img class="lazyload" data-src="https://via.placeholder.com/600x700/?text=image+placeholder" 
-            class="img-fluid img-rounded border border-2 border-success mx-auto d-block" 
+            <img data-src="https://via.placeholder.com/600x700/?text=image+placeholder" 
+            class="img-fluid img-rounded border border-2 border-success mx-auto d-block lazyload" 
             width="600px" height="700px"
             alt="Poster Skeleton"
             >

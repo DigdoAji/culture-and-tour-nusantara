@@ -145,6 +145,11 @@ a {
   object-fit: cover !important;
 }
 
+/* ==== Detail ==== */
+.text-description {
+  white-space: pre-line;
+}
+
 
 /* ==== Review ==== */
 
