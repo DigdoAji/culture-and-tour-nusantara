@@ -40,6 +40,7 @@ const createFormUpdateArticleTemplate = (detailArticle) => `
     </div>
 `;
 
+
 const createFormUpdateEventTemplate = (detailEvent) => `
   <div class="container mt-5">
     <h2 class="text-center fw-bold pt-3 pb-1 mt-1">Form Edit Event</h2>
@@ -96,7 +97,7 @@ const createFormUpdateEventTemplate = (detailEvent) => `
           </div>
           <div class="d-grid gap-2 d-sm-flex justify-content-sm-center my-2 pt-1">
               <button id="submitEvent" type="submit" class="btn btn-green fs-5 px-5 fw-bold my-2 my-sm-0 me-sm-3" tabindex="-1">Submit</button>
-              <button id="cancelEvent" type="button" class="btn btn-danger fs-5 px-5 fw-bold" tabindex="-1">Cancel</button></a>    
+              <button id="cancelEvent" type="button" class="btn btn-danger fs-5 px-5 fw-bold" tabindex="-1">Cancel</button></a>
           </div>
       </form>
   </div>
