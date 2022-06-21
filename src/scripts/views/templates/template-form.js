@@ -40,7 +40,6 @@ const createFormUpdateArticleTemplate = (detailArticle) => `
     </div>
 `;
 
-
 const createFormUpdateEventTemplate = (detailEvent) => `
   <div class="container mt-5">
     <h2 class="text-center fw-bold pt-3 pb-1 mt-1">Form Edit Event</h2>
