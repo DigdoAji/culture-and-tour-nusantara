@@ -19,7 +19,9 @@
   .hero-text > p {
     font-size: 20px !important;
   }
+}
 
+@media (max-width: 768px) {
   .post-footer {
     padding: 0px 25px !important;
 

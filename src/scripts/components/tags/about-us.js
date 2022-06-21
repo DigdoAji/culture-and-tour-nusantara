@@ -61,7 +61,7 @@ class AboutUs extends HTMLElement {
           <div class="row text-center">
             
             <div class="col-xl-3 col-md-6 mb-5 px-0 px-sm-4 px-md-3 px-xl-2">
-              <div class="card bg-white border border-3 rounded-card shadow-lg py-5 px-4">
+              <div class="card bg-white border border-3 rounded-card shadow-lg py-5 px-4 h-100">
                 <img src="images/foto-profil-digdo.jpg" 
                   class="img-fluid rounded-circle border border-3 mx-auto mb-3 shadow-sm" 
                   alt="Digdo Profile" 
@@ -81,7 +81,7 @@ class AboutUs extends HTMLElement {
             </div>
 
             <div class="col-xl-3 col-md-6 mb-5 px-0 px-sm-4 px-md-3 px-xl-2">
-              <div class="card bg-white border border-3 rounded-card shadow-lg py-5 px-4">
+              <div class="card bg-white border border-3 rounded-card shadow-lg py-5 px-4 h-100">
                 <img src="images/foto-profil-taufik.jpg" 
                   class="img-fluid rounded-circle border border-3 mx-auto mb-3 shadow-sm" 
                   alt="Taufik Profile" 
@@ -101,7 +101,7 @@ class AboutUs extends HTMLElement {
             </div>
 
             <div class="col-xl-3 col-md-6 mb-5 px-0 px-sm-4 px-md-3 px-xl-2">
-              <div class="card bg-white border border-3 rounded-card shadow-lg py-5 px-4">
+              <div class="card bg-white border border-3 rounded-card shadow-lg py-5 px-4 h-100">
                 <img src="images/foto-profil-raichan.jpg" 
                   class="img-fluid rounded-circle border border-3 mx-auto mb-3 shadow-sm" 
                   alt="Raichan Profile" 
@@ -120,7 +120,7 @@ class AboutUs extends HTMLElement {
               </div>
             </div>
 
-            <div class="col-xl-3 col-md-6 mb-5 px-0 px-sm-4 px-md-3 px-xl-2">
+            <div class="col-xl-3 col-md-6 mb-5 px-0 px-sm-4 px-md-3 px-xl-2 h-100">
               <div class="card bg-white border border-3 rounded-card shadow-lg py-5 px-4">
                 <img src="images/foto-profil-saprini.jpg" 
                   class="img-fluid rounded-circle border border-3 mx-auto mb-3 shadow-sm" 
@@ -138,8 +138,8 @@ class AboutUs extends HTMLElement {
                   <a href="https://github.com/saprinikhairunnisa" target="_blank" class="px-2"><button type="button" class="btn btn-outline-green icons-size" tabindex="-1"><i class="fa fa-github"></i></button></a>
                 </div>
               </div>
-            </div>\
-            
+            </div>
+
           </div>
         </div>
       </section>
