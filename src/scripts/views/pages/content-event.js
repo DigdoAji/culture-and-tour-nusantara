@@ -27,9 +27,7 @@ const ContentEvent = {
 
             <div class="container-fluid col-11 px-4 py-3 mb-4">
               <div class="row" id="loading-event"></div>
-              <div class="row" id="card-events">
-
-              </div>
+              <div class="row" id="card-events"></div>
             </div>
         </section>
 
