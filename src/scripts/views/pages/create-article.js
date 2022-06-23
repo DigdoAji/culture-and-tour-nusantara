@@ -1,6 +1,6 @@
 import Swal from 'sweetalert2';
 import CTNAPISource from '../../global/API-CTNsource';
-import { setInputCreateDateToday } from '../../utils/set-input-today';
+import { setInputDateToday } from '../../utils/set-input-today';
 
 const AddArticle = {
   async render() {
@@ -59,7 +59,7 @@ const AddArticle = {
     const inputImageArticle = document.querySelector('#inputImageArticle');
     const inputDescriptionArticle = document.querySelector('#inputDescriptionArticle');
 
-    setInputCreateDateToday(inputDateArticle);
+    setInputDateToday(inputDateArticle);
 
     submitArticle.addEventListener('click', async (event) => {
       event.preventDefault();

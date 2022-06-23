@@ -2,7 +2,7 @@ import Swal from 'sweetalert2';
 import UrlParser from '../../routes/url-parser';
 import CTNAPISource from '../../global/API-CTNsource';
 import { createFormUpdateArticleTemplate } from '../templates/template-form';
-import { setInputEditDateToday } from '../../utils/set-input-today';
+import { setInputDateToday } from '../../utils/set-input-today';
 
 const EditArticle = {
   async render() {
@@ -32,7 +32,7 @@ const EditArticle = {
     const editImageArticle = document.querySelector('#editImageArticle');
     const editDescriptionArticle = document.querySelector('#editDescriptionArticle');
 
-    setInputEditDateToday(editDateArticle);
+    setInputDateToday(editDateArticle);
 
     submitArticle.addEventListener('click', async (event) => {
       event.preventDefault();

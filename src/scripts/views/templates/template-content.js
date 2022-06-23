@@ -123,7 +123,7 @@ const createCardEmpty = () => `
     <div class="d-flex justify-content-center">
         <img data-src="images/empty-box.png" 
             class="d-block img-fluid mt-2 mt-md-0 mb-4 lazyload"  
-            alt="logo Culture and Tour Nusantara" 
+            alt="Empty box and shelf" 
             width="300px" height="300px"
         >
     </div>
