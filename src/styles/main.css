@@ -150,6 +150,11 @@ a {
   white-space: pre-line;
 }
 
+.description-textarea {
+  resize: none;
+  height: 280px !important;
+}
+
 
 /* ==== Review ==== */
 

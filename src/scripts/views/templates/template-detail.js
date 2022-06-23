@@ -1,11 +1,18 @@
 const createDetailArticleTemplate = (detailArticle) => `
 <div class="container-fluid">
     <div class="card border border-0">
-        <div class="d-flex justify-content-center mx-3 mx-md-0 mt-2 mb-2 pt-4">
+        <div class="mt-2 mb-2 pt-4 ps-3 ps-md-5">
+            <p class="size-text-sm ms-1 ms-md-4 mb-0">
+                <a class="linkhov-deco color-black" href="/">CTN</a> / 
+                <a class="linkhov-deco color-black" href="#/content-article">Article</a> / 
+                <span class="color-ctn fw-bold">${detailArticle.name}</span>
+            </p>
+        </div>
+        <div class="d-flex justify-content-center mx-3 mx-lg-0 mt-2 mb-2 pt-2">
             <img data-src="${detailArticle.pictureId}" 
                 class="img-fluid img-rounded border border-2 border-success mx-auto d-block lazyload" 
                 alt="${detailArticle.name} illustration" 
-                width="600px" height="400px"
+                width="920px" height="400px"
             >
         </div>
         <div class="card-body">
@@ -86,8 +93,17 @@ const createDetailArticleTemplate = (detailArticle) => `
 const createDetailEventTemplate = (detailEvent) => `
 <div class="container my-5">
     <div class="row">
+        <div class="col-md-7">
+            <p class="size-text-sm ps-3">
+                <a class="linkhov-deco color-black" href="/">CTN</a> / 
+                <a class="linkhov-deco color-black" href="#/content-event">Event</a> / 
+                <span class="color-ctn fw-bold">${detailEvent.name}</span>
+            </p>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-md-7 d-flex justify-content-md-start">
-            <div class="p-3" >
+            <div class="px-3 pb-3 pt-0">
                 <h2 class="mt-2">${detailEvent.name}</h2>
                 <p class="fw-normal size-text-md mb-1"><i class="fa fa-map-marker me-2"></i>${detailEvent.location}</p>
                 <p class="fw-normal size-text-md mb-1"><i class="fa fa-calendar me-2"></i>${detailEvent.date}</p>
@@ -170,11 +186,18 @@ const createDetailEventTemplate = (detailEvent) => `
 const createSkeletonDetailArticleTemplate = () => `
 <div class="container-fluid">
     <div class="card border border-0">
-        <div class="d-flex justify-content-center mx-3 mx-md-0 mt-2 mb-2 pt-4">
+        <div class="mt-2 mb-2 pt-4 ps-3 ps-md-5">
+            <p class="size-text-sm ms-1 ms-md-4 mb-0">
+                <a class="linkhov-deco color-black" href="/">CTN</a> / 
+                <a class="linkhov-deco color-black" href="#/content-article">Article</a> / 
+                <span class="color-ctn fw-bold">Skeleton Detail Article</span>
+            </p>
+        </div>
+        <div class="d-flex justify-content-center mx-3 mx-lg-0 mt-2 mb-2 pt-2">
             <img data-src="https://via.placeholder.com/600x400/?text=image+placeholder" 
                 class="img-fluid img-rounded border border-2 border-success mx-auto d-block lazyload" 
                 alt="Skeleton Image" 
-                width="750px" height="300px"
+                width="920px" height="300px"
             >
         </div>
         <div class="card-body">
@@ -255,8 +278,17 @@ const createSkeletonDetailArticleTemplate = () => `
 const createSkeletonDetailEventTemplate = () => `
 <div class="container my-5">
     <div class="row">
+        <div class="col-md-7">
+            <p class="size-text-sm ps-3">
+                <a class="linkhov-deco color-black" href="/">CTN</a> / 
+                <a class="linkhov-deco color-black" href="#/content-event">Event</a> / 
+                <span class="color-ctn fw-bold">Skeleton Detail Event</span>
+            </p>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-md-7 d-flex justify-content-md-start">
-            <div class="p-3" >
+            <div class="px-3 pb-3 pt-0" >
                 <h2 class="mt-2">Lorem Ipsum Inarte</h2>
                 <p class="fw-normal size-text-md mb-1"><i class="fa fa-map-marker me-2"></i>Nusantara</p>
                 <p class="fw-normal size-text-md mb-1"><i class="fa fa-calendar me-2"></i>XXXX-XX-XX</p>
