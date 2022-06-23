@@ -118,6 +118,18 @@ class CTNAPISource {
     const responseJson = await response.json();
     return responseJson.detailEvent;
   }
+
+  static async findCategoryArticle(category) {
+    const response = await fetch(API_ENDPOINT.CATEGORY_ARTICLE(category));
+    const responseJson = await response.json();
+    return responseJson.contentArticles;
+  }
+
+  static async findCategoryEvent(category) {
+    const response = await fetch(API_ENDPOINT.CATEGORY_EVENT(category));
+    const responseJson = await response.json();
+    return responseJson.contentEvents;
+  }
 }
 
 export default CTNAPISource;

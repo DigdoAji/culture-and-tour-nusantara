@@ -13,6 +13,7 @@ class HeroJumbotronWeb extends HTMLElement {
                 width="100%" height="360px" 
                 src="images/hero-image-bromo.jpg" 
                 alt="Bromo Mountain"
+                class="lazyload"
               />
               <div class="hero-text pos-fix-hero">
                 <h1>Bromo Mountain</h1>
@@ -24,6 +25,7 @@ class HeroJumbotronWeb extends HTMLElement {
                 width="100%" height="360px" 
                 src="images/hero-image-kecak.jpg" 
                 alt="Kecak Dance"
+                class="lazyload"
               />
               <div class="hero-text pos-fix-hero">
                 <h1>Kecak Dance</h1>

@@ -19,7 +19,7 @@ const createFormUpdateArticleTemplate = (detailArticle) => `
                   <option selected disabled>${detailArticle.categories}</option>
                   <option value="Tourism">Tourism</option>
                   <option value="Culture">Culture</option>
-                  <option value="Tourism and Culture">Tourism and Culture</option>
+                  <option value="Tourism & Culture">Tourism & Culture</option>
                 </select>
                 <label for="editTagsArticle">Categories</label>
               </div>
