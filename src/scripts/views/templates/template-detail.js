@@ -9,7 +9,7 @@ const createDetailArticleTemplate = (detailArticle) => `
             </p>
         </div>
         <div class="d-flex justify-content-center mx-3 mx-lg-0 mt-2 mb-2 pt-2">
-            <img data-src="${detailArticle.pictureId}" 
+            <img data-src="${detailArticle.pictureId ? detailArticle.pictureId : 'https://via.placeholder.com/600x400/?text=image+not+found'}" 
                 class="img-fluid img-rounded border border-2 border-success mx-auto d-block lazyload" 
                 alt="${detailArticle.name} illustration" 
                 width="920px" height="400px"
@@ -116,7 +116,7 @@ const createDetailEventTemplate = (detailEvent) => `
             </div>
         </div>
         <div class="col-md-5">
-            <img data-src="${detailEvent.pictureId}" 
+            <img data-src="${detailEvent.pictureId ? detailEvent.pictureId : 'https://via.placeholder.com/600x700/?text=image+not+found'}" 
                 class="img-fluid img-rounded border border-2 border-success mx-auto d-block lazyload" 
                 width="600px" height="700px"
                 alt="${detailEvent.name} Poster"

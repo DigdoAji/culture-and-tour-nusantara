@@ -118,14 +118,14 @@ const AddEvent = {
           icon: 'success',
           title: 'New Event have been added',
         });
-        await location.replace('#/content-event');
+        window.location.href = '#/content-event';
       }
     });
 
-    cancelEvent.addEventListener('click', async (event) => {
+    cancelEvent.addEventListener('click', (event) => {
       event.preventDefault();
-      await location.replace('#/content-event');
-      await window.scrollTo(0, 0);
+      window.location.href = '#/content-event';
+      window.scrollTo(0, 0);
     });
   },
 };

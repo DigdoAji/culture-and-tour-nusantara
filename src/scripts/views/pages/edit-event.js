@@ -70,17 +70,17 @@ const EditEvent = {
               'Your selected event has been updated.',
               'success',
             );
-            await location.replace('#/content-event');
-            await window.scrollTo(0, 0);
+            window.location.href = '#/content-event';
+            window.scrollTo(0, 0);
           }
         });
       }
     });
 
-    cancelEvent.addEventListener('click', async (event) => {
+    cancelEvent.addEventListener('click', (event) => {
       event.preventDefault();
-      await location.replace('#/content-event');
-      await window.scrollTo(0, 0);
+      window.location.href = '#/content-event';
+      window.scrollTo(0, 0);
     });
   },
 };

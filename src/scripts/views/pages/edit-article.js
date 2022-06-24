@@ -68,17 +68,17 @@ const EditArticle = {
               'Your selected article has been updated.',
               'success',
             );
-            await location.replace('#/content-article');
-            await window.scrollTo(0, 0);
+            window.location.href = '#/content-article';
+            window.scrollTo(0, 0);
           }
         });
       }
     });
 
-    cancelArticle.addEventListener('click', async (event) => {
+    cancelArticle.addEventListener('click', (event) => {
       event.preventDefault();
-      await location.replace('#/content-article');
-      await window.scrollTo(0, 0);
+      window.location.href = '#/content-article';
+      window.scrollTo(0, 0);
     });
   },
 };

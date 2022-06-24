@@ -1,13 +1,13 @@
 const MoreButton = () => {
-  const clickMoreEvents = document.getElementById('more-events');
-  clickMoreEvents.addEventListener('click', () => {
-    location.replace('#/content-event');
+  const clickMoreArticles = document.getElementById('more-articles');
+  clickMoreArticles.addEventListener('click', () => {
+    window.location.href = '#/content-article';
     window.scrollTo(0, 0);
   });
 
-  const clickMoreArticles = document.getElementById('more-articles');
-  clickMoreArticles.addEventListener('click', () => {
-    location.replace('#/content-article');
+  const clickMoreEvents = document.getElementById('more-events');
+  clickMoreEvents.addEventListener('click', () => {
+    window.location.href = '#/content-event';
     window.scrollTo(0, 0);
   });
 };
