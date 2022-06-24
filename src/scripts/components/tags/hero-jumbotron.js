@@ -32,6 +32,30 @@ class HeroJumbotronWeb extends HTMLElement {
                 <p><i class="fa fa-map-marker me-2"></i>Bali, Indonesia</p>
               </div>
             </div>
+            <div class="carousel-item hero">
+              <img
+                width="100%" height="360px" 
+                src="images/hero-image-gili-trawangan.jpg" 
+                alt="Gili Trawanagan"
+                class="lazyload"
+              />
+              <div class="hero-text pos-fix-hero">
+                <h1>Gili Trawangan</h1>
+                <p><i class="fa fa-map-marker me-2"></i>West Nusa Tenggara, Indonesia</p>
+              </div>
+            </div>
+            <div class="carousel-item hero">
+              <img
+                width="100%" height="360px" 
+                src="images/hero-image-papua-tribe.jpg" 
+                alt="Papua Tribe"
+                class="lazyload"
+              />
+              <div class="hero-text pos-fix-hero">
+                <h1>Papua Tribe</h1>
+                <p><i class="fa fa-map-marker me-2"></i>Papua, Indonesia</p>
+              </div>
+            </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
