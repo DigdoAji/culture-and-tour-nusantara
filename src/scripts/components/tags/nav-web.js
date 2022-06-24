@@ -35,10 +35,6 @@ class NavWeb extends HTMLElement {
                   <a class="nav-link" href="#/about">About Us</a>
                 </li>
               </ul>
-              <form class="form-inline my-2 my-lg-0">
-                  <a href="#/login" class="me-1 me-lg-2"><button type="button" class="btn btn-green px-4" tabindex="-1">Log In</button></a>
-                  <a href="#/register"><button type="button" class="btn btn-outline-green px-4" tabindex="-1">Register</button></a>
-              </form>
             </div>
           </div>
         </nav>
