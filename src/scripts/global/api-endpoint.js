@@ -1,5 +1,5 @@
 const CONFIG = {
-  BASE_URL: 'http://localhost:3030/',
+  BASE_URL: 'http://localhost:3030/api/',
 };
 
 const API_ENDPOINT = {
