@@ -9,8 +9,8 @@ const createDetailArticleTemplate = (detailArticle) => `
             </p>
         </div>
         <div class="d-flex justify-content-center mx-3 mx-lg-0 mt-2 mb-2 pt-2">
-            <img data-src="${detailArticle.pictureId ? detailArticle.pictureId : 'https://via.placeholder.com/600x400/?text=image+not+found'}" 
-                class="img-fluid img-rounded border border-2 border-success mx-auto d-block lazyload" 
+            <img src="${detailArticle.pictureId ? detailArticle.pictureId : 'https://via.placeholder.com/600x400/?text=image+not+found'}" 
+                class="img-fluid img-rounded border border-2 border-success mx-auto d-block" 
                 alt="${detailArticle.name} illustration" 
                 width="920px" height="400px"
             >
@@ -116,8 +116,8 @@ const createDetailEventTemplate = (detailEvent) => `
             </div>
         </div>
         <div class="col-md-5">
-            <img data-src="${detailEvent.pictureId ? detailEvent.pictureId : 'https://via.placeholder.com/600x700/?text=image+not+found'}" 
-                class="img-fluid img-rounded border border-2 border-success mx-auto d-block lazyload" 
+            <img src="${detailEvent.pictureId ? detailEvent.pictureId : 'https://via.placeholder.com/600x700/?text=image+not+found'}" 
+                class="img-fluid img-rounded border border-2 border-success mx-auto d-block" 
                 width="600px" height="700px"
                 alt="${detailEvent.name} Poster"
             >
@@ -194,8 +194,8 @@ const createSkeletonDetailArticleTemplate = () => `
             </p>
         </div>
         <div class="d-flex justify-content-center mx-3 mx-lg-0 mt-2 mb-2 pt-2">
-            <img data-src="https://via.placeholder.com/600x400/?text=image+placeholder" 
-                class="img-fluid img-rounded border border-2 border-success mx-auto d-block lazyload" 
+            <img src="https://via.placeholder.com/600x400/?text=image+placeholder" 
+                class="img-fluid img-rounded border border-2 border-success mx-auto d-block" 
                 alt="Skeleton Image" 
                 width="920px" height="300px"
             >
@@ -252,9 +252,9 @@ const createSkeletonDetailArticleTemplate = () => `
                 <div class="card-body py-3">
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="user d-flex flex-row align-items-center">
-                            <img data-src="images/blank-profile.png" 
+                            <img src="images/blank-profile.png" 
                                 width="50" height="50" 
-                                class="usercomment-img rounded-circle me-3 lazyload"
+                                class="usercomment-img rounded-circle me-3"
                             >
                             <h5 class="card-title fs-5 mb-0">Jane Doe</h5>
                         </div>
@@ -303,8 +303,8 @@ const createSkeletonDetailEventTemplate = () => `
             </div>
         </div>
         <div class="col-md-5">
-            <img data-src="https://via.placeholder.com/600x700/?text=image+placeholder" 
-            class="img-fluid img-rounded border border-2 border-success mx-auto d-block lazyload" 
+            <img src="https://via.placeholder.com/600x700/?text=image+placeholder" 
+            class="img-fluid img-rounded border border-2 border-success mx-auto d-block" 
             width="600px" height="700px"
             alt="Poster Skeleton"
             >
@@ -345,9 +345,9 @@ const createSkeletonDetailEventTemplate = () => `
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="user d-flex flex-row align-items-center">
                             <img 
-                                data-src="images/blank-profile.png" 
+                                src="images/blank-profile.png" 
                                 width="50" height="50" 
-                                class="usercomment-img rounded-circle me-3 lazyload"
+                                class="usercomment-img rounded-circle me-3"
                             >
                             <h5 class="card-title fs-5 mb-0">John Doe</h5>
                         </div>

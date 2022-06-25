@@ -9,9 +9,6 @@ import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import App from './views/app';
-import main from './utils/main';
-
-document.addEventListener('DOMContentLoaded', main);
 
 const app = new App({
   button: document.querySelector('#drawerButton'),

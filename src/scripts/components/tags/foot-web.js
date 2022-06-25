@@ -52,9 +52,7 @@ class FooterWeb extends HTMLElement {
                 <ul class="nav flex-column">
                   <h5 class="mx-3">Address</h5>
                   <li class="nav-item mb-2 mx-3">
-                    <p class="text-muted">Jl. Batik Kumeli No. 50, Bandung City, West Java, Indonesia,  
-                      40123Jl. Batik Kumeli No. 50, Bandung City, West Java, Indonesia, 40123
-                    </p>
+                    <p class="text-muted">Jl. Batik Kumeli No. 50, Bandung City, West Java, Indonesia, 40123</p>
                   </li>
                 </ul>
               </div>
