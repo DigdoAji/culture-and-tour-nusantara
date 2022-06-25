@@ -13,7 +13,7 @@ class HeroIntroWeb extends HTMLElement {
                   src="images/two-traveler.png" 
                   class="d-block mx-lg-auto img-fluid" 
                   alt="two traveler with backpack and map" 
-                  width="650" height="650"
+                  width="650px" height="300px"
                 >
               </div>
               <div class="col-lg-6">

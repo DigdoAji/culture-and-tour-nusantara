@@ -11,7 +11,7 @@ class NavWeb extends HTMLElement {
                   <img class="img-fluid" 
                     src="images/CTN logo - with title.png" 
                     alt="logo Culture and Tour Nusantara" 
-                    width="145" height="53"
+                    width="145px" height="53px"
                   >
               </div>
             <button class="navbar-toggler" type="button" id="drawerButton" data-bs-toggle="collapse" data-bs-target="#navDropdown" aria-controls="navDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,10 +35,6 @@ class NavWeb extends HTMLElement {
                   <a class="nav-link" href="#/about">About Us</a>
                 </li>
               </ul>
-              <form class="form-inline my-2 my-lg-0">
-                  <a href="#/login" class="me-1 me-lg-2"><button type="button" class="btn btn-green px-4" tabindex="-1">Log In</button></a>
-                  <a href="#/register"><button type="button" class="btn btn-outline-green px-4" tabindex="-1">Register</button></a>
-              </form>
             </div>
           </div>
         </nav>

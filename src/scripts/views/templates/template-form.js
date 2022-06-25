@@ -19,7 +19,7 @@ const createFormUpdateArticleTemplate = (detailArticle) => `
                   <option selected disabled>${detailArticle.categories}</option>
                   <option value="Tourism">Tourism</option>
                   <option value="Culture">Culture</option>
-                  <option value="Tourism and Culture">Tourism and Culture</option>
+                  <option value="Tourism & Culture">Tourism & Culture</option>
                 </select>
                 <label for="editTagsArticle">Categories</label>
               </div>
@@ -29,7 +29,7 @@ const createFormUpdateArticleTemplate = (detailArticle) => `
                 <p class="size-text-sm ps-2 pt-2 mb-0">Convert image to direct link Url with <a href="https://postimages.org/" class="color-postimages linkhov-deco fw-bold" target="_blank">postimages</a></p>
               </div> 
               <div class="form-floating mb-4">
-                <textarea class="form-control comment-textarea" id="editDescriptionArticle" placeholder="Description" >${detailArticle.description}</textarea>
+                <textarea class="form-control description-textarea" id="editDescriptionArticle" placeholder="Description" >${detailArticle.description}</textarea>
                 <label for="editDescriptionArticle">Description</label>
               </div>
               <div class="d-grid gap-2 d-sm-flex justify-content-sm-center my-2 pt-1">
@@ -91,7 +91,7 @@ const createFormUpdateEventTemplate = (detailEvent) => `
             <p class="size-text-sm ps-2 pt-2 mb-0">Convert image to direct link Url with <a href="https://postimages.org/" class="color-postimages linkhov-deco fw-bold" target="_blank">postimages</a></p>
           </div>
           <div class="form-floating mb-4">
-            <textarea class="form-control comment-textarea" id="editDescriptionEvent" placeholder="Description" >${detailEvent.description}</textarea>
+            <textarea class="form-control description-textarea" id="editDescriptionEvent" placeholder="Description" >${detailEvent.description}</textarea>
             <label for="editDescriptionEvent">Description</label>
           </div>
           <div class="d-grid gap-2 d-sm-flex justify-content-sm-center my-2 pt-1">

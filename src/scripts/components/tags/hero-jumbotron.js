@@ -13,6 +13,7 @@ class HeroJumbotronWeb extends HTMLElement {
                 width="100%" height="360px" 
                 src="images/hero-image-bromo.jpg" 
                 alt="Bromo Mountain"
+                class="lazyload"
               />
               <div class="hero-text pos-fix-hero">
                 <h1>Bromo Mountain</h1>
@@ -24,10 +25,35 @@ class HeroJumbotronWeb extends HTMLElement {
                 width="100%" height="360px" 
                 src="images/hero-image-kecak.jpg" 
                 alt="Kecak Dance"
+                class="lazyload"
               />
               <div class="hero-text pos-fix-hero">
                 <h1>Kecak Dance</h1>
                 <p><i class="fa fa-map-marker me-2"></i>Bali, Indonesia</p>
+              </div>
+            </div>
+            <div class="carousel-item hero">
+              <img
+                width="100%" height="360px" 
+                src="images/hero-image-gili-trawangan.jpg" 
+                alt="Gili Trawanagan"
+                class="lazyload"
+              />
+              <div class="hero-text pos-fix-hero">
+                <h1>Gili Trawangan</h1>
+                <p><i class="fa fa-map-marker me-2"></i>West Nusa Tenggara, Indonesia</p>
+              </div>
+            </div>
+            <div class="carousel-item hero">
+              <img
+                width="100%" height="360px" 
+                src="images/hero-image-papua-tribe.jpg" 
+                alt="Papua Tribe"
+                class="lazyload"
+              />
+              <div class="hero-text pos-fix-hero">
+                <h1>Papua Tribe</h1>
+                <p><i class="fa fa-map-marker me-2"></i>Papua, Indonesia</p>
               </div>
             </div>
           </div>

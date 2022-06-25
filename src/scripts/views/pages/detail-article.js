@@ -65,8 +65,8 @@ const DetailArticle = {
             'Your selected article has been deleted.',
             'success',
           );
-          await location.replace('#/content-article');
-          await window.scrollTo(0, 0);
+          window.location.href = '#/content-article';
+          window.scrollTo(0, 0);
         }
       });
     });

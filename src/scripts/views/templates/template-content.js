@@ -1,9 +1,9 @@
 const createContentArticleTemplate = (contentArticles) => `
     <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
         <div class="card shadow-lg rounded-card h-100">
-            <img src="${contentArticles.pictureId ? contentArticles.pictureId : 'https://via.placeholder.com/600x400/?text=image+not+found'}" 
+            <img data-src="${contentArticles.pictureId ? contentArticles.pictureId : 'https://via.placeholder.com/600x400/?text=image+not+found'}" 
                 alt="${contentArticles.name} illustration" 
-                class="article-img-top img-fluid border border-2 img-rounded-card" 
+                class="article-img-top img-fluid border border-2 img-rounded-card lazyload" 
                 width="600px" height="300px"
             >
             <div class="card-body px-4">
@@ -25,9 +25,9 @@ const createContentArticleTemplate = (contentArticles) => `
 const createContentEventTemplate = (contentEvents) => `
     <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
         <div class="card shadow-lg rounded-card h-100">
-            <img src="${contentEvents.pictureId ? contentEvents.pictureId : 'https://via.placeholder.com/600x700/?text=image+not+found'}" 
+            <img data-src="${contentEvents.pictureId ? contentEvents.pictureId : 'https://via.placeholder.com/600x700/?text=image+not+found'}" 
                 alt="${contentEvents.name} illustration" 
-                class="img-fluid border border-2 img-rounded-card" 
+                class="img-fluid border border-2 img-rounded-card lazyload" 
                 width="600px" height="700px"
             >
             <div class="card-body px-4">
@@ -51,9 +51,9 @@ const createSkeletonArticleTemplate = (count) => {
     skeletonTemplate += `
       <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
         <div class="card skeleton shadow-lg rounded-card h-100">
-            <img src="https://via.placeholder.com/600x400/?text=image+placeholder" 
+            <img data-src="https://via.placeholder.com/600x400/?text=image+placeholder" 
                 alt="Skeleton image" 
-                class="article-img-top img-fluid border border-2 img-rounded-card" 
+                class="article-img-top img-fluid border border-2 img-rounded-card lazyload" 
                 width="800px" height="400px"
             >
             <div class="card-body px-4">
@@ -88,9 +88,9 @@ const createSkeletonEventTemplate = (count) => {
     skeletonTemplate += `
     <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
         <div class="card skeleton shadow-lg rounded-card h-100">
-            <img src="https://via.placeholder.com/600x700/?text=image+placeholder" 
+            <img data-src="https://via.placeholder.com/600x700/?text=image+placeholder" 
                 alt="Poster Skeleton" 
-                class="img-fluid border border-2 img-rounded-card" 
+                class="img-fluid border border-2 img-rounded-card lazyload" 
                 width="800px" height="700px"
             >
             <div class="card-body px-4">
@@ -119,8 +119,26 @@ const createAfterLoadingText = (err) => `
     <p class="text-danger fw-bolder ms-2"><i class="fa fa-warning me-1"></i>CTN API Error. ${err}<h2>
 `;
 
-const createCardEmpty = () => `  
-    <h3 class="text-center mt-3 mt-md-0 mb-5">Data in CTN API Empty. Create New Content First</h3>
+const createCardEmpty = () => ` 
+    <div class="d-flex justify-content-center">
+        <img src="images/empty-box.png" 
+            class="d-block img-fluid mt-2 mt-md-0 mb-4"  
+            alt="Empty box and shelf" 
+            width="300px" height="300px"
+        >
+    </div>
+    <h3 class="text-center mt-2 mb-5">Data in CTN API is Empty. Please create new content!!</h3>
+`;
+
+const createCategoryNotFound = (categories) => ` 
+    <div class="d-flex justify-content-center">
+        <img src="images/empty-box.png" 
+            class="d-block img-fluid mt-2 mt-md-0 mb-4"  
+            alt="Empty box and shelf" 
+            width="300px" height="300px"
+        >
+    </div>
+    <h3 class="text-center mt-2 mb-5">The category of ${categories} is not found</h3>
 `;
 
 export {
@@ -131,4 +149,5 @@ export {
   createLoadingText,
   createAfterLoadingText,
   createCardEmpty,
+  createCategoryNotFound,
 };

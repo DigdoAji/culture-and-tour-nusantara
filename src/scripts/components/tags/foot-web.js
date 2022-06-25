@@ -9,7 +9,11 @@ class FooterWeb extends HTMLElement {
         <div class="container px-0 mb-5">
           <div class="post-footer d-flex pt-5 px-4 px-md-0">
             <div class="col">
-              <img class="img-fluid bi me-2 mb-3" src="images/CTN logo - with title.png" alt="logo Culture and Tour Nusantara" width="175" height="95">
+              <img class="img-fluid bi me-2 mb-3" 
+                src="images/CTN logo - with title.png" 
+                alt="logo Culture and Tour Nusantara" 
+                width="175px" height="95px"
+              >
               <p class=" text-muted">Discover Paradise of Nusantara</p>
             </div>
             
@@ -48,9 +52,7 @@ class FooterWeb extends HTMLElement {
                 <ul class="nav flex-column">
                   <h5 class="mx-3">Address</h5>
                   <li class="nav-item mb-2 mx-3">
-                    <p class="text-muted">Jl. Batik Kumeli No. 50, Bandung City, West Java, Indonesia,  
-                      40123Jl. Batik Kumeli No. 50, Bandung City, West Java, Indonesia, 40123
-                    </p>
+                    <p class="text-muted">Jl. Batik Kumeli No. 50, Bandung City, West Java, Indonesia, 40123</p>
                   </li>
                 </ul>
               </div>

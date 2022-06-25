@@ -1,0 +1,37 @@
+@media (min-width: 480px) {
+  .hero-text > h1 {
+    font-size: 26px !important;
+  }
+
+  .hero-text > p {
+    font-size: 16px !important;
+  }
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  .hero-text > h1 {
+    font-size: 30px !important;
+  }
+
+  .hero-text > p {
+    font-size: 20px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .post-footer {
+    padding: 0px 25px !important;
+
+    flex-direction: column;
+    text-align: left;
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}

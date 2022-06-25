@@ -1,6 +1,6 @@
 import Swal from 'sweetalert2';
 import CTNAPISource from '../../global/API-CTNsource';
-import { setInputCreateDateToday } from '../../utils/set-input-today';
+import { setInputDateToday } from '../../utils/set-input-today';
 
 const AddArticle = {
   async render() {
@@ -36,7 +36,7 @@ const AddArticle = {
                   <p class="size-text-sm ps-2 pt-2 mb-0">Convert image to direct link Url with <a href="https://postimages.org/" class="color-postimages linkhov-deco fw-bold" target="_blank">postimages</a></p>
               </div> 
               <div class="form-floating mb-4">
-                <textarea class="form-control comment-textarea" id="inputDescriptionArticle" placeholder="Description" ></textarea>
+                <textarea class="form-control description-textarea" id="inputDescriptionArticle" placeholder="Description" ></textarea>
                 <label for="inputDescriptionArticle">Description</label>
               </div>
               <div class="d-grid gap-2 d-sm-flex justify-content-sm-center my-2 pt-1">
@@ -59,7 +59,7 @@ const AddArticle = {
     const inputImageArticle = document.querySelector('#inputImageArticle');
     const inputDescriptionArticle = document.querySelector('#inputDescriptionArticle');
 
-    setInputCreateDateToday(inputDateArticle);
+    setInputDateToday(inputDateArticle);
 
     submitArticle.addEventListener('click', async (event) => {
       event.preventDefault();
@@ -69,6 +69,12 @@ const AddArticle = {
           icon: 'error',
           title: 'Your input still empty',
           text: 'Please fill the empty input form!',
+        });
+      } else if (inputTagsArticle.value === 'Select Categories') {
+        Swal.fire({
+          icon: 'error',
+          title: 'Input categories not selected',
+          text: 'Please select categories of article!',
         });
       } else {
         const dataArticle = {
@@ -84,14 +90,15 @@ const AddArticle = {
           icon: 'success',
           title: 'New Article have been added',
         });
-        await location.replace('#/content-article');
+        window.location.href = '#/content-article';
+        window.scrollTo(0, 0);
       }
     });
 
-    cancelArticle.addEventListener('click', async (event) => {
+    cancelArticle.addEventListener('click', (event) => {
       event.preventDefault();
-      await location.replace('#/content-article');
-      await window.scrollTo(0, 0);
+      window.location.href = '#/content-article';
+      window.scrollTo(0, 0);
     });
   },
 };

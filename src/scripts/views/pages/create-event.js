@@ -55,7 +55,7 @@ const AddEvent = {
                   <p class="size-text-sm ps-2 pt-2 mb-0">Convert image to direct link Url with <a href="https://postimages.org/" class="color-postimages linkhov-deco fw-bold" target="_blank">postimages</a></p>
               </div> 
               <div class="form-floating mb-4">
-                <textarea class="form-control comment-textarea" id="inputDescriptionEvent" placeholder="Description" ></textarea>
+                <textarea class="form-control description-textarea" id="inputDescriptionEvent" placeholder="Description" ></textarea>
                 <label for="inputDescriptionEvent">Description</label>
               </div>
               <div class="d-grid gap-2 d-sm-flex justify-content-sm-center my-2 pt-1">
@@ -90,6 +90,18 @@ const AddEvent = {
           title: 'Your input still empty',
           text: 'Please fill the empty input form!',
         });
+      } else if (inputTimezoneEvent.value === 'Select Indonesian Timezone') {
+        Swal.fire({
+          icon: 'error',
+          title: 'Input timezone not selected',
+          text: 'Please select Indonesian timezone where you at!',
+        });
+      } else if (inputTagsEvent.value === 'Select Categories') {
+        Swal.fire({
+          icon: 'error',
+          title: 'Input categories not selected',
+          text: 'Please select categories of event!',
+        });
       } else {
         const dataEvent = {
           name: inputNameEvent.value,
@@ -106,14 +118,14 @@ const AddEvent = {
           icon: 'success',
           title: 'New Event have been added',
         });
-        await location.replace('#/content-event');
+        window.location.href = '#/content-event';
       }
     });
 
-    cancelEvent.addEventListener('click', async (event) => {
+    cancelEvent.addEventListener('click', (event) => {
       event.preventDefault();
-      await location.replace('#/content-event');
-      await window.scrollTo(0, 0);
+      window.location.href = '#/content-event';
+      window.scrollTo(0, 0);
     });
   },
 };
