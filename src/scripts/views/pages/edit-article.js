@@ -68,7 +68,7 @@ const EditArticle = {
               'Your selected article has been updated.',
               'success',
             );
-            window.location.href = '#/content-article';
+            window.location.href = `#/detail-article/${url.id}`;
             window.scrollTo(0, 0);
           }
         });

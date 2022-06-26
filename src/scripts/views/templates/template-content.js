@@ -1,9 +1,10 @@
 const createContentArticleTemplate = (contentArticles) => `
     <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
         <div class="card shadow-lg rounded-card h-100">
-            <img data-src="${contentArticles.pictureId ? contentArticles.pictureId : 'https://via.placeholder.com/600x400/?text=image+not+found'}" 
+            <img data-src="${contentArticles.pictureId}" 
                 alt="${contentArticles.name} illustration" 
                 class="article-img-top img-fluid border border-2 img-rounded-card lazyload" 
+                onerror="this.src='https://via.placeholder.com/600x400/?text=image+not+found';" 
                 width="600px" height="300px"
             >
             <div class="card-body px-4">
@@ -25,9 +26,10 @@ const createContentArticleTemplate = (contentArticles) => `
 const createContentEventTemplate = (contentEvents) => `
     <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
         <div class="card shadow-lg rounded-card h-100">
-            <img data-src="${contentEvents.pictureId ? contentEvents.pictureId : 'https://via.placeholder.com/600x700/?text=image+not+found'}" 
+            <img data-src="${contentEvents.pictureId}" 
                 alt="${contentEvents.name} illustration" 
-                class="img-fluid border border-2 img-rounded-card lazyload" 
+                class="img-fluid border border-2 img-rounded-card lazyload"
+                onerror="this.src='https://via.placeholder.com/600x700/?text=image+not+found';" 
                 width="600px" height="700px"
             >
             <div class="card-body px-4">

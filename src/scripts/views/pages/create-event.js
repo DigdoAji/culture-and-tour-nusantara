@@ -82,8 +82,8 @@ const AddEvent = {
 
     submitEvent.addEventListener('click', async (event) => {
       event.preventDefault();
-      if (!inputNameEvent.value || !inputLocationEvent.value || !inputTimeEvent.value
-        || !inputTimezoneEvent.value || !inputDescriptionEvent.value
+      if (!inputNameEvent.value || !inputLocationEvent.value || !inputDateEvent.value
+        || !inputTimeEvent.value || !inputTimezoneEvent.value || !inputDescriptionEvent.value
         || !inputImageEvent.value || !inputTagsEvent.value) {
         Swal.fire({
           icon: 'error',

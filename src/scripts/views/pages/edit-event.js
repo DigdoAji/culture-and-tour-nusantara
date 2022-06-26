@@ -35,8 +35,8 @@ const EditEvent = {
 
     submitEvent.addEventListener('click', async (event) => {
       event.preventDefault();
-      if (!editNameEvent.value || !editLocationEvent.value || !editTimeEvent.value
-        || !editTimezoneEvent.value || !editDescriptionEvent.value
+      if (!editNameEvent.value || !editLocationEvent.value || !editDateEvent.value
+        || !editTimeEvent.value || !editTimezoneEvent.value || !editDescriptionEvent.value
         || !editImageEvent.value || !editTagsEvent.value) {
         Swal.fire({
           icon: 'error',
@@ -70,7 +70,7 @@ const EditEvent = {
               'Your selected event has been updated.',
               'success',
             );
-            window.location.href = '#/content-event';
+            window.location.href = `#/detail-event/${url.id}`;
             window.scrollTo(0, 0);
           }
         });

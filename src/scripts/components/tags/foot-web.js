@@ -12,7 +12,7 @@ class FooterWeb extends HTMLElement {
               <img class="img-fluid bi me-2 mb-3" 
                 src="images/CTN logo - with title.png" 
                 alt="logo Culture and Tour Nusantara" 
-                width="175px" height="95px"
+                width="175px" height="65px"
               >
               <p class=" text-muted">Discover Paradise of Nusantara</p>
             </div>
