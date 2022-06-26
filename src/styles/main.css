@@ -148,6 +148,7 @@ a {
 /* ==== Detail ==== */
 .text-description {
   white-space: pre-line;
+  font-size: 18px !important;
 }
 
 .description-textarea {

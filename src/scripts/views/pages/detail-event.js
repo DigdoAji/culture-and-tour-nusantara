@@ -42,7 +42,16 @@ const DetailEvent = {
           review: inputReview.value,
         };
         await CTNAPISource.addReviewEvent(dataReview);
-        await location.reload();
+        Swal.fire({
+          icon: 'success',
+          title: 'Your Review have been added',
+          showCancelButton: false,
+          confirmButtonColor: '#3085d6',
+        }).then(async (result) => {
+          if (result.isConfirmed) {
+            location.reload();
+          }
+        });
       }
     });
 
