@@ -9,9 +9,10 @@ const createDetailArticleTemplate = (detailArticle) => `
             </p>
         </div>
         <div class="d-flex justify-content-center mx-3 mx-lg-0 mt-2 mb-2 pt-2">
-            <img src="${detailArticle.pictureId ? detailArticle.pictureId : 'https://via.placeholder.com/600x400/?text=image+not+found'}" 
-                class="img-fluid img-rounded border border-2 border-success mx-auto d-block" 
-                alt="${detailArticle.name} illustration" 
+            <img src="${detailArticle.pictureId}"
+                alt="${detailArticle.name} illustration"
+                class="img-fluid img-rounded border border-2 border-success mx-auto d-block"
+                onerror="this.src='https://via.placeholder.com/600x400/?text=image+not+found';"
                 width="920px" height="400px"
             >
         </div>
@@ -116,10 +117,11 @@ const createDetailEventTemplate = (detailEvent) => `
             </div>
         </div>
         <div class="col-md-5">
-            <img src="${detailEvent.pictureId ? detailEvent.pictureId : 'https://via.placeholder.com/600x700/?text=image+not+found'}" 
-                class="img-fluid img-rounded border border-2 border-success mx-auto d-block" 
-                width="600px" height="700px"
+            <img src="${detailEvent.pictureId}" 
                 alt="${detailEvent.name} Poster"
+                class="img-fluid img-rounded border border-2 border-success mx-auto d-block"
+                onerror="this.src='https://via.placeholder.com/600x700/?text=image+not+found';" 
+                width="600px" height="700px"
             >
             <div class="d-flex justify-content-center justify-content-md-end mt-2 mb-2 pt-4">
                 <a href="${`#/edit-event/${detailEvent._id}`}" onclick="window.scrollTo(0, 0);"><button id="updateEvent" type="button" class="btn btn-primary ms-2 fw-bold px-4" tabindex="-1">Update</button></a>

@@ -35,8 +35,8 @@ const EditEvent = {
 
     submitEvent.addEventListener('click', async (event) => {
       event.preventDefault();
-      if (!editNameEvent.value || !editLocationEvent.value || !editTimeEvent.value
-        || !editTimezoneEvent.value || !editDescriptionEvent.value
+      if (!editNameEvent.value || !editLocationEvent.value || !editDateEvent.value
+        || !editTimeEvent.value || !editTimezoneEvent.value || !editDescriptionEvent.value
         || !editImageEvent.value || !editTagsEvent.value) {
         Swal.fire({
           icon: 'error',
