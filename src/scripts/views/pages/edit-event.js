@@ -70,7 +70,7 @@ const EditEvent = {
               'Your selected event has been updated.',
               'success',
             );
-            window.location.href = '#/content-event';
+            window.location.href = `#/detail-event/${url.id}`;
             window.scrollTo(0, 0);
           }
         });
