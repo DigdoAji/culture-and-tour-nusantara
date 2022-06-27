@@ -77,7 +77,7 @@ const EditArticle = {
 
     cancelArticle.addEventListener('click', (event) => {
       event.preventDefault();
-      window.location.href = '#/content-article';
+      window.location.href = `#/detail-article/${url.id}`;
       window.scrollTo(0, 0);
     });
   },

@@ -1,0 +1,1839 @@
+{
+  "id": "f9a8a5bf-ce7e-4c60-bd19-9545e037d145",
+  "version": "2.0",
+  "name": "Testing Website CTN",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "6a78176e-abb3-40b6-9d95-5a192cde052a",
+    "name": "1. Add New Content Article",
+    "commands": [{
+      "id": "cca7085b-ef54-476f-964b-950e2c986210",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b7d30f8d-f771-4d24-9ece-f798b34f4bf8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "51494984-98f5-4bc6-a29b-31f90312571d",
+      "comment": "",
+      "command": "click",
+      "target": "id=dropdownNavMenu",
+      "targets": [
+        ["id=dropdownNavMenu", "id"],
+        ["linkText=Content", "linkText"],
+        ["css=#dropdownNavMenu", "css:finder"],
+        ["xpath=//a[contains(text(),'Content')]", "xpath:link"],
+        ["xpath=//a[@id='dropdownNavMenu']", "xpath:attributes"],
+        ["xpath=//div[@id='navDropdown']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd39ed30-6594-419f-956a-dbc6b5157169",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Article",
+      "targets": [
+        ["linkText=Article", "linkText"],
+        ["css=li:nth-child(1) > .dropdown-item", "css:finder"],
+        ["xpath=//a[contains(text(),'Article')]", "xpath:link"],
+        ["xpath=//div[@id='navDropdown']/ul/li[2]/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#/content-article')]", "xpath:href"],
+        ["xpath=//li[2]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Article')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eccec37f-81b0-4d7c-a75b-2f83c54079e1",
+      "comment": "",
+      "command": "click",
+      "target": "css=a > .btn-green",
+      "targets": [
+        ["css=a > .btn-green", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//section[@id='article']/div/div/div[2]/a/button", "xpath:idRelative"],
+        ["xpath=//a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create New Article')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3c924441-8021-4204-a08a-0a1df7119787",
+      "comment": "",
+      "command": "click",
+      "target": "id=inputHeadineArticle",
+      "targets": [
+        ["id=inputHeadineArticle", "id"],
+        ["css=#inputHeadineArticle", "css:finder"],
+        ["xpath=//input[@id='inputHeadineArticle']", "xpath:attributes"],
+        ["xpath=//section[@id='add-article']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ff674ab8-088b-4ad9-81f2-21c1f1b4cccc",
+      "comment": "",
+      "command": "type",
+      "target": "id=inputHeadineArticle",
+      "targets": [
+        ["id=inputHeadineArticle", "id"],
+        ["css=#inputHeadineArticle", "css:finder"],
+        ["xpath=//input[@id='inputHeadineArticle']", "xpath:attributes"],
+        ["xpath=//section[@id='add-article']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pusik Beach, Hidden Charm on Jemaja Island"
+    }, {
+      "id": "197e657f-74b3-48de-a534-0a1e100d9dc5",
+      "comment": "",
+      "command": "click",
+      "target": "id=inputPublisherName",
+      "targets": [
+        ["id=inputPublisherName", "id"],
+        ["css=#inputPublisherName", "css:finder"],
+        ["xpath=//input[@id='inputPublisherName']", "xpath:attributes"],
+        ["xpath=//section[@id='add-article']/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4039b5c7-0f18-4c86-9e37-a00e81d6c13c",
+      "comment": "",
+      "command": "click",
+      "target": "id=inputPublisherName",
+      "targets": [
+        ["id=inputPublisherName", "id"],
+        ["css=#inputPublisherName", "css:finder"],
+        ["xpath=//input[@id='inputPublisherName']", "xpath:attributes"],
+        ["xpath=//section[@id='add-article']/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b8d21630-abf4-4164-89c9-bb3f362a31e0",
+      "comment": "",
+      "command": "type",
+      "target": "id=inputPublisherName",
+      "targets": [
+        ["id=inputPublisherName", "id"],
+        ["css=#inputPublisherName", "css:finder"],
+        ["xpath=//input[@id='inputPublisherName']", "xpath:attributes"],
+        ["xpath=//section[@id='add-article']/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Intan"
+    }, {
+      "id": "9560d068-dc15-4403-aaa2-766073f5eef7",
+      "comment": "",
+      "command": "click",
+      "target": "id=inputDateArticle",
+      "targets": [
+        ["id=inputDateArticle", "id"],
+        ["css=#inputDateArticle", "css:finder"],
+        ["xpath=//input[@id='inputDateArticle']", "xpath:attributes"],
+        ["xpath=//section[@id='add-article']/div/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f9ec14c-2dac-401d-ab9d-fa5e887e75e4",
+      "comment": "",
+      "command": "type",
+      "target": "id=inputDateArticle",
+      "targets": [
+        ["id=inputDateArticle", "id"],
+        ["css=#inputDateArticle", "css:finder"],
+        ["xpath=//input[@id='inputDateArticle']", "xpath:attributes"],
+        ["xpath=//section[@id='add-article']/div/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "2022-06-25"
+    }, {
+      "id": "d2712d8f-8783-4185-a248-39429f0d5156",
+      "comment": "",
+      "command": "click",
+      "target": "id=inputTagsArticle",
+      "targets": [
+        ["id=inputTagsArticle", "id"],
+        ["css=#inputTagsArticle", "css:finder"],
+        ["xpath=//select[@id='inputTagsArticle']", "xpath:attributes"],
+        ["xpath=//section[@id='add-article']/div/form/div[4]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fe69b209-e317-471a-bc24-dd7c69872e9c",
+      "comment": "",
+      "command": "select",
+      "target": "id=inputTagsArticle",
+      "targets": [],
+      "value": "label=Tourism"
+    }, {
+      "id": "0f8efd08-5766-4c8e-bff9-ba3c705944cd",
+      "comment": "",
+      "command": "click",
+      "target": "id=inputImageArticle",
+      "targets": [
+        ["id=inputImageArticle", "id"],
+        ["css=#inputImageArticle", "css:finder"],
+        ["xpath=//input[@id='inputImageArticle']", "xpath:attributes"],
+        ["xpath=//section[@id='add-article']/div/form/div[5]/input", "xpath:idRelative"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "adcf86ab-535f-431e-b608-0b97906e6597",
+      "comment": "",
+      "command": "type",
+      "target": "id=inputImageArticle",
+      "targets": [
+        ["id=inputImageArticle", "id"],
+        ["css=#inputImageArticle", "css:finder"],
+        ["xpath=//input[@id='inputImageArticle']", "xpath:attributes"],
+        ["xpath=//section[@id='add-article']/div/form/div[5]/input", "xpath:idRelative"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": "https://i.postimg.cc/vHnHNbTS/373-Pantai-Kusik-air-laut-di-pantai-kusik-sangat-jernih-bahkan-pasir-pantainya-pun-nyaris-tanpa-koto.jpg"
+    }, {
+      "id": "3255628e-07c2-4b2c-bf29-fad01dd01fc8",
+      "comment": "",
+      "command": "click",
+      "target": "id=inputDescriptionArticle",
+      "targets": [
+        ["id=inputDescriptionArticle", "id"],
+        ["css=#inputDescriptionArticle", "css:finder"],
+        ["xpath=//textarea[@id='inputDescriptionArticle']", "xpath:attributes"],
+        ["xpath=//section[@id='add-article']/div/form/div[6]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b6ca5423-7100-4efd-94c1-63fda07150a3",
+      "comment": "",
+      "command": "click",
+      "target": "id=inputDescriptionArticle",
+      "targets": [
+        ["id=inputDescriptionArticle", "id"],
+        ["css=#inputDescriptionArticle", "css:finder"],
+        ["xpath=//textarea[@id='inputDescriptionArticle']", "xpath:attributes"],
+        ["xpath=//section[@id='add-article']/div/form/div[6]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a6eff32c-7c63-456a-ba7f-3d79315d8dae",
+      "comment": "",
+      "command": "type",
+      "target": "id=inputDescriptionArticle",
+      "targets": [
+        ["id=inputDescriptionArticle", "id"],
+        ["css=#inputDescriptionArticle", "css:finder"],
+        ["xpath=//textarea[@id='inputDescriptionArticle']", "xpath:attributes"],
+        ["xpath=//section[@id='add-article']/div/form/div[6]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Pusik Beach is one of the natural beauty that is also found on Jemaja Island. It is said that here many ceramic slabs were found which according to the story are traces of the pirates. This beach has not been visited by many tourists because the access is not easy."
+    }, {
+      "id": "3f8e67a8-9e74-4156-a9ca-b64ad7a4bd10",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputHeadineArticle",
+      "targets": [
+        ["id=inputHeadineArticle", "id"],
+        ["css=#inputHeadineArticle", "css:finder"],
+        ["xpath=//input[@id='inputHeadineArticle']", "xpath:attributes"],
+        ["xpath=//section[@id='add-article']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pusik Beach, Hidden Charm on Jemaja Island"
+    }, {
+      "id": "ae55becc-2570-448c-8878-7995f6a0a7be",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputTagsArticle",
+      "targets": [
+        ["id=inputTagsArticle", "id"],
+        ["css=#inputTagsArticle", "css:finder"],
+        ["xpath=//select[@id='inputTagsArticle']", "xpath:attributes"],
+        ["xpath=//section[@id='add-article']/div/form/div[4]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "Tourism"
+    }, {
+      "id": "3d31b1ce-e448-4858-b2a4-b38f423f1578",
+      "comment": "",
+      "command": "click",
+      "target": "id=submitArticle",
+      "targets": [
+        ["id=submitArticle", "id"],
+        ["css=#submitArticle", "css:finder"],
+        ["xpath=//button[@id='submitArticle']", "xpath:attributes"],
+        ["xpath=//section[@id='add-article']/div/form/div[7]/button", "xpath:idRelative"],
+        ["xpath=//div[7]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6b848d38-6399-412d-994c-ec4b16a6ee08",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,262.3999938964844)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "79ef1606-eac1-4b28-a755-8f6eb732a919",
+      "comment": "",
+      "command": "click",
+      "target": "css=.swal2-confirm",
+      "targets": [
+        ["css=.swal2-confirm", "css:finder"],
+        ["xpath=(//button[@type='button'])[12]", "xpath:attributes"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'OK')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0750b498-a8eb-4e2f-a030-ec97d29534f3",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.col-md-6:nth-child(1) .card-title",
+      "targets": [
+        ["css=.col-md-6:nth-child(1) .card-title", "css:finder"],
+        ["xpath=//div[@id='card-articles']/div/div/div/h5", "xpath:idRelative"],
+        ["xpath=//h5", "xpath:position"],
+        ["xpath=//h5[contains(.,'Pusik Beach, Hidden Charm on Jemaja Island')]", "xpath:innerText"]
+      ],
+      "value": "Pusik Beach, Hidden Charm on Jemaja Island"
+    }, {
+      "id": "7fbb4768-960a-4b68-bb66-57797204be98",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.col-md-6:nth-child(1) .card-text:nth-child(2)",
+      "targets": [
+        ["css=.col-md-6:nth-child(1) .card-text:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='card-articles']/div/div/div/p[2]", "xpath:idRelative"],
+        ["xpath=//p[2]", "xpath:position"],
+        ["xpath=//p[contains(.,'Tourism')]", "xpath:innerText"]
+      ],
+      "value": "Tourism"
+    }]
+  }, {
+    "id": "50ade6dd-9a3d-4c0b-b27e-87e49913c787",
+    "name": "2. Add Review Content Article",
+    "commands": [{
+      "id": "4a4cad54-ed68-4183-92c7-2b9ba3338380",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f16cddac-8f34-496f-9fe3-3371c7e02a34",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "28965475-be9f-4bcc-8cf0-5c40e6341d4d",
+      "comment": "",
+      "command": "click",
+      "target": "css=#home-article > .col-md-6:nth-child(1) .btn",
+      "targets": [
+        ["css=#home-article > .col-md-6:nth-child(1) .btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='home-article']/div/div/div[2]/a/button", "xpath:idRelative"],
+        ["xpath=//a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Read More')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c2fa6587-96cc-4744-bfc8-dc48179758ba",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "88325468-afd8-4d4b-afc2-4c70d7884950",
+      "comment": "",
+      "command": "click",
+      "target": "id=inputUserReview",
+      "targets": [
+        ["id=inputUserReview", "id"],
+        ["css=#inputUserReview", "css:finder"],
+        ["xpath=//input[@id='inputUserReview']", "xpath:attributes"],
+        ["xpath=//section[@id='detail-article']/div[2]/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b6d24e24-fab6-4873-ba1d-c4f32b623485",
+      "comment": "",
+      "command": "type",
+      "target": "id=inputUserReview",
+      "targets": [
+        ["id=inputUserReview", "id"],
+        ["css=#inputUserReview", "css:finder"],
+        ["xpath=//input[@id='inputUserReview']", "xpath:attributes"],
+        ["xpath=//section[@id='detail-article']/div[2]/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Bagas"
+    }, {
+      "id": "e78204c5-7811-4343-ae6a-5a871ace8d44",
+      "comment": "",
+      "command": "click",
+      "target": "id=inputReviewArticle",
+      "targets": [
+        ["id=inputReviewArticle", "id"],
+        ["css=#inputReviewArticle", "css:finder"],
+        ["xpath=//textarea[@id='inputReviewArticle']", "xpath:attributes"],
+        ["xpath=//section[@id='detail-article']/div[2]/form/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c9b83f22-62e6-45e7-9369-1bf1062978b3",
+      "comment": "",
+      "command": "type",
+      "target": "id=inputReviewArticle",
+      "targets": [
+        ["id=inputReviewArticle", "id"],
+        ["css=#inputReviewArticle", "css:finder"],
+        ["xpath=//textarea[@id='inputReviewArticle']", "xpath:attributes"],
+        ["xpath=//section[@id='detail-article']/div[2]/form/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "The Water is so clean"
+    }, {
+      "id": "66596188-ae72-4b02-a7cf-ffb1700e5981",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputUserReview",
+      "targets": [
+        ["id=inputUserReview", "id"],
+        ["css=#inputUserReview", "css:finder"],
+        ["xpath=//input[@id='inputUserReview']", "xpath:attributes"],
+        ["xpath=//section[@id='detail-article']/div[2]/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Bagas"
+    }, {
+      "id": "9362b230-2575-4c80-9836-bf5801b0c4c9",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputReviewArticle",
+      "targets": [
+        ["id=inputReviewArticle", "id"],
+        ["css=#inputReviewArticle", "css:finder"],
+        ["xpath=//textarea[@id='inputReviewArticle']", "xpath:attributes"],
+        ["xpath=//section[@id='detail-article']/div[2]/form/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "The Water is so clean"
+    }, {
+      "id": "7015f689-84c3-42ba-99f7-2b129c6ab28f",
+      "comment": "",
+      "command": "click",
+      "target": "id=submitReview",
+      "targets": [
+        ["id=submitReview", "id"],
+        ["css=#submitReview", "css:finder"],
+        ["xpath=//button[@id='submitReview']", "xpath:attributes"],
+        ["xpath=//section[@id='detail-article']/div[2]/form/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "34440b30-4f14-4d79-93a2-0032d1df874c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.swal2-confirm",
+      "targets": [
+        ["css=.swal2-confirm", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'OK')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "05649587-218d-4a67-9d1f-e6e60debb47c",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.card-title:nth-child(2)",
+      "targets": [
+        ["css=.card-title:nth-child(2)", "css:finder"],
+        ["xpath=//section[@id='detail-article']/div[3]/div/div/div[2]/div/div/div/h5", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/h5", "xpath:position"],
+        ["xpath=//h5[contains(.,'Bagas')]", "xpath:innerText"]
+      ],
+      "value": "Bagas"
+    }, {
+      "id": "d8fdab75-6c89-499c-bc2f-d6f4615cba47",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.fw-light",
+      "targets": [
+        ["css=.fw-light", "css:finder"],
+        ["xpath=//section[@id='detail-article']/div[3]/div/div/div[2]/div/div[2]/div/p", "xpath:idRelative"],
+        ["xpath=//div[2]/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'The Water is so clean')]", "xpath:innerText"]
+      ],
+      "value": "The Water is so clean"
+    }]
+  }, {
+    "id": "4a627cc5-809c-43ee-8734-416c77771da0",
+    "name": "3. Update Content Article",
+    "commands": [{
+      "id": "8d3cc035-29aa-4a6a-aa5e-8e633ed72c79",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d188872c-9e16-46d6-996f-569de9bce880",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "66497302-8f03-4ac9-839a-74ada0f585bd",
+      "comment": "",
+      "command": "click",
+      "target": "id=dropdownNavMenu",
+      "targets": [
+        ["id=dropdownNavMenu", "id"],
+        ["linkText=Content", "linkText"],
+        ["css=#dropdownNavMenu", "css:finder"],
+        ["xpath=//a[contains(text(),'Content')]", "xpath:link"],
+        ["xpath=//a[@id='dropdownNavMenu']", "xpath:attributes"],
+        ["xpath=//div[@id='navDropdown']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c064db9a-c894-470e-838f-58505b89a765",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Article",
+      "targets": [
+        ["linkText=Article", "linkText"],
+        ["css=li:nth-child(1) > .dropdown-item", "css:finder"],
+        ["xpath=//a[contains(text(),'Article')]", "xpath:link"],
+        ["xpath=//div[@id='navDropdown']/ul/li[2]/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#/content-article')]", "xpath:href"],
+        ["xpath=//li[2]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Article')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d58f10ee-a676-449b-bcf9-c45f8755b8f6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-md-6:nth-child(1) .btn",
+      "targets": [
+        ["css=.col-md-6:nth-child(1) .btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
+        ["xpath=//div[@id='card-articles']/div/div/div[2]/a/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Read More')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0418d03a-d807-479d-83f3-f8b4411237fe",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eccee209-6c0f-47db-9c60-131d8ec4f621",
+      "comment": "",
+      "command": "click",
+      "target": "id=updateArticle",
+      "targets": [
+        ["id=updateArticle", "id"],
+        ["css=#updateArticle", "css:finder"],
+        ["xpath=//button[@id='updateArticle']", "xpath:attributes"],
+        ["xpath=//section[@id='detail-article']/div/div/div[3]/div/div[2]/a/button", "xpath:idRelative"],
+        ["xpath=//a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Update')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd973043-777b-46a7-a21f-67cce8d6027f",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "605b6f66-1206-4d65-9c97-94eb4d9c13b4",
+      "comment": "",
+      "command": "click",
+      "target": "id=editHeadineArticle",
+      "targets": [
+        ["id=editHeadineArticle", "id"],
+        ["css=#editHeadineArticle", "css:finder"],
+        ["xpath=//input[@id='editHeadineArticle']", "xpath:attributes"],
+        ["xpath=//section[@id='update-article']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "904fa94d-c85b-4a8d-af5e-da45f2373364",
+      "comment": "",
+      "command": "type",
+      "target": "id=editHeadineArticle",
+      "targets": [
+        ["id=editHeadineArticle", "id"],
+        ["css=#editHeadineArticle", "css:finder"],
+        ["xpath=//input[@id='editHeadineArticle']", "xpath:attributes"],
+        ["xpath=//section[@id='update-article']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pusik Beach, Hidden Beauty of Jemaja Island"
+    }, {
+      "id": "032ad32a-b11d-4d85-83ce-0acad77aa706",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mt-5",
+      "targets": [
+        ["css=.mt-5", "css:finder"],
+        ["xpath=//section[@id='update-article']/div", "xpath:idRelative"],
+        ["xpath=//section/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9df07275-e0c7-490e-a78f-43d1efbea7b1",
+      "comment": "",
+      "command": "type",
+      "target": "id=editPublisherName",
+      "targets": [
+        ["id=editPublisherName", "id"],
+        ["css=#editPublisherName", "css:finder"],
+        ["xpath=//input[@id='editPublisherName']", "xpath:attributes"],
+        ["xpath=//section[@id='update-article']/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Bahrul"
+    }, {
+      "id": "dcb483b0-ac50-456a-9191-fa044969f1f2",
+      "comment": "",
+      "command": "click",
+      "target": "id=editTagsArticle",
+      "targets": [
+        ["id=editTagsArticle", "id"],
+        ["css=#editTagsArticle", "css:finder"],
+        ["xpath=//select[@id='editTagsArticle']", "xpath:attributes"],
+        ["xpath=//section[@id='update-article']/div/form/div[4]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a8ec0191-499c-4bb9-ba7a-2ee434581564",
+      "comment": "",
+      "command": "select",
+      "target": "id=editTagsArticle",
+      "targets": [],
+      "value": "label=Tourism & Culture"
+    }, {
+      "id": "c99e39de-5280-41b2-8226-96d6dc4b060c",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=editHeadineArticle",
+      "targets": [
+        ["id=editHeadineArticle", "id"],
+        ["css=#editHeadineArticle", "css:finder"],
+        ["xpath=//input[@id='editHeadineArticle']", "xpath:attributes"],
+        ["xpath=//section[@id='update-article']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pusik Beach, Hidden Beauty of Jemaja Island"
+    }, {
+      "id": "46af766f-e2dd-404f-bcf0-28f2de552c7f",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=editPublisherName",
+      "targets": [
+        ["id=editPublisherName", "id"],
+        ["css=#editPublisherName", "css:finder"],
+        ["xpath=//input[@id='editPublisherName']", "xpath:attributes"],
+        ["xpath=//section[@id='update-article']/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Bahrul"
+    }, {
+      "id": "43faa2d6-8df6-49f4-ac06-026570e851e2",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=editTagsArticle",
+      "targets": [
+        ["id=editTagsArticle", "id"],
+        ["css=#editTagsArticle", "css:finder"],
+        ["xpath=//select[@id='editTagsArticle']", "xpath:attributes"],
+        ["xpath=//section[@id='update-article']/div/form/div[4]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "Tourism & Culture"
+    }, {
+      "id": "fe7b747b-1107-4c94-b37a-c34944613ee6",
+      "comment": "",
+      "command": "click",
+      "target": "id=submitArticle",
+      "targets": [
+        ["id=submitArticle", "id"],
+        ["css=#submitArticle", "css:finder"],
+        ["xpath=//button[@id='submitArticle']", "xpath:attributes"],
+        ["xpath=//section[@id='update-article']/div/form/div[7]/button", "xpath:idRelative"],
+        ["xpath=//div[7]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d85206a6-f7f8-443d-8d88-9c516ec04c2a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.swal2-confirm",
+      "targets": [
+        ["css=.swal2-confirm", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirm')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2e04f20c-4456-454b-8182-f6cb26ebec58",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "595d90de-7f05-4005-bd1e-cc232d2a98c8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.swal2-confirm",
+      "targets": [
+        ["css=.swal2-confirm", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'OK')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "84d80ee8-b22e-46c9-bf9d-6ce30d94726d",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.card-title",
+      "targets": [
+        ["css=.card-title", "css:finder"],
+        ["xpath=//section[@id='detail-article']/div/div/div[3]/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Pusik Beach, Hidden Beauty of Jemaja Island')]", "xpath:innerText"]
+      ],
+      "value": "Pusik Beach, Hidden Beauty of Jemaja Island"
+    }, {
+      "id": "2c93e81c-ae24-4420-98d3-86c801e2fe8e",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.fw-normal:nth-child(2)",
+      "targets": [
+        ["css=.fw-normal:nth-child(2)", "css:finder"],
+        ["xpath=//section[@id='detail-article']/div/div/div[3]/div/div/p", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Bahrul')]", "xpath:innerText"]
+      ],
+      "value": "Bahrul"
+    }, {
+      "id": "a05ac66f-599e-4426-9ed1-7445100ee696",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.card-text:nth-child(4)",
+      "targets": [
+        ["css=.card-text:nth-child(4)", "css:finder"],
+        ["xpath=//section[@id='detail-article']/div/div/div[3]/div/div/p[3]", "xpath:idRelative"],
+        ["xpath=//p[3]", "xpath:position"],
+        ["xpath=//p[contains(.,'Tourism & Culture')]", "xpath:innerText"]
+      ],
+      "value": "Tourism & Culture"
+    }]
+  }, {
+    "id": "409c9bbb-18cf-4645-93fb-4f0386f4f69d",
+    "name": "4. Delete Selected Content Article",
+    "commands": [{
+      "id": "1c34bdba-677c-461d-affe-1e8ddba12d8a",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "632e0eaa-db32-404e-8364-7bda682d9773",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6e656b61-e8ff-4e0e-b71d-839812370f6f",
+      "comment": "",
+      "command": "click",
+      "target": "id=dropdownNavMenu",
+      "targets": [
+        ["id=dropdownNavMenu", "id"],
+        ["linkText=Content", "linkText"],
+        ["css=#dropdownNavMenu", "css:finder"],
+        ["xpath=//a[contains(text(),'Content')]", "xpath:link"],
+        ["xpath=//a[@id='dropdownNavMenu']", "xpath:attributes"],
+        ["xpath=//div[@id='navDropdown']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "28f10476-e9c9-4d23-b371-7a4cf45f5520",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Article",
+      "targets": [
+        ["linkText=Article", "linkText"],
+        ["css=li:nth-child(1) > .dropdown-item", "css:finder"],
+        ["xpath=//a[contains(text(),'Article')]", "xpath:link"],
+        ["xpath=//div[@id='navDropdown']/ul/li[2]/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#/content-article')]", "xpath:href"],
+        ["xpath=//li[2]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Article')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a5510dbc-fc56-4012-afa1-0cf3d3ac500e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-md-6:nth-child(1) .btn",
+      "targets": [
+        ["css=.col-md-6:nth-child(1) .btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
+        ["xpath=//div[@id='card-articles']/div/div/div[2]/a/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Read More')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b489b503-bf67-4fb7-858c-227e2125c95b",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b76c27f1-fd6a-48c1-be44-62b50f6ccee0",
+      "comment": "",
+      "command": "click",
+      "target": "id=deleteArticle",
+      "targets": [
+        ["id=deleteArticle", "id"],
+        ["css=#deleteArticle", "css:finder"],
+        ["xpath=//button[@id='deleteArticle']", "xpath:attributes"],
+        ["xpath=//section[@id='detail-article']/div/div/div[3]/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Delete')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2efe1232-595e-40d2-91ed-4cfcd7ec9d18",
+      "comment": "",
+      "command": "click",
+      "target": "css=.swal2-confirm",
+      "targets": [
+        ["css=.swal2-confirm", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Yes, delete it!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fe833ab0-ebf9-43a9-906a-9eece466c541",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,358.3999938964844)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3133c1d1-2c1e-4073-a938-f56cc69aa770",
+      "comment": "",
+      "command": "click",
+      "target": "css=.swal2-confirm",
+      "targets": [
+        ["css=.swal2-confirm", "css:finder"],
+        ["xpath=(//button[@type='button'])[11]", "xpath:attributes"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'OK')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "bf90b7c2-a57e-4a11-8d61-827e413d3015",
+    "name": "5. Add New Content Event",
+    "commands": [{
+      "id": "fd286350-9dcc-4ccc-a025-d8ecba411d2a",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c1aea8a0-c42b-40af-b3ba-76644320f6ba",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e87eddd1-c71c-4679-aa2c-d96508bf11ab",
+      "comment": "",
+      "command": "click",
+      "target": "id=dropdownNavMenu",
+      "targets": [
+        ["id=dropdownNavMenu", "id"],
+        ["linkText=Content", "linkText"],
+        ["css=#dropdownNavMenu", "css:finder"],
+        ["xpath=//a[contains(text(),'Content')]", "xpath:link"],
+        ["xpath=//a[@id='dropdownNavMenu']", "xpath:attributes"],
+        ["xpath=//div[@id='navDropdown']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "16bae502-42c7-4772-be7f-7708f9466bb9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Event",
+      "targets": [
+        ["linkText=Event", "linkText"],
+        ["css=li:nth-child(2) > .dropdown-item", "css:finder"],
+        ["xpath=//a[contains(text(),'Event')]", "xpath:link"],
+        ["xpath=//div[@id='navDropdown']/ul/li[2]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#/content-event')]", "xpath:href"],
+        ["xpath=//li[2]/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Event')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e9d45ba-c787-404e-ac23-8eb6dc9d445b",
+      "comment": "",
+      "command": "click",
+      "target": "css=a > .btn-green",
+      "targets": [
+        ["css=a > .btn-green", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//section[@id='event']/div/div/div[2]/a/button", "xpath:idRelative"],
+        ["xpath=//a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create New Event')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "78f096fd-d9b7-4cd0-bb6a-f447203a2b9a",
+      "comment": "",
+      "command": "click",
+      "target": "id=inputNameEvent",
+      "targets": [
+        ["id=inputNameEvent", "id"],
+        ["css=#inputNameEvent", "css:finder"],
+        ["xpath=//input[@id='inputNameEvent']", "xpath:attributes"],
+        ["xpath=//section[@id='add-event']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "47962788-4eb0-42c2-8324-8722f607850a",
+      "comment": "",
+      "command": "type",
+      "target": "id=inputNameEvent",
+      "targets": [
+        ["id=inputNameEvent", "id"],
+        ["css=#inputNameEvent", "css:finder"],
+        ["xpath=//input[@id='inputNameEvent']", "xpath:attributes"],
+        ["xpath=//section[@id='add-event']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Banjar Traditional Rowboat Competition"
+    }, {
+      "id": "c9a4cedb-ece9-44a0-b664-3fb4fc689ab2",
+      "comment": "",
+      "command": "click",
+      "target": "id=inputLocationEvent",
+      "targets": [
+        ["id=inputLocationEvent", "id"],
+        ["css=#inputLocationEvent", "css:finder"],
+        ["xpath=//input[@id='inputLocationEvent']", "xpath:attributes"],
+        ["xpath=//section[@id='add-event']/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9c5ad263-1754-4b56-9917-dc83da9e5aff",
+      "comment": "",
+      "command": "type",
+      "target": "id=inputLocationEvent",
+      "targets": [
+        ["id=inputLocationEvent", "id"],
+        ["css=#inputLocationEvent", "css:finder"],
+        ["xpath=//input[@id='inputLocationEvent']", "xpath:attributes"],
+        ["xpath=//section[@id='add-event']/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Martapura, South Kalimantan"
+    }, {
+      "id": "9e83aad2-9db1-40b2-80ce-9c211c432618",
+      "comment": "",
+      "command": "click",
+      "target": "id=inputDateEvent",
+      "targets": [
+        ["id=inputDateEvent", "id"],
+        ["css=#inputDateEvent", "css:finder"],
+        ["xpath=//input[@id='inputDateEvent']", "xpath:attributes"],
+        ["xpath=//section[@id='add-event']/div/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "53139637-ca71-4e3f-b865-976abf4e6a8a",
+      "comment": "",
+      "command": "type",
+      "target": "id=inputDateEvent",
+      "targets": [
+        ["id=inputDateEvent", "id"],
+        ["css=#inputDateEvent", "css:finder"],
+        ["xpath=//input[@id='inputDateEvent']", "xpath:attributes"],
+        ["xpath=//section[@id='add-event']/div/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "2022-05-15"
+    }, {
+      "id": "026612a1-80ae-41d8-9af1-7b02ef7af88d",
+      "comment": "",
+      "command": "click",
+      "target": "id=inputTimeEvent",
+      "targets": [
+        ["id=inputTimeEvent", "id"],
+        ["css=#inputTimeEvent", "css:finder"],
+        ["xpath=//input[@id='inputTimeEvent']", "xpath:attributes"],
+        ["xpath=//section[@id='add-event']/div/form/div[4]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0af870c9-586c-4cd1-81a9-2b00ff3afb9c",
+      "comment": "",
+      "command": "type",
+      "target": "id=inputTimeEvent",
+      "targets": [
+        ["id=inputTimeEvent", "id"],
+        ["css=#inputTimeEvent", "css:finder"],
+        ["xpath=//input[@id='inputTimeEvent']", "xpath:attributes"],
+        ["xpath=//section[@id='add-event']/div/form/div[4]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": "08:00"
+    }, {
+      "id": "b2425d62-33f7-4160-b58c-ac71e5503950",
+      "comment": "",
+      "command": "click",
+      "target": "id=inputTimezoneEvent",
+      "targets": [
+        ["id=inputTimezoneEvent", "id"],
+        ["css=#inputTimezoneEvent", "css:finder"],
+        ["xpath=//select[@id='inputTimezoneEvent']", "xpath:attributes"],
+        ["xpath=//section[@id='add-event']/div/form/div[4]/div[2]/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "876f8700-4dad-4469-a813-93c880db3164",
+      "comment": "",
+      "command": "select",
+      "target": "id=inputTimezoneEvent",
+      "targets": [],
+      "value": "label=WITA"
+    }, {
+      "id": "bcf98994-ac7d-4d52-957e-9fd7e12af432",
+      "comment": "",
+      "command": "click",
+      "target": "id=inputTagsEvent",
+      "targets": [
+        ["id=inputTagsEvent", "id"],
+        ["css=#inputTagsEvent", "css:finder"],
+        ["xpath=//select[@id='inputTagsEvent']", "xpath:attributes"],
+        ["xpath=//section[@id='add-event']/div/form/div[5]/select", "xpath:idRelative"],
+        ["xpath=//div[5]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "363e36d9-3e61-4f9c-b980-9b4350da9488",
+      "comment": "",
+      "command": "select",
+      "target": "id=inputTagsEvent",
+      "targets": [],
+      "value": "label=Competition"
+    }, {
+      "id": "99672c9e-85de-4c06-a498-fd65be10b542",
+      "comment": "",
+      "command": "click",
+      "target": "id=inputImageEvent",
+      "targets": [
+        ["id=inputImageEvent", "id"],
+        ["css=#inputImageEvent", "css:finder"],
+        ["xpath=//input[@id='inputImageEvent']", "xpath:attributes"],
+        ["xpath=//section[@id='add-event']/div/form/div[6]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ea01c4a-d517-4b18-93e2-0ef3f8d6b2f3",
+      "comment": "",
+      "command": "type",
+      "target": "id=inputImageEvent",
+      "targets": [
+        ["id=inputImageEvent", "id"],
+        ["css=#inputImageEvent", "css:finder"],
+        ["xpath=//input[@id='inputImageEvent']", "xpath:attributes"],
+        ["xpath=//section[@id='add-event']/div/form/div[6]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": "https://i.postimg.cc/QMKKXM2m/lomba-jukung-tradisonal-banjar.png"
+    }, {
+      "id": "5cdf59a1-8d39-4191-8110-53c098362e53",
+      "comment": "",
+      "command": "click",
+      "target": "id=inputDescriptionEvent",
+      "targets": [
+        ["id=inputDescriptionEvent", "id"],
+        ["css=#inputDescriptionEvent", "css:finder"],
+        ["xpath=//textarea[@id='inputDescriptionEvent']", "xpath:attributes"],
+        ["xpath=//section[@id='add-event']/div/form/div[7]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6c5ef16c-315d-4e41-9fcf-cd3c0bb52036",
+      "comment": "",
+      "command": "type",
+      "target": "id=inputDescriptionEvent",
+      "targets": [
+        ["id=inputDescriptionEvent", "id"],
+        ["css=#inputDescriptionEvent", "css:finder"],
+        ["xpath=//textarea[@id='inputDescriptionEvent']", "xpath:attributes"],
+        ["xpath=//section[@id='add-event']/div/form/div[7]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Repeating the success of the previous year's event, the Equatorial Tour Rowboat Competition for the Governor of South Kalimantan Cup 2022 will again be held\\n\\nThis prestige and action-laden event features a traditional six-person jukung race on the Martapura River\\n\\nDozens of the best rowing teams will fight for the championship throne, for the prize of tens of millions of rupiah & bring home the South Kalimantan Governor trophy\\n\\nIn addition to the jukung competition, in the competition area there will also be an MSME Festival which will be filled by various tenants, both culinary, souvenirs, etc.\\n\\nSunday, May 15, 2022\\nStart 08.00 WITA\\nEquator Tour of Central Rangas River Village (SRT) West Martapura District, Banjar Regency, South Kalimantan\\nParticipants are open to the public\\n\\nCome on, immediately register your rowing team in this event‼️\\nAnd don't forget, come and support your favorite rowing teams\\n\\nParticipants and spectators are required to apply health protocols during the event\\n\\nCompetitors contact:\\n• +62 882 4713 8949 / Salmani\\ntenant contact and other event information:\\n• +62 821 5740 6777 / Feisal\\n\\npresented by:\\n• South Kalimantan Provincial Government Dispora\\n• Pemdes Sungai Rangas Tengah District Banjar\\n• Pokdarwis Wisata Equator SRT\\n\\norganized by:\\n• kart organizer\\n\\n“land of river heritage”\\n\\n@pamanbirin_mu\\n@hermansyahdamhuri27\\n@setdaprovkalselbergerak\\n\\n#lombajukung #balapjukung #eventkalsel #eventbanua #desawisata #wisatakhatulistiwaSRT #explorebanjar #wonderfulindonesia #banjar #martapura\\n"
+    }, {
+      "id": "afcb9423-dc8c-4341-ac39-fe9f0f98d61c",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputNameEvent",
+      "targets": [
+        ["id=inputNameEvent", "id"],
+        ["css=#inputNameEvent", "css:finder"],
+        ["xpath=//input[@id='inputNameEvent']", "xpath:attributes"],
+        ["xpath=//section[@id='add-event']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Banjar Traditional Rowboat Competition"
+    }, {
+      "id": "e4f778e0-2a5e-46a8-8e08-ebda74c984cc",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputLocationEvent",
+      "targets": [
+        ["id=inputLocationEvent", "id"],
+        ["css=#inputLocationEvent", "css:finder"],
+        ["xpath=//input[@id='inputLocationEvent']", "xpath:attributes"],
+        ["xpath=//section[@id='add-event']/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Martapura, South Kalimantan"
+    }, {
+      "id": "25a165c4-8a4b-4b25-acf2-525af076cbdf",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputTagsEvent",
+      "targets": [
+        ["id=inputTagsEvent", "id"],
+        ["css=#inputTagsEvent", "css:finder"],
+        ["xpath=//select[@id='inputTagsEvent']", "xpath:attributes"],
+        ["xpath=//section[@id='add-event']/div/form/div[5]/select", "xpath:idRelative"],
+        ["xpath=//div[5]/select", "xpath:position"]
+      ],
+      "value": "Competition"
+    }, {
+      "id": "c6b1f1cf-f7d8-4f5c-a5f4-0678f9ad5ccf",
+      "comment": "",
+      "command": "click",
+      "target": "id=submitEvent",
+      "targets": [
+        ["id=submitEvent", "id"],
+        ["css=#submitEvent", "css:finder"],
+        ["xpath=//button[@id='submitEvent']", "xpath:attributes"],
+        ["xpath=//section[@id='add-event']/div/form/div[8]/button", "xpath:idRelative"],
+        ["xpath=//div[8]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "121e7b8a-6653-4643-849b-7e4dca4de0bc",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,517.5999755859375)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "51e06966-b04c-407c-b327-bfd969bd9d9c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.swal2-confirm",
+      "targets": [
+        ["css=.swal2-confirm", "css:finder"],
+        ["xpath=(//button[@type='button'])[9]", "xpath:attributes"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'OK')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "96985333-fba4-4fc1-9013-145c08749075",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.col-md-6:nth-child(1) .card-title",
+      "targets": [
+        ["css=.col-md-6:nth-child(1) .card-title", "css:finder"],
+        ["xpath=//div[@id='card-events']/div/div/div/h5", "xpath:idRelative"],
+        ["xpath=//h5", "xpath:position"],
+        ["xpath=//h5[contains(.,'Banjar Traditional Rowboat Competition')]", "xpath:innerText"]
+      ],
+      "value": "Banjar Traditional Rowboat Competition"
+    }, {
+      "id": "566cd557-cf6b-44bb-8375-0a16bc240783",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.col-md-6:nth-child(1) .card-text:nth-child(2)",
+      "targets": [
+        ["css=.col-md-6:nth-child(1) .card-text:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='card-events']/div/div/div/p", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Martapura, South Kalimantan')]", "xpath:innerText"]
+      ],
+      "value": "Martapura, South Kalimantan"
+    }, {
+      "id": "18e27d1a-9c47-4dfa-b756-50e17e438b97",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.col-md-6:nth-child(1) .card-text:nth-child(5)",
+      "targets": [
+        ["css=.col-md-6:nth-child(1) .card-text:nth-child(5)", "css:finder"],
+        ["xpath=//div[@id='card-events']/div/div/div/p[4]", "xpath:idRelative"],
+        ["xpath=//p[4]", "xpath:position"],
+        ["xpath=//p[contains(.,'Competition')]", "xpath:innerText"]
+      ],
+      "value": "Competition"
+    }]
+  }, {
+    "id": "19da3bd3-e4eb-4f87-a53c-0e118e63252d",
+    "name": "6. Add Review Content Event",
+    "commands": [{
+      "id": "384b8e1d-b5a6-447d-837b-8a32d5945ffb",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fde1759a-d281-475b-baab-e4886cd3814e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "61f66489-0045-479d-9003-c27b0fc7e07f",
+      "comment": "",
+      "command": "click",
+      "target": "css=#home-event > .col-md-6:nth-child(1) .btn",
+      "targets": [
+        ["css=#home-event > .col-md-6:nth-child(1) .btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[9]", "xpath:attributes"],
+        ["xpath=//div[@id='home-event']/div/div/div[2]/a/button", "xpath:idRelative"],
+        ["xpath=//section[2]/div[2]/div[2]/div/div/div[2]/a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a91289d-8625-4cc0-bb5d-9eae239fac9c",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7125ce73-8caf-4dd7-8e58-dd9b5b4e4297",
+      "comment": "",
+      "command": "click",
+      "target": "id=inputUserReview",
+      "targets": [
+        ["id=inputUserReview", "id"],
+        ["css=#inputUserReview", "css:finder"],
+        ["xpath=//input[@id='inputUserReview']", "xpath:attributes"],
+        ["xpath=//section[@id='detail-event']/div[2]/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "285d3aae-ca63-4605-981c-637b0a503294",
+      "comment": "",
+      "command": "type",
+      "target": "id=inputUserReview",
+      "targets": [
+        ["id=inputUserReview", "id"],
+        ["css=#inputUserReview", "css:finder"],
+        ["xpath=//input[@id='inputUserReview']", "xpath:attributes"],
+        ["xpath=//section[@id='detail-event']/div[2]/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Riski"
+    }, {
+      "id": "802ac13e-679a-4b86-8f44-bdd1c15151e6",
+      "comment": "",
+      "command": "click",
+      "target": "id=inputReviewEvent",
+      "targets": [
+        ["id=inputReviewEvent", "id"],
+        ["css=#inputReviewEvent", "css:finder"],
+        ["xpath=//textarea[@id='inputReviewEvent']", "xpath:attributes"],
+        ["xpath=//section[@id='detail-event']/div[2]/form/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d8e8542a-7ac7-4abb-9a15-341df526f30f",
+      "comment": "",
+      "command": "type",
+      "target": "id=inputReviewEvent",
+      "targets": [
+        ["id=inputReviewEvent", "id"],
+        ["css=#inputReviewEvent", "css:finder"],
+        ["xpath=//textarea[@id='inputReviewEvent']", "xpath:attributes"],
+        ["xpath=//section[@id='detail-event']/div[2]/form/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "What a interesting event"
+    }, {
+      "id": "50cd883e-14b5-4c7d-a87f-994d004636ae",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputUserReview",
+      "targets": [
+        ["id=inputUserReview", "id"],
+        ["css=#inputUserReview", "css:finder"],
+        ["xpath=//input[@id='inputUserReview']", "xpath:attributes"],
+        ["xpath=//section[@id='detail-event']/div[2]/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Riski"
+    }, {
+      "id": "72edd5ff-455e-4f31-b523-601a983d3cb7",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputReviewEvent",
+      "targets": [
+        ["id=inputReviewEvent", "id"],
+        ["css=#inputReviewEvent", "css:finder"],
+        ["xpath=//textarea[@id='inputReviewEvent']", "xpath:attributes"],
+        ["xpath=//section[@id='detail-event']/div[2]/form/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "What a interesting event"
+    }, {
+      "id": "93536ce8-9870-42b1-b6af-c02171cdd29a",
+      "comment": "",
+      "command": "click",
+      "target": "id=submitReview",
+      "targets": [
+        ["id=submitReview", "id"],
+        ["css=#submitReview", "css:finder"],
+        ["xpath=//button[@id='submitReview']", "xpath:attributes"],
+        ["xpath=//section[@id='detail-event']/div[2]/form/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cdb19468-42f7-436a-869c-059beb417651",
+      "comment": "",
+      "command": "click",
+      "target": "css=.swal2-confirm",
+      "targets": [
+        ["css=.swal2-confirm", "css:finder"],
+        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'OK')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2a190d81-e174-4f2e-a676-9a46ac89fbd6",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.card-title",
+      "targets": [
+        ["css=.card-title", "css:finder"],
+        ["xpath=//section[@id='detail-event']/div[3]/div/div/div[2]/div/div/div/h5", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/h5", "xpath:position"],
+        ["xpath=//h5[contains(.,'Riski')]", "xpath:innerText"]
+      ],
+      "value": "Riski"
+    }, {
+      "id": "2ce3c3c1-6b77-4cf2-8969-af0680b2043a",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.fw-light",
+      "targets": [
+        ["css=.fw-light", "css:finder"],
+        ["xpath=//section[@id='detail-event']/div[3]/div/div/div[2]/div/div[2]/div/p", "xpath:idRelative"],
+        ["xpath=//div[2]/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'What a interesting event')]", "xpath:innerText"]
+      ],
+      "value": "What a interesting event"
+    }]
+  }, {
+    "id": "945f736c-284f-4c79-be4a-eb928b967bcb",
+    "name": "7. Update Content Event",
+    "commands": [{
+      "id": "bbc1bd42-cca2-480a-8ccd-2bdac6f52f11",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2fc6bcd8-ce02-4354-8cbb-ddf678496751",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "53906215-2c8a-4c07-b3cf-94951c289302",
+      "comment": "",
+      "command": "click",
+      "target": "id=dropdownNavMenu",
+      "targets": [
+        ["id=dropdownNavMenu", "id"],
+        ["linkText=Content", "linkText"],
+        ["css=#dropdownNavMenu", "css:finder"],
+        ["xpath=//a[contains(text(),'Content')]", "xpath:link"],
+        ["xpath=//a[@id='dropdownNavMenu']", "xpath:attributes"],
+        ["xpath=//div[@id='navDropdown']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "27283cb6-8f4c-4152-96c4-92cb0b79ca29",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Event",
+      "targets": [
+        ["linkText=Event", "linkText"],
+        ["css=li:nth-child(2) > .dropdown-item", "css:finder"],
+        ["xpath=//a[contains(text(),'Event')]", "xpath:link"],
+        ["xpath=//div[@id='navDropdown']/ul/li[2]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#/content-event')]", "xpath:href"],
+        ["xpath=//li[2]/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Event')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "96f8ad16-fed0-4d97-b141-406f66f137b5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-md-6:nth-child(1) .btn",
+      "targets": [
+        ["css=.col-md-6:nth-child(1) .btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
+        ["xpath=//div[@id='card-events']/div/div/div[2]/a/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Read More')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b89da14e-4a26-4ec4-a7f4-3c8652703669",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fd7c37e0-dacd-4875-88d9-d05cf15b0b01",
+      "comment": "",
+      "command": "click",
+      "target": "id=updateEvent",
+      "targets": [
+        ["id=updateEvent", "id"],
+        ["css=#updateEvent", "css:finder"],
+        ["xpath=//button[@id='updateEvent']", "xpath:attributes"],
+        ["xpath=//section[@id='detail-event']/div/div[2]/div[2]/div/a/button", "xpath:idRelative"],
+        ["xpath=//a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Update')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "46f7e7de-7881-4c53-8266-ebadf033733b",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6ea7db28-f57a-47fb-9606-3ff95181dc2e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mt-5",
+      "targets": [
+        ["css=.mt-5", "css:finder"],
+        ["xpath=//section[@id='update-event']/div", "xpath:idRelative"],
+        ["xpath=//section/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "742b4c6e-6481-443b-b2e8-5a41ec591bae",
+      "comment": "",
+      "command": "type",
+      "target": "id=editLocationEvent",
+      "targets": [
+        ["id=editLocationEvent", "id"],
+        ["css=#editLocationEvent", "css:finder"],
+        ["xpath=//input[@id='editLocationEvent']", "xpath:attributes"],
+        ["xpath=//section[@id='update-event']/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Banjar, South Kalimantan"
+    }, {
+      "id": "66f9559e-5409-48c1-a2f6-6498c9f3dcb2",
+      "comment": "",
+      "command": "click",
+      "target": "id=editTimeEvent",
+      "targets": [
+        ["id=editTimeEvent", "id"],
+        ["css=#editTimeEvent", "css:finder"],
+        ["xpath=//input[@id='editTimeEvent']", "xpath:attributes"],
+        ["xpath=//section[@id='update-event']/div/form/div[4]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b4ff3270-6a6a-44b4-bcce-0010fe4b7e49",
+      "comment": "",
+      "command": "type",
+      "target": "id=editTimeEvent",
+      "targets": [
+        ["id=editTimeEvent", "id"],
+        ["css=#editTimeEvent", "css:finder"],
+        ["xpath=//input[@id='editTimeEvent']", "xpath:attributes"],
+        ["xpath=//section[@id='update-event']/div/form/div[4]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": "09:00"
+    }, {
+      "id": "0d86b2f6-1627-4507-a3b4-fa920d683389",
+      "comment": "",
+      "command": "click",
+      "target": "id=editDescriptionEvent",
+      "targets": [
+        ["id=editDescriptionEvent", "id"],
+        ["css=#editDescriptionEvent", "css:finder"],
+        ["xpath=//textarea[@id='editDescriptionEvent']", "xpath:attributes"],
+        ["xpath=//section[@id='update-event']/div/form/div[7]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "144f047e-22df-4f86-8860-b429c1ff37eb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mt-5",
+      "targets": [
+        ["css=.mt-5", "css:finder"],
+        ["xpath=//section[@id='update-event']/div", "xpath:idRelative"],
+        ["xpath=//section/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ec4c6232-b7ff-4375-895e-62de570e36fe",
+      "comment": "",
+      "command": "type",
+      "target": "id=editDescriptionEvent",
+      "targets": [
+        ["id=editDescriptionEvent", "id"],
+        ["css=#editDescriptionEvent", "css:finder"],
+        ["xpath=//textarea[@id='editDescriptionEvent']", "xpath:attributes"],
+        ["xpath=//section[@id='update-event']/div/form/div[7]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Repeating the success of the previous year's event, the Equatorial Tour Rowboat Competition for the Governor of South Kalimantan Cup 2022 will again be held\\n\\nThis prestige and action-laden event features a traditional six-person jukung race on the Martapura River\\n\\nDozens of the best rowing teams will fight for the championship throne, for the prize of tens of millions of rupiah & bring home the South Kalimantan Governor trophy\\n\\nIn addition to the jukung competition, in the competition area there will also be an MSME Festival which will be filled by various tenants, both culinary, souvenirs, etc.\\n\\nSunday, May 15, 2022\\nStart 09.00 WITA\\nBanjar Regency, South Kalimantan\\nParticipants are open to the public\\n\\nCome on, immediately register your rowing team in this event‼️\\nAnd don't forget, come and support your favorite rowing teams\\n\\nParticipants and spectators are required to apply health protocols during the event\\n\\nCompetitors contact:\\n• +62 882 4713 8949 / Salmani\\ntenant contact and other event information:\\n• +62 821 5740 6777 / Feisal\\n\\npresented by:\\n• South Kalimantan Provincial Government Dispora\\n• Pemdes Sungai Rangas Tengah District Banjar\\n• Pokdarwis Wisata Equator SRT\\n\\norganized by:\\n• kart organizer\\n\\n“land of river heritage”\\n\\n@pamanbirin_mu\\n@hermansyahdamhuri27\\n@setdaprovkalselbergerak\\n\\n#lombajukung #balapjukung #eventkalsel #eventbanua #desawisata #wisatakhatulistiwaSRT #explorebanjar #wonderfulindonesia #banjar #martapura\\n"
+    }, {
+      "id": "50afdf09-b758-4036-a603-86cf8e369f2b",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=editLocationEvent",
+      "targets": [
+        ["id=editLocationEvent", "id"],
+        ["css=#editLocationEvent", "css:finder"],
+        ["xpath=//input[@id='editLocationEvent']", "xpath:attributes"],
+        ["xpath=//section[@id='update-event']/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Banjar, South Kalimantan"
+    }, {
+      "id": "ffd6f4e7-c35d-4394-9f9a-5210864f4819",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=editTimeEvent",
+      "targets": [
+        ["id=editTimeEvent", "id"],
+        ["css=#editTimeEvent", "css:finder"],
+        ["xpath=//input[@id='editTimeEvent']", "xpath:attributes"],
+        ["xpath=//section[@id='update-event']/div/form/div[4]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": "09:00"
+    }, {
+      "id": "f0b1d24f-6e55-47e2-bcbc-b60bf577c5fd",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=editDescriptionEvent",
+      "targets": [
+        ["id=editDescriptionEvent", "id"],
+        ["css=#editDescriptionEvent", "css:finder"],
+        ["xpath=//textarea[@id='editDescriptionEvent']", "xpath:attributes"],
+        ["xpath=//section[@id='update-event']/div/form/div[7]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Repeating the success of the previous year's event, the Equatorial Tour Rowboat Competition for the Governor of South Kalimantan Cup 2022 will again be held\\n\\nThis prestige and action-laden event features a traditional six-person jukung race on the Martapura River\\n\\nDozens of the best rowing teams will fight for the championship throne, for the prize of tens of millions of rupiah & bring home the South Kalimantan Governor trophy\\n\\nIn addition to the jukung competition, in the competition area there will also be an MSME Festival which will be filled by various tenants, both culinary, souvenirs, etc.\\n\\nSunday, May 15, 2022\\nStart 09.00 WITA\\nBanjar Regency, South Kalimantan\\nParticipants are open to the public\\n\\nCome on, immediately register your rowing team in this event‼️\\nAnd don't forget, come and support your favorite rowing teams\\n\\nParticipants and spectators are required to apply health protocols during the event\\n\\nCompetitors contact:\\n• +62 882 4713 8949 / Salmani\\ntenant contact and other event information:\\n• +62 821 5740 6777 / Feisal\\n\\npresented by:\\n• South Kalimantan Provincial Government Dispora\\n• Pemdes Sungai Rangas Tengah District Banjar\\n• Pokdarwis Wisata Equator SRT\\n\\norganized by:\\n• kart organizer\\n\\n“land of river heritage”\\n\\n@pamanbirin_mu\\n@hermansyahdamhuri27\\n@setdaprovkalselbergerak\\n\\n#lombajukung #balapjukung #eventkalsel #eventbanua #desawisata #wisatakhatulistiwaSRT #explorebanjar #wonderfulindonesia #banjar #martapura\\n"
+    }, {
+      "id": "c943e1c5-42b4-46c9-a92c-fe95e440288a",
+      "comment": "",
+      "command": "click",
+      "target": "id=submitEvent",
+      "targets": [
+        ["id=submitEvent", "id"],
+        ["css=#submitEvent", "css:finder"],
+        ["xpath=//button[@id='submitEvent']", "xpath:attributes"],
+        ["xpath=//section[@id='update-event']/div/form/div[8]/button", "xpath:idRelative"],
+        ["xpath=//div[8]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d8fafb02-65a9-4e66-bef9-905058f663af",
+      "comment": "",
+      "command": "click",
+      "target": "css=.swal2-confirm",
+      "targets": [
+        ["css=.swal2-confirm", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirm')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b6c6857b-99f1-4c37-93a6-492af51ad627",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,244.8000030517578)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "84cd4900-f456-4ec8-ad01-f5246d644e06",
+      "comment": "",
+      "command": "click",
+      "target": "css=.swal2-confirm",
+      "targets": [
+        ["css=.swal2-confirm", "css:finder"],
+        ["xpath=(//button[@type='button'])[9]", "xpath:attributes"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'OK')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b27e7dc-892a-4ac6-94c1-942359a220c9",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.fw-normal:nth-child(2)",
+      "targets": [
+        ["css=.fw-normal:nth-child(2)", "css:finder"],
+        ["xpath=//section[@id='detail-event']/div/div[2]/div/div/p", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Banjar, South Kalimantan')]", "xpath:innerText"]
+      ],
+      "value": "Banjar, South Kalimantan"
+    }, {
+      "id": "899fc8d9-4449-4b19-a036-06c8174b9ee0",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.fw-normal:nth-child(4)",
+      "targets": [
+        ["css=.fw-normal:nth-child(4)", "css:finder"],
+        ["xpath=//section[@id='detail-event']/div/div[2]/div/div/p[3]", "xpath:idRelative"],
+        ["xpath=//p[3]", "xpath:position"],
+        ["xpath=//p[contains(.,'09:00 WITA')]", "xpath:innerText"]
+      ],
+      "value": "09:00 WITA"
+    }, {
+      "id": "c3426491-54a7-4de7-9442-bc2b02890bb9",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.text-description",
+      "targets": [
+        ["css=.text-description", "css:finder"],
+        ["xpath=//section[@id='detail-event']/div/div[2]/div/div/p[5]", "xpath:idRelative"],
+        ["xpath=//p[5]", "xpath:position"]
+      ],
+      "value": "Repeating the success of the previous year's event, the Equatorial Tour Rowboat Competition for the Governor of South Kalimantan Cup 2022 will again be held\\n\\nThis prestige and action-laden event features a traditional six-person jukung race on the Martapura River\\n\\nDozens of the best rowing teams will fight for the championship throne, for the prize of tens of millions of rupiah & bring home the South Kalimantan Governor trophy\\n\\nIn addition to the jukung competition, in the competition area there will also be an MSME Festival which will be filled by various tenants, both culinary, souvenirs, etc.\\n\\nSunday, May 15, 2022\\nStart 09.00 WITA\\nBanjar Regency, South Kalimantan\\nParticipants are open to the public\\n\\nCome on, immediately register your rowing team in this event‼️\\nAnd don't forget, come and support your favorite rowing teams\\n\\nParticipants and spectators are required to apply health protocols during the event\\n\\nCompetitors contact:\\n• +62 882 4713 8949 / Salmani\\ntenant contact and other event information:\\n• +62 821 5740 6777 / Feisal\\n\\npresented by:\\n• South Kalimantan Provincial Government Dispora\\n• Pemdes Sungai Rangas Tengah District Banjar\\n• Pokdarwis Wisata Equator SRT\\n\\norganized by:\\n• kart organizer\\n\\n“land of river heritage”\\n\\n@pamanbirin_mu\\n@hermansyahdamhuri27\\n@setdaprovkalselbergerak\\n\\n#lombajukung #balapjukung #eventkalsel #eventbanua #desawisata #wisatakhatulistiwaSRT #explorebanjar #wonderfulindonesia #banjar #martapura"
+    }]
+  }, {
+    "id": "7c174640-dd85-4fbd-9355-a5dc85acdd31",
+    "name": "8. Delete Selected Content Event",
+    "commands": [{
+      "id": "438e045b-2651-46c2-b641-b1a153285117",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c8c7020d-56d2-4361-9842-138731b738de",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b19683de-e394-4324-b08a-966c748470b1",
+      "comment": "",
+      "command": "click",
+      "target": "id=dropdownNavMenu",
+      "targets": [
+        ["id=dropdownNavMenu", "id"],
+        ["linkText=Content", "linkText"],
+        ["css=#dropdownNavMenu", "css:finder"],
+        ["xpath=//a[contains(text(),'Content')]", "xpath:link"],
+        ["xpath=//a[@id='dropdownNavMenu']", "xpath:attributes"],
+        ["xpath=//div[@id='navDropdown']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2e94872-8c86-4e8b-a353-761c50914817",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Event",
+      "targets": [
+        ["linkText=Event", "linkText"],
+        ["css=li:nth-child(2) > .dropdown-item", "css:finder"],
+        ["xpath=//a[contains(text(),'Event')]", "xpath:link"],
+        ["xpath=//div[@id='navDropdown']/ul/li[2]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#/content-event')]", "xpath:href"],
+        ["xpath=//li[2]/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Event')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "20464f10-2de2-4b84-a2b2-1de2a973e104",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-md-6:nth-child(1) .btn",
+      "targets": [
+        ["css=.col-md-6:nth-child(1) .btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
+        ["xpath=//div[@id='card-events']/div/div/div[2]/a/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Read More')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "74397c26-927c-475c-bc07-d011c7ef65e9",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6f2155ea-a832-44f6-bba1-3eb7fe1f9e97",
+      "comment": "",
+      "command": "click",
+      "target": "id=deleteEvent",
+      "targets": [
+        ["id=deleteEvent", "id"],
+        ["css=#deleteEvent", "css:finder"],
+        ["xpath=//button[@id='deleteEvent']", "xpath:attributes"],
+        ["xpath=//section[@id='detail-event']/div/div[2]/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Delete')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "36997d17-4553-4932-bff1-ab28afbdc813",
+      "comment": "",
+      "command": "click",
+      "target": "css=.swal2-confirm",
+      "targets": [
+        ["css=.swal2-confirm", "css:finder"],
+        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Yes, delete it!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "02a95d6c-c647-4485-be6b-cc984e3622ed",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,632)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f84be899-80a1-47d5-a460-4192fba9c7e9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.swal2-confirm",
+      "targets": [
+        ["css=.swal2-confirm", "css:finder"],
+        ["xpath=(//button[@type='button'])[8]", "xpath:attributes"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'OK')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "015321ca-317c-408b-a558-b9ef281d4f52",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}

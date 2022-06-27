@@ -79,7 +79,7 @@ const EditEvent = {
 
     cancelEvent.addEventListener('click', (event) => {
       event.preventDefault();
-      window.location.href = '#/content-event';
+      window.location.href = `#/detail-event/${url.id}`;
       window.scrollTo(0, 0);
     });
   },
