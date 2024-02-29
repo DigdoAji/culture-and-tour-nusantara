@@ -8,7 +8,7 @@ Culture and Tour Nusantara (CTN) is a website-based platform as a medium of info
 - Presentation Video            : https://youtu.be/ILbj1r2v72Y?si=qXsAWFKp65zf3uhr
 - Demo Video                    : https://youtu.be/FcxVQ2dM9mU?si=I7XyK7EwIis0ks73
 - Link Web Deployment           : https://culture-and-tour-nusantara.netlify.app/
-- Link Back-End CTN API Project : https://github.com/DigdoAji/Back-End-CTN
+- Link Back-End CTN API Project : https://github.com/Raichan4/Back-End-CTN or https://github.com/DigdoAji/Back-End-CTN
 
 ## Tech Stacks Used
 
